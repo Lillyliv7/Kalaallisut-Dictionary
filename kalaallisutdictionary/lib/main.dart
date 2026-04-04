@@ -1,7 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(const MyApp());
+}
+
+Future<String?> _apiRequest(String _searchTerm) async {
+  // 1. Define the URL
+  var url = Uri.parse('https://ordbog.gl/callback.php');
+  // 2. Define the form data
+  // The http package will automatically URL-encode these keys and values.
+  var body = {
+    'a': 'search',
+    'q': _searchTerm,
+    'opts[df]': '0',
+    'opts[cs]': '0',
+    'opts[ww]': '0',
+    'opts[pm]': '1',
+    'opts[xd]': '0',
+    'opts[d]': '401',
+  };
+
+  try {
+    // 3. Make the POST request
+    var response = await http.post(url, body: body);
+    // 4. Handle the response
+    if (response.statusCode == 200) {
+      print('Request successful!');
+      print('Response body: ${response.body}');
+      return response.body;
+    } else {
+      print('Request failed with status: ${response.statusCode}.');
+    }
+  } catch (e) {
+    print('An error occurred: $e');
+  }
+  return null;
 }
 
 class MyApp extends StatelessWidget {
@@ -28,12 +62,11 @@ class WordAnalyserPage extends StatefulWidget {
 }
 
 class _WordAnalyserPageState extends State<WordAnalyserPage> {
-  int _counter = 0;
+//https://ordbog.gl/callback.php
+  String _textValue = '';
 
-  void _apiRequest() {
-    setState(() {
-      _counter++;
-    });
+  void _searchDatabase() {
+    _apiRequest(_textValue);
   }
 
   @override
@@ -57,12 +90,15 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
                   child: TextField(
                   decoration: InputDecoration(
                    border: OutlineInputBorder(),
-                  )
+                  ),
+                  onChanged: (text) {
+                    setState(() { _textValue = text; });
+                  },
                 )
                 ),
                 SizedBox(width: 15),
                 ElevatedButton(
-                  onPressed: null,
+                  onPressed: _searchDatabase,
                   child: Text('Analyse')
                 )
               ]
@@ -73,49 +109,3 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
     );
   }
 }
-
-// class MyHomePage extends StatefulWidget {
-//   const MyHomePage({super.key, required this.title});
-
-//   final String title;
-
-//   @override
-//   State<MyHomePage> createState() => _MyHomePageState();
-// }
-
-// class _MyHomePageState extends State<MyHomePage> {
-//   int _counter = 0;
-
-//   void _incrementCounter() {
-//     setState(() {
-//       _counter++;
-//     });
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-//         title: Text(widget.title),
-//       ),
-//       body: Center(
-//         child: Column(
-//           mainAxisAlignment: .center,
-//           children: [
-//             const Text('You have pushed the button this many times:'),
-//             Text(
-//               '$_counter',
-//               style: Theme.of(context).textTheme.headlineMedium,
-//             ),
-//           ],
-//         ),
-//       ),
-//       floatingActionButton: FloatingActionButton(
-//         onPressed: _incrementCounter,
-//         tooltip: 'Increment',
-//         child: const Icon(Icons.add),
-//       ),
-//     );
-//   }
-// }
