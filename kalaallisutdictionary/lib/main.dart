@@ -99,7 +99,14 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
                 SizedBox(width: 15),
                 ElevatedButton(
                   onPressed: _searchDatabase,
-                  child: Text('Analyse')
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(50, 50),
+                    padding: EdgeInsets.zero, // Essential for small squares
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8), // Adjust for corner sharpness
+                    ),
+                  ),
+                  child: const Icon(Icons.pageview_outlined, size:32),
                 )
               ]
             ),
