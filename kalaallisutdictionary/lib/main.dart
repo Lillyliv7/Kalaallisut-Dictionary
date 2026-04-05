@@ -5,26 +5,21 @@ void main() {
   runApp(const MyApp());
 }
 
-Future<String?> _apiRequest(String _searchTerm) async {
-  // 1. Define the URL
+Future<String?> _dictionaryRequest(String _searchTerm) async {
   var url = Uri.parse('https://ordbog.gl/callback.php');
-  // 2. Define the form data
-  // The http package will automatically URL-encode these keys and values.
   var body = {
     'a': 'search',
     'q': _searchTerm,
-    'opts[df]': '0',
-    'opts[cs]': '0',
-    'opts[ww]': '0',
-    'opts[pm]': '1',
-    'opts[xd]': '0',
-    'opts[d]': '401',
+    'opts[df]': '0',   // search in definitions as well
+    'opts[cs]': '0',   // case sensitive
+    'opts[ww]': '0',   // match whole word
+    'opts[pm]': '1',   // match from start of word only
+    'opts[xd]': '0',   // match diacritics exactly
+    'opts[d]':  '401', // dictionary of the west greenland eskimo language, 1927
   };
 
   try {
-    // 3. Make the POST request
     var response = await http.post(url, body: body);
-    // 4. Handle the response
     if (response.statusCode == 200) {
       print('Request successful!');
       print('Response body: ${response.body}');
@@ -37,6 +32,29 @@ Future<String?> _apiRequest(String _searchTerm) async {
   }
   return null;
 }
+
+Future<String?> _analyzerRequest(String _URL, String _searchTerm) async {
+  final url = Uri.parse(_URL + "/analyze?word=" + _searchTerm);
+  print(url);
+
+
+  try {
+    final response = await http.get(url);
+    if (response.statusCode == 200) {
+      print('Request successful!');
+      print('Response body: ${response.body}');
+      return response.body;
+    } else {
+      print('Request failed with status: ${response.statusCode}.');
+    }
+  } catch (e) {
+    print('An error occurred: $e');
+  }
+  return null;
+
+
+}
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -64,9 +82,11 @@ class WordAnalyserPage extends StatefulWidget {
 class _WordAnalyserPageState extends State<WordAnalyserPage> {
 //https://ordbog.gl/callback.php
   String _textValue = '';
+  String _analyzerServer = '';
 
-  void _searchDatabase() {
-    _apiRequest(_textValue);
+  void _searchDictionary() {
+    _dictionaryRequest(_textValue);
+    
   }
 
   @override
@@ -80,7 +100,18 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
         child: Column(
           mainAxisAlignment: .center,
           children: [
-            Text('Type a completed word'),
+            ConstrainedBox (
+                  constraints: BoxConstraints(maxWidth: 365),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Analyzer Server (ex: localhost:8000)',
+                      border: OutlineInputBorder(),
+                    ),
+                    onChanged: (text) {
+                      setState(() { _analyzerServer = text; });
+                    },
+                  )
+            ),
             SizedBox(height: 15),
             Row (
               mainAxisAlignment: .center,
@@ -88,22 +119,23 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
                 ConstrainedBox (
                   constraints: BoxConstraints(maxWidth: 300),
                   child: TextField(
-                  decoration: InputDecoration(
-                   border: OutlineInputBorder(),
-                  ),
-                  onChanged: (text) {
-                    setState(() { _textValue = text; });
-                  },
-                )
+                    decoration: InputDecoration(
+                      hintText: 'Enter a full word',
+                      border: OutlineInputBorder(),
+                    ),
+                    onChanged: (text) {
+                      setState(() { _textValue = text; });
+                    },
+                  )
                 ),
                 SizedBox(width: 15),
                 ElevatedButton(
-                  onPressed: _searchDatabase,
+                  onPressed: _searchDictionary,
                   style: ElevatedButton.styleFrom(
                     fixedSize: const Size(50, 50),
-                    padding: EdgeInsets.zero, // Essential for small squares
+                    padding: EdgeInsets.zero,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8), // Adjust for corner sharpness
+                      borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                   child: const Icon(Icons.pageview_outlined, size:32),
