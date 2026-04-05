@@ -99,52 +99,52 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
         child: ConstrainedBox (
           constraints: BoxConstraints(maxWidth:400),
           child:
-        
-        
-        
-        Column(
-          mainAxisAlignment: .center,
-          children: [
-                  TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Analyzer Server (ex: localhost:8000)',
-                      border: OutlineInputBorder(),
+
+          Column(
+            mainAxisAlignment: .center,
+            children: [
+                    TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Analyzer Server (ex: localhost:8000)',
+                        border: OutlineInputBorder(),
+                      ),
+                      onChanged: (text) {
+                        setState(() { _analyzerServer = text; });
+                      },
                     ),
-                    onChanged: (text) {
-                      setState(() { _analyzerServer = text; });
-                    },
-                  ),
-            SizedBox(height: 15),
-            Row (
-              mainAxisAlignment: .center,
-              children: [
-                Expanded (
-                  child: 
-                  TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Enter a full word',
-                      border: OutlineInputBorder(),
+              SizedBox(height: 15),
+              Row (
+                mainAxisAlignment: .center,
+                children: [
+                  Expanded (
+                    child: 
+                    TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Enter a full word',
+                        border: OutlineInputBorder(),
+                      ),
+                      onChanged: (text) {
+                        setState(() { _textValue = text; });
+                      },
+                    )),
+                  SizedBox(width: 15),
+                  ElevatedButton(
+                    onPressed: _searchDictionary,
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(50, 50),
+                      padding: EdgeInsets.zero,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
                     ),
-                    onChanged: (text) {
-                      setState(() { _textValue = text; });
-                    },
-                  )),
-                SizedBox(width: 15),
-                ElevatedButton(
-                  onPressed: _searchDictionary,
-                  style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(50, 50),
-                    padding: EdgeInsets.zero,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                  child: const Icon(Icons.pageview_outlined, size:32),
-                )
-              ]
-            ),
-          ],
-        )
+                    child: const Icon(Icons.pageview_outlined, size:32),
+                  )
+                ]
+              ),
+            ],
+          )
+
+          
         )
       )
     );
