@@ -80,13 +80,12 @@ class WordAnalyserPage extends StatefulWidget {
 }
 
 class _WordAnalyserPageState extends State<WordAnalyserPage> {
-//https://ordbog.gl/callback.php
   String _textValue = '';
   String _analyzerServer = '';
 
   void _searchDictionary() {
     _dictionaryRequest(_textValue);
-    
+
   }
 
   @override
@@ -97,12 +96,16 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
         title: Text(":D"),
       ),
       body: Center(
-        child: Column(
+        child: ConstrainedBox (
+          constraints: BoxConstraints(maxWidth:400),
+          child:
+        
+        
+        
+        Column(
           mainAxisAlignment: .center,
           children: [
-            ConstrainedBox (
-                  constraints: BoxConstraints(maxWidth: 365),
-                  child: TextField(
+                  TextField(
                     decoration: InputDecoration(
                       hintText: 'Analyzer Server (ex: localhost:8000)',
                       border: OutlineInputBorder(),
@@ -110,15 +113,14 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
                     onChanged: (text) {
                       setState(() { _analyzerServer = text; });
                     },
-                  )
-            ),
+                  ),
             SizedBox(height: 15),
             Row (
               mainAxisAlignment: .center,
               children: [
-                ConstrainedBox (
-                  constraints: BoxConstraints(maxWidth: 300),
-                  child: TextField(
+                Expanded (
+                  child: 
+                  TextField(
                     decoration: InputDecoration(
                       hintText: 'Enter a full word',
                       border: OutlineInputBorder(),
@@ -126,8 +128,7 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
                     onChanged: (text) {
                       setState(() { _textValue = text; });
                     },
-                  )
-                ),
+                  )),
                 SizedBox(width: 15),
                 ElevatedButton(
                   onPressed: _searchDictionary,
@@ -143,7 +144,8 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
               ]
             ),
           ],
-        ),
+        )
+        )
       )
     );
   }
