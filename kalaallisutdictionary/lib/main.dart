@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +35,9 @@ Future<String?> _dictionaryRequest(String _searchTerm) async {
 }
 
 Future<String?> _analyzerRequest(String _URL, String _searchTerm) async {
-  final url = Uri.parse(_URL + "/analyze?word=" + _searchTerm);
+  final url = Uri.http('localhost:8000', '/analyze', {
+    'word': _searchTerm,
+  });
   print(url);
 
 
@@ -84,7 +87,20 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
   String _analyzerServer = '';
 
   void _searchDictionary() {
-    _dictionaryRequest(_textValue);
+    // _dictionaryRequest(_textValue);
+
+    // final analyzed = await _analyzerRequest(_analyzerServer, _textValue);
+    // final analyzed_obj = jsonDecode(analyzed);
+    // print(analyzed_obj);
+
+    _analyzerRequest(_analyzerServer, _textValue).then((analyzed) {
+      if (analyzed == null) {
+        return;
+      }
+      final analyzed_obj = jsonDecode(analyzed);
+      print(analyzed_obj);
+    });
+    
 
   }
 
@@ -144,7 +160,7 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
             ],
           )
 
-          
+
         )
       )
     );
