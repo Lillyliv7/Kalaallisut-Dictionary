@@ -203,6 +203,7 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
                         ],
                       ),
                       Column(
+                        mainAxisAlignment: .center,
                         children: [
                           Text(
                             "Dictionary View",
@@ -211,6 +212,7 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
                         ],
                       ),
                       Column(
+                        mainAxisAlignment: .center,
                         children: [
                           Text(
                             "Flashcards",
@@ -219,6 +221,7 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
                         ],
                       ),
                       Column(
+                        mainAxisAlignment: .center,
                         children: [
                           Text(
                             "Settings",
