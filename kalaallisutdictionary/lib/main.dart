@@ -207,6 +207,15 @@ class ParsedWordWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return FutureBuilder(future: _dictionaryRequest(word.root.text), builder: (context,snapshot) {
+      String definition = "Loading Definition...";
+      if (snapshot.hasError) {
+        definition = "Failed to load definition from ordbog.gl";
+      } else if (snapshot.hasData) {
+        definition = snapshot.data ?? "No definition found";
+      }
+    
+
     return Wrap(
       spacing: 6.0,    // horizontal space between blocks
       runSpacing: 8.0, // vertical space when wrapping to a new line
@@ -214,7 +223,7 @@ class ParsedWordWidget extends StatelessWidget {
         // 1. Root Block
         _MorphBlock(
           text: word.root.text,
-          tooltipText: 'Root (${word.root.type})\n${word.root.markers.join(" + ")}',
+          tooltipText: 'Root (${word.root.type})\n${definition}',
           backgroundColor: Colors.blue.shade100,
           borderColor: Colors.blue.shade400,
         ),
@@ -222,7 +231,7 @@ class ParsedWordWidget extends StatelessWidget {
         // 2. Affix Blocks
         ...word.affixes.map((affix) => _MorphBlock(
           text: affix.text,
-          tooltipText: 'Affix (${affix.joinEffect})\n${affix.markers.join(" + ")}',
+          tooltipText: '${affix.joinEffect}',
           backgroundColor: Colors.green.shade100,
           borderColor: Colors.green.shade400,
         )),
@@ -235,7 +244,7 @@ class ParsedWordWidget extends StatelessWidget {
           borderColor: Colors.orange.shade400,
         ),
       ],
-    );
+    );});
   }
 }
 
@@ -299,7 +308,8 @@ Future<String?> _dictionaryRequest(String searchTerm) async {
     'opts[ww]': '0', // match whole word
     'opts[pm]': '1', // match from start of word only
     'opts[xd]': '0', // match diacritics exactly
-    'opts[d]': '401', // dictionary of the west greenland eskimo language, 1927
+    // 'opts[d]': '401', // dictionary of the west greenland eskimo language, 1927
+    'opts[d]': '402' // Greenlandic-English Dictionary, 2019
   };
 
   try {
