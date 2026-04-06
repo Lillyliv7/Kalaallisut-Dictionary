@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Kalaallisut Dictionary',
       theme: ThemeData(
 
         colorScheme: .fromSeed(seedColor: Colors.green),
@@ -85,23 +85,19 @@ class WordAnalyserPage extends StatefulWidget {
 class _WordAnalyserPageState extends State<WordAnalyserPage> {
   String _textValue = '';
   String _analyzerServer = '';
+  List<String> _cleanedAnalyses = [];
 
   void _searchDictionary() {
-    // _dictionaryRequest(_textValue);
-
-    // final analyzed = await _analyzerRequest(_analyzerServer, _textValue);
-    // final analyzed_obj = jsonDecode(analyzed);
-    // print(analyzed_obj);
-
     _analyzerRequest(_analyzerServer, _textValue).then((analyzed) {
       if (analyzed == null) {
+        setState(() { _cleanedAnalyses = []; });
         return;
       }
       final analyzed_obj = jsonDecode(analyzed);
-      print(analyzed_obj);
+      final analyses = analyzed_obj['analyses'] as List<dynamic>?;
+      final cleaned = analyses?.map((a) => a['cleaned'] as String).toList() ?? [];
+      setState(() { _cleanedAnalyses = cleaned; });
     });
-    
-
   }
 
   @override
@@ -119,15 +115,15 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
           Column(
             mainAxisAlignment: .center,
             children: [
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Analyzer Server (ex: localhost:8000)',
-                        border: OutlineInputBorder(),
-                      ),
-                      onChanged: (text) {
-                        setState(() { _analyzerServer = text; });
-                      },
-                    ),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Analyzer Server (ex: localhost:8000)',
+                  border: OutlineInputBorder(),
+                ),
+                onChanged: (text) {
+                  setState(() { _analyzerServer = text; });
+                },
+              ),
               SizedBox(height: 15),
               Row (
                 mainAxisAlignment: .center,
@@ -157,6 +153,11 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
                   )
                 ]
               ),
+              SizedBox(height: 20),
+              ..._cleanedAnalyses.map((line) => Padding(
+                padding: const EdgeInsets.symmetric(vertical: 2.0),
+                child: Text(line, style: TextStyle(fontSize: 16)),
+              )),
             ],
           )
 
