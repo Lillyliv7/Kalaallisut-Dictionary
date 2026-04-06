@@ -209,13 +209,11 @@ class ParsedWordWidget extends StatefulWidget {
 }
 
 class _ParsedWordWidgetState extends State<ParsedWordWidget> {
-  // We store the future in a variable so it persists across rebuilds
   late Future<String?> _definitionFuture;
 
   @override
   void initState() {
     super.initState();
-    // Initialize the request ONCE when the widget is born
     _definitionFuture = _dictionaryRequest(widget.word.root.text);
   }
 
@@ -394,6 +392,9 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
   List<ParsedWord> _cleanedAnalyses = [];
 
   void _searchDictionary() {
+    setState(() {
+        _cleanedAnalyses = [];
+      });
     _analyzerRequest(_analyzerServer, _textValue).then((analyzed) {
       if (analyzed == null) {
         setState(() {
@@ -406,7 +407,6 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
       
       // Store the actual ParsedWord objects instead of turning them into strings
       final cleaned = analyses?.map((a) => parseAnalyzerOutput(a['cleaned'] as String)).toList() ?? [];
-      
       setState(() {
         _cleanedAnalyses = cleaned.cast<ParsedWord>();
       });
