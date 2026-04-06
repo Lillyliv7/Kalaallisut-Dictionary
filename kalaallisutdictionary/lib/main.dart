@@ -102,13 +102,23 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(":D"),
-      ),
+    return DefaultTabController(length:3,child: Scaffold(
       body: Center(
-        child: Column(
+        child: SafeArea(
+          child: Column (
+            children: [
+              TabBar(
+                labelColor: Colors.black, // Required if no AppBar theme is present
+                tabs: [
+                  Tab(text: "Word Lookup"),
+                  Tab(text: "Dictionary View"),
+                  Tab(text: "Flashcards"),
+                ],
+              ),
+              Expanded(
+                child: TabBarView (
+                  children: [
+                    Column(
             mainAxisAlignment: .center,
         children: [ConstrainedBox (
           constraints: BoxConstraints(maxWidth:400),
@@ -171,7 +181,14 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
           ),
         ),]
         )
+                  ,Column(),Column()]
+                )
+              )
+            ]
+          )
+        
       )
-    );
+    )
+    ));
   }
 }
