@@ -6,17 +6,17 @@ void main() {
   runApp(const MyApp());
 }
 
-Future<String?> _dictionaryRequest(String _searchTerm) async {
+Future<String?> _dictionaryRequest(String searchTerm) async {
   var url = Uri.parse('https://ordbog.gl/callback.php');
   var body = {
     'a': 'search',
-    'q': _searchTerm,
-    'opts[df]': '0',   // search in definitions as well
-    'opts[cs]': '0',   // case sensitive
-    'opts[ww]': '0',   // match whole word
-    'opts[pm]': '1',   // match from start of word only
-    'opts[xd]': '0',   // match diacritics exactly
-    'opts[d]':  '401', // dictionary of the west greenland eskimo language, 1927
+    'q': searchTerm,
+    'opts[df]': '0', // search in definitions as well
+    'opts[cs]': '0', // case sensitive
+    'opts[ww]': '0', // match whole word
+    'opts[pm]': '1', // match from start of word only
+    'opts[xd]': '0', // match diacritics exactly
+    'opts[d]': '401', // dictionary of the west greenland eskimo language, 1927
   };
 
   try {
@@ -34,12 +34,9 @@ Future<String?> _dictionaryRequest(String _searchTerm) async {
   return null;
 }
 
-Future<String?> _analyzerRequest(String _URL, String _searchTerm) async {
-  final url = Uri.http('localhost:8000', '/analyze', {
-    'word': _searchTerm,
-  });
+Future<String?> _analyzerRequest(String URL, String searchTerm) async {
+  final url = Uri.http('localhost:8000', '/analyze', {'word': searchTerm});
   print(url);
-
 
   try {
     final response = await http.get(url);
@@ -54,10 +51,7 @@ Future<String?> _analyzerRequest(String _URL, String _searchTerm) async {
     print('An error occurred: $e');
   }
   return null;
-
-
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -66,10 +60,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Kalaallisut Dictionary',
-      theme: ThemeData(
-
-        colorScheme: .fromSeed(seedColor: Colors.green),
-      ),
+      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.green)),
       home: const WordAnalyserPage(),
     );
   }
@@ -90,105 +81,159 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
   void _searchDictionary() {
     _analyzerRequest(_analyzerServer, _textValue).then((analyzed) {
       if (analyzed == null) {
-        setState(() { _cleanedAnalyses = []; });
+        setState(() {
+          _cleanedAnalyses = [];
+        });
         return;
       }
-      final analyzed_obj = jsonDecode(analyzed);
-      final analyses = analyzed_obj['analyses'] as List<dynamic>?;
-      final cleaned = analyses?.map((a) => a['cleaned'] as String).toList() ?? [];
-      setState(() { _cleanedAnalyses = cleaned; });
+      final analyzedObj = jsonDecode(analyzed);
+      final analyses = analyzedObj['analyses'] as List<dynamic>?;
+      final cleaned =
+          analyses?.map((a) => a['cleaned'] as String).toList() ?? [];
+      setState(() {
+        _cleanedAnalyses = cleaned;
+      });
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(length:3,child: Scaffold(
-      body: Center(
-        child: SafeArea(
-          child: Column (
-            children: [
-              TabBar(
-                labelColor: Colors.black, // Required if no AppBar theme is present
-                tabs: [
-                  Tab(text: "Word Lookup"),
-                  Tab(text: "Dictionary View"),
-                  Tab(text: "Flashcards"),
-                ],
-              ),
-              Expanded(
-                child: TabBarView (
-                  children: [
-                    Column(
-            mainAxisAlignment: .center,
-        children: [ConstrainedBox (
-          constraints: BoxConstraints(maxWidth:400),
-          child:
-
-          Column(
-            mainAxisAlignment: .center,
-            children: [
-              TextField(
-                decoration: InputDecoration(
-                  hintText: 'Analyzer Server (ex: localhost:8000)',
-                  border: OutlineInputBorder(),
+    return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        body: Center(
+          child: SafeArea(
+            child: Column(
+              children: [
+                TabBar(
+                  labelColor:
+                      Colors.black, // Required if no AppBar theme is present
+                  tabs: [
+                    Tab(icon: Icon(Icons.pageview_outlined)), // word lookup
+                    Tab(icon: Icon(Icons.library_books)), // dictionary view
+                    Tab(icon: Icon(Icons.reorder)), // flashcards
+                    Tab(icon: Icon(Icons.settings)), // settings
+                  ],
                 ),
-                onChanged: (text) {
-                  setState(() { _analyzerServer = text; });
-                },
-              ),
-              SizedBox(height: 15),
-              Row (
-                mainAxisAlignment: .center,
-                children: [
-                  Expanded (
-                    child: 
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Enter a full word',
-                        border: OutlineInputBorder(),
+                Expanded(
+                  child: TabBarView(
+                    children: [
+                      Column(
+                        mainAxisAlignment: .center,
+                        children: [
+                          Text(
+                            "Word Lookup",
+                            style: TextStyle(fontSize: 30)
+                          ),
+                          ConstrainedBox(
+                            constraints: BoxConstraints(maxWidth: 400),
+                            child: Column(
+                              mainAxisAlignment: .center,
+                              children: [
+                                TextField(
+                                  decoration: InputDecoration(
+                                    hintText:
+                                        'Analyzer Server (ex: localhost:8000)',
+                                    border: OutlineInputBorder(),
+                                  ),
+                                  onChanged: (text) {
+                                    setState(() {
+                                      _analyzerServer = text;
+                                    });
+                                  },
+                                ),
+                                SizedBox(height: 15),
+                                Row(
+                                  mainAxisAlignment: .center,
+                                  children: [
+                                    Expanded(
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                          hintText: 'Enter a full word',
+                                          border: OutlineInputBorder(),
+                                        ),
+                                        onChanged: (text) {
+                                          setState(() {
+                                            _textValue = text;
+                                          });
+                                        },
+                                      ),
+                                    ),
+                                    SizedBox(width: 15),
+                                    ElevatedButton(
+                                      onPressed: _searchDictionary,
+                                      style: ElevatedButton.styleFrom(
+                                        fixedSize: const Size(50, 50),
+                                        padding: EdgeInsets.zero,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(
+                                            8,
+                                          ),
+                                        ),
+                                      ),
+                                      child: const Icon(
+                                        Icons.pageview_outlined,
+                                        size: 32,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: _cleanedAnalyses
+                                  .map(
+                                    (line) => Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        vertical: 2.0,
+                                      ),
+                                      child: Text(
+                                        line,
+                                        style: TextStyle(fontSize: 16),
+                                      ),
+                                    ),
+                                  )
+                                  .toList(),
+                            ),
+                          ),
+                        ],
                       ),
-                      onChanged: (text) {
-                        setState(() { _textValue = text; });
-                      },
-                    )),
-                  SizedBox(width: 15),
-                  ElevatedButton(
-                    onPressed: _searchDictionary,
-                    style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(50, 50),
-                      padding: EdgeInsets.zero,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
+                      Column(
+                        children: [
+                          Text(
+                            "Dictionary View",
+                            style: TextStyle(fontSize: 30)
+                          ),
+                        ],
                       ),
-                    ),
-                    child: const Icon(Icons.pageview_outlined, size:32),
-                  )
-                ]
-              ),
-            ],
-          )
-
-
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 10.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: _cleanedAnalyses.map((line) => Padding(
-              padding: const EdgeInsets.symmetric(vertical: 2.0),
-              child: Text(line, style: TextStyle(fontSize: 16)),
-            )).toList(),
+                      Column(
+                        children: [
+                          Text(
+                            "Flashcards",
+                            style: TextStyle(fontSize: 30)
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            "Settings",
+                            style: TextStyle(fontSize: 30)
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),]
-        )
-                  ,Column(),Column()]
-                )
-              )
-            ]
-          )
-        
-      )
-    )
-    ));
+        ),
+      ),
+    );
   }
 }
