@@ -108,7 +108,9 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
         title: Text(":D"),
       ),
       body: Center(
-        child: ConstrainedBox (
+        child: Column(
+            mainAxisAlignment: .center,
+        children: [ConstrainedBox (
           constraints: BoxConstraints(maxWidth:400),
           child:
 
@@ -153,15 +155,21 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
                   )
                 ]
               ),
-              SizedBox(height: 20),
-              ..._cleanedAnalyses.map((line) => Padding(
-                padding: const EdgeInsets.symmetric(vertical: 2.0),
-                child: Text(line, style: TextStyle(fontSize: 16)),
-              )),
             ],
           )
 
 
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 10.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: _cleanedAnalyses.map((line) => Padding(
+              padding: const EdgeInsets.symmetric(vertical: 2.0),
+              child: Text(line, style: TextStyle(fontSize: 16)),
+            )).toList(),
+          ),
+        ),]
         )
       )
     );
