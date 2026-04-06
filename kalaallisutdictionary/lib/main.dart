@@ -200,7 +200,87 @@ ParsedWord parseAnalyzerOutput(String input) {
   );
 }
 
+class ParsedWordWidget extends StatelessWidget {
+  final ParsedWord word;
 
+  const ParsedWordWidget({Key? key, required this.word}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 6.0,    // horizontal space between blocks
+      runSpacing: 8.0, // vertical space when wrapping to a new line
+      children: [
+        // 1. Root Block
+        _MorphBlock(
+          text: word.root.text,
+          tooltipText: 'Root (${word.root.type})\n${word.root.markers.join(" + ")}',
+          backgroundColor: Colors.blue.shade100,
+          borderColor: Colors.blue.shade400,
+        ),
+        
+        // 2. Affix Blocks
+        ...word.affixes.map((affix) => _MorphBlock(
+          text: affix.text,
+          tooltipText: 'Affix (${affix.joinEffect})\n${affix.markers.join(" + ")}',
+          backgroundColor: Colors.green.shade100,
+          borderColor: Colors.green.shade400,
+        )),
+
+        // 3. Ending Block
+        _MorphBlock(
+          text: '-${word.ending.tags.first}', // just showing the first tag on the block itself
+          tooltipText: 'Ending\n${word.ending.tags.join(" + ")}',
+          backgroundColor: Colors.orange.shade100,
+          borderColor: Colors.orange.shade400,
+        ),
+      ],
+    );
+  }
+}
+
+class _MorphBlock extends StatelessWidget {
+  final String text;
+  final String tooltipText;
+  final Color backgroundColor;
+  final Color borderColor;
+
+  const _MorphBlock({
+    required this.text,
+    required this.tooltipText,
+    required this.backgroundColor,
+    required this.borderColor,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Tooltip(
+      message: tooltipText,
+      padding: const EdgeInsets.all(12.0),
+      textStyle: const TextStyle(color: Colors.white, fontSize: 14, height: 1.4),
+      decoration: BoxDecoration(
+        color: Colors.black87,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+        decoration: BoxDecoration(
+          color: backgroundColor,
+          borderRadius: BorderRadius.circular(6.0),
+          border: Border.all(color: borderColor, width: 1.5),
+        ),
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: Colors.black87,
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 
 
@@ -275,14 +355,15 @@ class WordAnalyserPage extends StatefulWidget {
   @override
   State<WordAnalyserPage> createState() => _WordAnalyserPageState();
 }
-
 class _WordAnalyserPageState extends State<WordAnalyserPage> {
   final TextEditingController _serverController = TextEditingController();
   final TextEditingController _wordController = TextEditingController();
 
   String _textValue = '';
   String _analyzerServer = '';
-  List<String> _cleanedAnalyses = [];
+  
+  // Changed from List<String> to List<ParsedWord>
+  List<ParsedWord> _cleanedAnalyses = [];
 
   void _searchDictionary() {
     _analyzerRequest(_analyzerServer, _textValue).then((analyzed) {
@@ -294,10 +375,12 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
       }
       final analyzedObj = jsonDecode(analyzed);
       final analyses = analyzedObj['analyses'] as List<dynamic>?;
-      final cleaned =
-          analyses?.map((a) => parseAnalyzerOutput(a['cleaned']).toString() as String).toList() ?? [];
+      
+      // Store the actual ParsedWord objects instead of turning them into strings
+      final cleaned = analyses?.map((a) => parseAnalyzerOutput(a['cleaned'] as String)).toList() ?? [];
+      
       setState(() {
-        _cleanedAnalyses = cleaned;
+        _cleanedAnalyses = cleaned.cast<ParsedWord>();
       });
     });
   }
@@ -318,36 +401,31 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
           child: SafeArea(
             child: Column(
               children: [
-                TabBar(
-                  labelColor:
-                      Colors.black, // Required if no AppBar theme is present
+                const TabBar(
+                  labelColor: Colors.black,
                   tabs: [
                     Tab(icon: Icon(Icons.pageview_outlined)), // word lookup
-                    Tab(icon: Icon(Icons.library_books)), // dictionary view
-                    Tab(icon: Icon(Icons.reorder)), // flashcards
-                    Tab(icon: Icon(Icons.settings)), // settings
+                    Tab(icon: Icon(Icons.library_books)),     // dictionary view
+                    Tab(icon: Icon(Icons.reorder)),           // flashcards
+                    Tab(icon: Icon(Icons.settings)),          // settings
                   ],
                 ),
                 Expanded(
                   child: TabBarView(
                     children: [
                       Column(
-                        mainAxisAlignment: .center,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            "Word Lookup",
-                            style: TextStyle(fontSize: 30)
-                          ),
+                          const Text("Word Lookup", style: TextStyle(fontSize: 30)),
                           ConstrainedBox(
-                            constraints: BoxConstraints(maxWidth: 400),
+                            constraints: const BoxConstraints(maxWidth: 400),
                             child: Column(
-                              mainAxisAlignment: .center,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 TextField(
                                   controller: _serverController,
-                                  decoration: InputDecoration(
-                                    hintText:
-                                        'Analyzer Server (ex: localhost:8000)',
+                                  decoration: const InputDecoration(
+                                    hintText: 'Analyzer Server (ex: localhost:8000)',
                                     border: OutlineInputBorder(),
                                   ),
                                   onChanged: (text) {
@@ -356,14 +434,14 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
                                     });
                                   },
                                 ),
-                                SizedBox(height: 15),
+                                const SizedBox(height: 15),
                                 Row(
-                                  mainAxisAlignment: .center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Expanded(
                                       child: TextField(
                                         controller: _wordController,
-                                        decoration: InputDecoration(
+                                        decoration: const InputDecoration(
                                           hintText: 'Enter a full word',
                                           border: OutlineInputBorder(),
                                         ),
@@ -374,16 +452,14 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
                                         },
                                       ),
                                     ),
-                                    SizedBox(width: 15),
+                                    const SizedBox(width: 15),
                                     ElevatedButton(
                                       onPressed: _searchDictionary,
                                       style: ElevatedButton.styleFrom(
                                         fixedSize: const Size(50, 50),
                                         padding: EdgeInsets.zero,
                                         shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(
-                                            8,
-                                          ),
+                                          borderRadius: BorderRadius.circular(8),
                                         ),
                                       ),
                                       child: const Icon(
@@ -397,52 +473,31 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 10.0),
+                            padding: const EdgeInsets.only(top: 20.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: _cleanedAnalyses
-                                  .map(
-                                    (line) => Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                        vertical: 2.0,
-                                      ),
-                                      child: Text(
-                                        line,
-                                        style: TextStyle(fontSize: 16),
-                                      ),
-                                    ),
-                                  )
-                                  .toList(),
+                              // Render the custom widget for each analysis
+                              children: _cleanedAnalyses.map(
+                                (parsedWord) => Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                                  child: ParsedWordWidget(word: parsedWord),
+                                ),
+                              ).toList(),
                             ),
                           ),
                         ],
                       ),
-                      Column(
-                        mainAxisAlignment: .center,
-                        children: [
-                          Text(
-                            "Dictionary View",
-                            style: TextStyle(fontSize: 30)
-                          ),
-                        ],
+                      const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [Text("Dictionary View", style: TextStyle(fontSize: 30))],
                       ),
-                      Column(
-                        mainAxisAlignment: .center,
-                        children: [
-                          Text(
-                            "Flashcards",
-                            style: TextStyle(fontSize: 30)
-                          ),
-                        ],
+                      const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [Text("Flashcards", style: TextStyle(fontSize: 30))],
                       ),
-                      Column(
-                        mainAxisAlignment: .center,
-                        children: [
-                          Text(
-                            "Settings",
-                            style: TextStyle(fontSize: 30)
-                          ),
-                        ],
+                      const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [Text("Settings", style: TextStyle(fontSize: 30))],
                       ),
                     ],
                   ),
