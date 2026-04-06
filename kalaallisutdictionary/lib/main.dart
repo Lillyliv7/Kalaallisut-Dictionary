@@ -199,52 +199,70 @@ ParsedWord parseAnalyzerOutput(String input) {
     ending: Ending(endingTags),
   );
 }
-
-class ParsedWordWidget extends StatelessWidget {
+class ParsedWordWidget extends StatefulWidget {
   final ParsedWord word;
 
   const ParsedWordWidget({Key? key, required this.word}) : super(key: key);
 
   @override
+  State<ParsedWordWidget> createState() => _ParsedWordWidgetState();
+}
+
+class _ParsedWordWidgetState extends State<ParsedWordWidget> {
+  // We store the future in a variable so it persists across rebuilds
+  late Future<String?> _definitionFuture;
+
+  @override
+  void initState() {
+    super.initState();
+    // Initialize the request ONCE when the widget is born
+    _definitionFuture = _dictionaryRequest(widget.word.root.text);
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return FutureBuilder(future: _dictionaryRequest(word.root.text), builder: (context,snapshot) {
-      String definition = "Loading Definition...";
-      if (snapshot.hasError) {
-        definition = "Failed to load definition from ordbog.gl";
-      } else if (snapshot.hasData) {
-        definition = snapshot.data ?? "No definition found";
-      }
-    
+    return FutureBuilder<String?>(
+      future: _definitionFuture,
+      builder: (context, snapshot) {
+        String definition = "Loading Definition...";
+        if (snapshot.hasError) {
+          definition = "Failed to load definition";
+        } else if (snapshot.connectionState == ConnectionState.done) {
+          definition = snapshot.data ?? "No definition found";
+        }
 
-    return Wrap(
-      spacing: 6.0,    // horizontal space between blocks
-      runSpacing: 8.0, // vertical space when wrapping to a new line
-      children: [
-        // 1. Root Block
-        _MorphBlock(
-          text: word.root.text,
-          tooltipText: 'Root (${word.root.type})\n${definition}',
-          backgroundColor: Colors.blue.shade100,
-          borderColor: Colors.blue.shade400,
-        ),
-        
-        // 2. Affix Blocks
-        ...word.affixes.map((affix) => _MorphBlock(
-          text: affix.text,
-          tooltipText: '${affix.joinEffect}',
-          backgroundColor: Colors.green.shade100,
-          borderColor: Colors.green.shade400,
-        )),
+        return Wrap(
+          spacing: 6.0,
+          runSpacing: 8.0,
+          children: [
+            // 1. Root Block
+            _MorphBlock(
+              text: widget.word.root.text,
+              // Now uses the loaded definition
+              tooltipText: 'Root (${widget.word.root.type})\n$definition',
+              backgroundColor: Colors.blue.shade100,
+              borderColor: Colors.blue.shade400,
+            ),
+            
+            // 2. Affix Blocks
+            ...widget.word.affixes.map((affix) => _MorphBlock(
+              text: affix.text,
+              tooltipText: affix.joinEffect,
+              backgroundColor: Colors.green.shade100,
+              borderColor: Colors.green.shade400,
+            )),
 
-        // 3. Ending Block
-        _MorphBlock(
-          text: '-${word.ending.tags.first}', // just showing the first tag on the block itself
-          tooltipText: 'Ending\n${word.ending.tags.join(" + ")}',
-          backgroundColor: Colors.orange.shade100,
-          borderColor: Colors.orange.shade400,
-        ),
-      ],
-    );});
+            // 3. Ending Block
+            _MorphBlock(
+              text: '-${widget.word.ending.tags.first}',
+              tooltipText: 'Ending\n${widget.word.ending.tags.join(" + ")}',
+              backgroundColor: Colors.orange.shade100,
+              borderColor: Colors.orange.shade400,
+            ),
+          ],
+        );
+      },
+    );
   }
 }
 
