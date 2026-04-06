@@ -3,21 +3,6 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 void main() {
-  final examples = [
-    'sinip+Gram/IV+TAR+Der/vv+Gram/IV+VIK+Der/vn+N+Abs+Sg',
-    'illu+QAR+Der/nv+Gram/IV+Gram/IV+VIK+Der/vn+N+Trm+Sg',
-    'ilior+Gram/IV+Gram/IV+USIQ+Der/vn+QAR+Der/nv+GramIV+Gram/IV+VIK+Der/vn+GE+Der/nv+Gram/TV+NIAR+Der/vv+Gram/TV+V+Cont+3SgO',
-    'oqalup+UTE+Der/vv+Gram/TV+Gram/TV+V+Ind+1Sg+3SgO'
-  ];
-
-  for (var i = 0; i < examples.length; i++) {
-    print('--- Example ${i + 1} ---');
-    print('Raw: ${examples[i]}\n');
-    final parsed = parseAnalyzerOutput(examples[i]);
-    print(parsed);
-
-  }
-
   runApp(const MyApp());
 }
 
@@ -333,7 +318,15 @@ Future<String?> _dictionaryRequest(String searchTerm) async {
     if (response.statusCode == 200) {
       print('Request successful!');
       print('Response body: ${response.body}');
-      return response.body;
+      final regex = RegExp(r'<div\s+lang=\\"en\\"\s+class=\\"lang-eng\\"> : ([\s\S]*?)<\/div>');
+      final matches = regex.allMatches(response.body);
+      String res = '';
+      for (final m in matches) {
+        // print(m.group(1)); // Prints "Dart", "is", "fun"
+        res = res + m.group(1)! + '; ';
+      }
+      // return response.body;
+      return res;
     } else {
       print('Request failed with status: ${response.statusCode}.');
     }
