@@ -22,7 +22,12 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
     super.initState();
     print(widget.word.root.type);
     // _definitionFuture = localDictionarySearchAll(widget.word.root.text);
-    _definitionFuture = dictionarySearchType(widget.word.root.type, widget.word.root.text.substring(0,widget.word.root.text.length-1));
+    // _definitionFuture = dictionarySearchType(widget.word.root.type, widget.word.root.text.substring(0,widget.word.root.text.length-1));
+    if (kalEngTypeToEng(widget.word.root.type) == 'verb') {
+      _definitionFuture = dictionarySearchType(widget.word.root.type, widget.word.root.text.substring(0,widget.word.root.text.length-1));
+    } else {
+      _definitionFuture = dictionarySearchType(widget.word.root.type, widget.word.root.text);
+    }
   }
 
   @override

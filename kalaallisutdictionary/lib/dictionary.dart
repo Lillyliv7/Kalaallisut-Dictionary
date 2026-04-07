@@ -16,25 +16,40 @@ String kalEngTypeToEng(String kalEngType) {
   return 'other';
 }
 
-// term: "noun", "verb", "other"
+
 Future<List<String>> dictionarySearchType(String type, String term) async {
-  List<String> outputs = [];
+  List<String> engOutputs = [];
+  List<int> lengths = [];
+  List<String> done = [];
+  int minLength = 9999;
 
   final String jsonString = await rootBundle.loadString('assets/kal-eng.json');
 
   var decoded = jsonDecode(jsonString);
 
-  for (int i = 1; i < decoded['entries'].length; i++) {
+  for (int i = 0; i < decoded['entries'].length; i++) {
     if (decoded['entries'][i]['kal'].startsWith(term)) {
       if (kalEngTypeToEng(decoded['entries'][i]['type']) == type.toLowerCase()) {
-        outputs.add(decoded['entries'][i]['eng']);
+        engOutputs.add(decoded['entries'][i]['eng']);
+        lengths.add(decoded['entries'][i]['kal'].length);
+        if (lengths[lengths.length-1] < minLength) {
+          minLength = lengths[lengths.length-1];
+        }
       }
     }
   }
 
+  for (int i = 0; i < engOutputs.length; i++) {
+    if (lengths[i] == minLength) {
+      done.add(engOutputs[i]);
+    }
+  }
 
-  return outputs;
+  return done;
 }
+
+
+
 
 Future<String?> localDictionarySearchAll(String searchTerm) async {
   final String jsonString = await rootBundle.loadString('assets/kal-eng.json');
