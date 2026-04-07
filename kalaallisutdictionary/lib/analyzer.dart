@@ -1,4 +1,7 @@
 import 'package:http/http.dart' as http;
+import 'dart:convert';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 
 class ParsedWord {
   final Root root;
@@ -189,4 +192,25 @@ Future<String?> analyzerRequest(String URL, String searchTerm) async {
     print('An error occurred: $e');
   }
   return null;
+}
+
+Future<String> analyzerToMofo(String input, String type) async {
+  final String jsonString = await rootBundle.loadString('assets/analyzer-mofo.json');
+
+  var decoded = jsonDecode(jsonString);
+
+  print(input);
+  print(type);
+
+  for (int i = 0; i < decoded['entries'].length; i++) {
+    print(i);
+    if (decoded['entries'][i]['t'] == type) {
+      if (decoded['entries'][i]['a'] == input) {
+        print("found!!");
+        return decoded['entries'][i]['m'];
+      }
+    }
+  }
+
+  return input;
 }

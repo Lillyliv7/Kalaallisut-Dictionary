@@ -16,6 +16,7 @@ class ParsedWordWidget extends StatefulWidget {
 class _ParsedWordWidgetState extends State<ParsedWordWidget> {
   // late Future<String?> _definitionFuture;
   late Future<List<String>> _definitionFuture;
+  late List<Future<String>> _affixFutures;
 
   @override
   void initState() {
@@ -28,6 +29,11 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
     } else {
       _definitionFuture = dictionarySearchType(widget.word.root.type, widget.word.root.text);
     }
+
+    _affixFutures = widget.word.affixes.map((affix) {
+      print(affix.joinEffect);
+      return analyzerToMofo(affix.text, affix.joinEffect); 
+    }).toList();
   }
 
   @override
@@ -59,12 +65,46 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
             ),
             
             // 2. Affix Blocks
-            ...widget.word.affixes.map((affix) => _MorphBlock(
-              text: affix.text,
-              tooltipText: affix.joinEffect,
-              backgroundColor: Colors.green.shade100,
-              borderColor: Colors.green.shade400,
-            )),
+            // ...widget.word.affixes.map((affix) => _MorphBlock(
+            //   text: affix.text,
+            //   tooltipText: affix.joinEffect,
+            //   backgroundColor: Colors.green.shade100,
+            //   borderColor: Colors.green.shade400,
+            // )),
+
+            ...List.generate(widget.word.affixes.length, (index) {
+              final affix = widget.word.affixes[index];
+              final affixFuture = _affixFutures[index];
+
+              return FutureBuilder<String>(
+                future: affixFuture,
+                builder: (context, affixSnapshot) {
+                  String mofoResult = "Loading...";
+                  if (affixSnapshot.hasError) {
+                    mofoResult = "Error";
+                    print(affixSnapshot.error);
+                  } else if (affixSnapshot.connectionState == ConnectionState.done) {
+                    mofoResult = affixSnapshot.data ?? "No data";
+                  }
+
+                  return _MorphBlock(
+                    // Decide where you want the analyzer output to show! 
+                    // If you want it to replace the text entirely, change `affix.text` to `mofoResult`.
+                    text: mofoResult, 
+                    tooltipText: affix.joinEffect,
+                    backgroundColor: Colors.green.shade100,
+                    borderColor: Colors.green.shade400,
+                  );
+                },
+              );
+            }),
+            
+            // _MorphBlock(
+            //   text: affix.text,
+            //   tooltipText: affix.joinEffect,
+            //   backgroundColor: Colors.green.shade100,
+            //   borderColor: Colors.green.shade400,
+            // )),
 
             // 3. Ending Block
             _MorphBlock(
