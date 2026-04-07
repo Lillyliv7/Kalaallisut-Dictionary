@@ -19,7 +19,7 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
   @override
   void initState() {
     super.initState();
-    _definitionFuture = dictionaryRequest(widget.word.root.text);
+    _definitionFuture = localDictionarySearch(widget.word.root.text);
   }
 
   @override
@@ -32,6 +32,9 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
           definition = "Failed to load definition";
         } else if (snapshot.connectionState == ConnectionState.done) {
           definition = snapshot.data ?? "No definition found";
+          if (snapshot.data! == '') {
+            definition = "No definition found";
+          }
         }
 
         return Wrap(
