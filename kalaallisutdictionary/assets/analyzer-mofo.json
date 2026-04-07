@@ -6,6 +6,91 @@
             "m": "V{-qatə}N"
         },
         {
+            "a": "QAR",
+            "t": "Noun -> Verb",
+            "m": "N{-qaq}V"
+        },
+        {
+            "a": "SSA",
+            "t": "Verb -> Verb",
+            "m": "V{ssa}V"
+        },
+        {
+            "a": "SSA",
+            "t": "Verb -> Verb",
+            "m": "V{ssa}V"
+        },
+        {
+            "a": "VIK",
+            "t": "Verb -> Noun",
+            "m": "V{(v)vik}N"
+        },
+        {
+            "a": "SINNAA",
+            "t": "Verb -> Verb",
+            "m": "V{sinnau}V"
+        },
+        {
+            "a": "NNGIT",
+            "t": "Verb -> Verb",
+            "m": "V{ŋŋit}V"
+        },
+        {
+            "a": "ARAQ",
+            "t": "Noun -> Noun",
+            "m": "N{-araq}N"
+        },
+        {
+            "a": "TAR",
+            "t": "Verb -> Verb",
+            "m": "V{ðaq}V"
+        },
+        {
+            "a": "U",
+            "t": "Noun -> Verb",
+            "m": "N{-u}V"
+        },
+        {
+            "a": "LLUAR",
+            "t": "Verb -> Verb",
+            "m": "V{(l)luaq}V"
+        },
+        {
+            "a": "QQU",
+            "t": "Verb -> Verb",
+            "m": "V{tqu}V"
+        },
+        {
+            "a": "TIP",
+            "t": "Verb -> Verb",
+            "m": "V{tət}V"
+        },
+        {
+            "a": "TUQ",
+            "t": "Verb -> Noun",
+            "m": "V{ðuq}N"
+        },
+        {
+            "a": "GE",
+            "t": "Noun -> Verb",
+            "m": "N{-gə}V"
+        },
+        {
+            "a": "SIAQ",
+            "t": "Noun -> Noun",
+            "m": "N{siaq}N"
+        },
+        {
+            "a": "SSAQ",
+            "t": "Noun -> Noun",
+            "m": "N{kcaq}N"
+        },
+        {
+            "a": "SUAQ",
+            "t": "Noun -> Noun",
+            "m": "N{(q)cuaq}N"
+        },
+        {
             "a": "GIIP",
             "t": "Noun -> Verb",
             "m": "N{-giik}V"

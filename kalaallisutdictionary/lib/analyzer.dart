@@ -166,6 +166,7 @@ ParsedWord parseAnalyzerOutput(String input) {
   else if (endingTags.isNotEmpty) {
     if (endingTags.first == 'N') rootType = 'Noun';
     if (endingTags.first == 'V') rootType = 'Verb';
+    else {rootType = 'Verb';}
   }
 
   return ParsedWord(
@@ -199,14 +200,9 @@ Future<String> analyzerToMofo(String input, String type) async {
 
   var decoded = jsonDecode(jsonString);
 
-  print(input);
-  print(type);
-
   for (int i = 0; i < decoded['entries'].length; i++) {
-    print(i);
     if (decoded['entries'][i]['t'] == type) {
       if (decoded['entries'][i]['a'] == input) {
-        print("found!!");
         return decoded['entries'][i]['m'];
       }
     }

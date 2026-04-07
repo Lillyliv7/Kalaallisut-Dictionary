@@ -108,7 +108,7 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
 
             // 3. Ending Block
             _MorphBlock(
-              text: '-${widget.word.ending.tags.first}',
+              text: '-${widget.word.ending.tags.isEmpty ? '∅' : widget.word.ending.tags.first}',
               tooltipText: 'Ending\n${widget.word.ending.tags.join(" + ")}',
               backgroundColor: Colors.orange.shade100,
               borderColor: Colors.orange.shade400,
