@@ -91,6 +91,21 @@
             "m": "N{(q)cuaq}N"
         },
         {
+            "a": "NNGUR",
+            "t": "Noun -> Verb",
+            "m": "N{ŋŋuq}V"
+        },
+        {
+            "a": "SINNAANNGUR",
+            "t": "Verb -> Verb",
+            "m": "V{sinnaaŋŋuq}V"
+        },
+        {
+            "a": "SIMA",
+            "t": "Verb -> Verb",
+            "m": "V{sima}V"
+        },
+        {
             "a": "GIIP",
             "t": "Noun -> Verb",
             "m": "N{-giik}V"

@@ -14,42 +14,15 @@ class ParsedWordWidget extends StatefulWidget {
 }
 
 class _ParsedWordWidgetState extends State<ParsedWordWidget> {
-  // late Future<String?> _definitionFuture;
-  late Future<List<String>> _definitionFuture;
-  late List<Future<String>> _affixFutures;
 
   @override
   void initState() {
     super.initState();
     print(widget.word.root.type);
-    // _definitionFuture = localDictionarySearchAll(widget.word.root.text);
-    // _definitionFuture = dictionarySearchType(widget.word.root.type, widget.word.root.text.substring(0,widget.word.root.text.length-1));
-    if (kalEngTypeToEng(widget.word.root.type) == 'verb') {
-      _definitionFuture = dictionarySearchType(widget.word.root.type, widget.word.root.text.substring(0,widget.word.root.text.length-1));
-    } else {
-      _definitionFuture = dictionarySearchType(widget.word.root.type, widget.word.root.text);
-    }
-
-    _affixFutures = widget.word.affixes.map((affix) {
-      print(affix.joinEffect);
-      return analyzerToMofo(affix.text, affix.joinEffect); 
-    }).toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<List<String>>(
-      future: _definitionFuture,
-      builder: (context, snapshot) {
-        String definition = "Loading Definition...";
-        if (snapshot.hasError) {
-          definition = "Failed to load definition";
-        } else if (snapshot.connectionState == ConnectionState.done) {
-          definition = snapshot.data.toString();
-          if (snapshot.data! == '') {
-            definition = "No definition found";
-          }
-        }
 
         return Wrap(
           spacing: 6.0,
@@ -59,52 +32,18 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
             _MorphBlock(
               text: widget.word.root.text,
               // Now uses the loaded definition
-              tooltipText: 'Root (${widget.word.root.type})\n$definition',
+              tooltipText: 'Root (${widget.word.root.type})\n${dictionarySearchType(widget.word.root.type, kalEngTypeToEng(widget.word.root.type) == 'verb' ? widget.word.root.text.substring(0,widget.word.root.text.length-1) : widget.word.root.text)}',
               backgroundColor: Colors.blue.shade100,
               borderColor: Colors.blue.shade400,
             ),
             
             // 2. Affix Blocks
-            // ...widget.word.affixes.map((affix) => _MorphBlock(
-            //   text: affix.text,
-            //   tooltipText: affix.joinEffect,
-            //   backgroundColor: Colors.green.shade100,
-            //   borderColor: Colors.green.shade400,
-            // )),
-
-            ...List.generate(widget.word.affixes.length, (index) {
-              final affix = widget.word.affixes[index];
-              final affixFuture = _affixFutures[index];
-
-              return FutureBuilder<String>(
-                future: affixFuture,
-                builder: (context, affixSnapshot) {
-                  String mofoResult = "Loading...";
-                  if (affixSnapshot.hasError) {
-                    mofoResult = "Error";
-                    print(affixSnapshot.error);
-                  } else if (affixSnapshot.connectionState == ConnectionState.done) {
-                    mofoResult = affixSnapshot.data ?? "No data";
-                  }
-
-                  return _MorphBlock(
-                    // Decide where you want the analyzer output to show! 
-                    // If you want it to replace the text entirely, change `affix.text` to `mofoResult`.
-                    text: mofoResult, 
-                    tooltipText: affix.joinEffect,
-                    backgroundColor: Colors.green.shade100,
-                    borderColor: Colors.green.shade400,
-                  );
-                },
-              );
-            }),
-            
-            // _MorphBlock(
-            //   text: affix.text,
-            //   tooltipText: affix.joinEffect,
-            //   backgroundColor: Colors.green.shade100,
-            //   borderColor: Colors.green.shade400,
-            // )),
+            ...widget.word.affixes.map((affix) => _MorphBlock(
+              text: analyzerToMofo(affix.text, affix.joinEffect),
+              tooltipText: affix.joinEffect,
+              backgroundColor: Colors.green.shade100,
+              borderColor: Colors.green.shade400,
+            )),
 
             // 3. Ending Block
             _MorphBlock(
@@ -115,8 +54,6 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
             ),
           ],
         );
-      },
-    );
   }
 }
 

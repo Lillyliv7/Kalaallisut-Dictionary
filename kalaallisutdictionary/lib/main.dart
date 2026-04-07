@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 import 'analyzer.dart';
 import 'blockWidget.dart';
 import 'dictionary.dart';
+import 'databases.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +19,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    loadDatabases();
     return MaterialApp(
       title: 'Kalaallisut Dictionary',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.green)),
@@ -54,6 +57,7 @@ class _WordAnalyserPageState extends State<WordAnalyserPage> {
       }
       final analyzedObj = jsonDecode(analyzed);
       final analyses = analyzedObj['analyses'] as List<dynamic>?;
+      // analyses['cleaned'] = analyses['cleaned'].toSet().toList();
       
       // Store the actual ParsedWord objects instead of turning them into strings
       final cleaned = analyses?.map((a) => parseAnalyzerOutput(a['cleaned'] as String)).toList() ?? [];

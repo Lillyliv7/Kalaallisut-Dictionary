@@ -2,6 +2,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import 'databases.dart';
 
 class ParsedWord {
   final Root root;
@@ -195,15 +196,12 @@ Future<String?> analyzerRequest(String URL, String searchTerm) async {
   return null;
 }
 
-Future<String> analyzerToMofo(String input, String type) async {
-  final String jsonString = await rootBundle.loadString('assets/analyzer-mofo.json');
+String analyzerToMofo(String input, String type) {
 
-  var decoded = jsonDecode(jsonString);
-
-  for (int i = 0; i < decoded['entries'].length; i++) {
-    if (decoded['entries'][i]['t'] == type) {
-      if (decoded['entries'][i]['a'] == input) {
-        return decoded['entries'][i]['m'];
+  for (int i = 0; i < analyzerMofoObj['entries'].length; i++) {
+    if (analyzerMofoObj['entries'][i]['t'] == type) {
+      if (analyzerMofoObj['entries'][i]['a'] == input) {
+        return analyzerMofoObj['entries'][i]['m'];
       }
     }
   }
