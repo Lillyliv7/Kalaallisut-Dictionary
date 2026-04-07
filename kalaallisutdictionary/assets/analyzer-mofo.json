@@ -106,6 +106,16 @@
             "m": "V{sima}V"
         },
         {
+            "a": "GUMA",
+            "t": "Verb -> Verb",
+            "m": "V{yuma}V"
+        },
+        {
+            "a": "NIAR",
+            "t": "Verb -> Verb",
+            "m": "V{niaq}V"
+        },
+        {
             "a": "GIIP",
             "t": "Noun -> Verb",
             "m": "N{-giik}V"
