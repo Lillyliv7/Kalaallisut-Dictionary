@@ -30,7 +30,7 @@ class ParsedWord {
 
 class Root {
   final String text;
-  final String type; // Noun, Verb, etc.
+  final String type; // Noun, Verb, Conj
   final List<String> markers;
 
   Root(this.text, this.type, this.markers);

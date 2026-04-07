@@ -3,7 +3,40 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-Future<String?> localDictionarySearch(String searchTerm) async {
+String kalEngTypeToEng(String kalEngType) {
+  if (kalEngType == "taggit") {
+    return 'noun';
+  }
+  if (kalEngType == 'oqaluut susaatsoq') { // intransitive
+    return 'verb';
+  }
+  if (kalEngType == 'oqaluut susalik') { // transitive
+    return 'verb';
+  }
+  return 'other';
+}
+
+// term: "noun", "verb", "other"
+Future<List<String>> dictionarySearchType(String type, String term) async {
+  List<String> outputs = [];
+
+  final String jsonString = await rootBundle.loadString('assets/kal-eng.json');
+
+  var decoded = jsonDecode(jsonString);
+
+  for (int i = 1; i < decoded['entries'].length; i++) {
+    if (decoded['entries'][i]['kal'].startsWith(term)) {
+      if (kalEngTypeToEng(decoded['entries'][i]['type']) == type.toLowerCase()) {
+        outputs.add(decoded['entries'][i]['eng']);
+      }
+    }
+  }
+
+
+  return outputs;
+}
+
+Future<String?> localDictionarySearchAll(String searchTerm) async {
   final String jsonString = await rootBundle.loadString('assets/kal-eng.json');
 
   var decoded = jsonDecode(jsonString);

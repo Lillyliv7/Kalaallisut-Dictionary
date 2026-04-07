@@ -14,24 +14,27 @@ class ParsedWordWidget extends StatefulWidget {
 }
 
 class _ParsedWordWidgetState extends State<ParsedWordWidget> {
-  late Future<String?> _definitionFuture;
+  // late Future<String?> _definitionFuture;
+  late Future<List<String>> _definitionFuture;
 
   @override
   void initState() {
     super.initState();
-    _definitionFuture = localDictionarySearch(widget.word.root.text);
+    print(widget.word.root.type);
+    // _definitionFuture = localDictionarySearchAll(widget.word.root.text);
+    _definitionFuture = dictionarySearchType(widget.word.root.type, widget.word.root.text.substring(0,widget.word.root.text.length-1));
   }
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<String?>(
+    return FutureBuilder<List<String>>(
       future: _definitionFuture,
       builder: (context, snapshot) {
         String definition = "Loading Definition...";
         if (snapshot.hasError) {
           definition = "Failed to load definition";
         } else if (snapshot.connectionState == ConnectionState.done) {
-          definition = snapshot.data ?? "No definition found";
+          definition = snapshot.data.toString();
           if (snapshot.data! == '') {
             definition = "No definition found";
           }
