@@ -116,6 +116,26 @@
             "m": "V{niaq}V"
         },
         {
+            "a": "LIUR",
+            "t": "Noun -> Verb",
+            "m": "N{-liuq}V"
+        },
+        {
+            "a": "QE",
+            "t": "Verb -> Verb",
+            "m": "V{-qə}V"
+        },
+        {
+            "a": "NIQ",
+            "t": "Verb -> Noun",
+            "m": "V{nəq}N"
+        },
+        {
+            "a": "NIQAR",
+            "t": "Verb -> Verb",
+            "m": "V{nəqaq}V"
+        },
+        {
             "a": "GIIP",
             "t": "Noun -> Verb",
             "m": "N{-giik}V"
