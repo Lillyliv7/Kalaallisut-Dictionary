@@ -136,6 +136,21 @@
             "m": "V{nəqaq}V"
         },
         {
+            "a": "GALUAR",
+            "t": "Verb -> Verb",
+            "m": "V{galuaq}V"
+        },
+        {
+            "a": "QQIP",
+            "t": "Verb -> Verb",
+            "m": "V{nqik}V"
+        },
+        {
+            "a": "NIRU",
+            "t": "Verb -> Verb",
+            "m": "V{nəru}V"
+        },
+        {
             "a": "GIIP",
             "t": "Noun -> Verb",
             "m": "N{-giik}V"
