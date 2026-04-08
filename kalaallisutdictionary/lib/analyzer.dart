@@ -1,7 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import 'package:kalaallisutdictionary/blockWidget.dart';
 import 'databases.dart';
 
 class ParsedWord {
@@ -207,4 +209,129 @@ String analyzerToMofo(String input, String type) {
   }
 
   return input;
+}
+
+class analyzerPage extends StatefulWidget {
+  const analyzerPage({super.key});
+
+  @override
+  State<analyzerPage> createState() => _analyzerPageState();
+}
+
+class _analyzerPageState extends State<analyzerPage> {
+  final TextEditingController _serverController = TextEditingController();
+  final TextEditingController _wordController = TextEditingController();
+
+  String _textValue = '';
+  String _analyzerServer = '';
+  
+  // Changed from List<String> to List<ParsedWord>
+  List<ParsedWord> _cleanedAnalyses = [];
+
+  void _searchDictionary() {
+    setState(() {
+        _cleanedAnalyses = [];
+      });
+    analyzerRequest(_analyzerServer, _textValue).then((analyzed) {
+      if (analyzed == null) {
+        setState(() {
+          _cleanedAnalyses = [];
+        });
+        return;
+      }
+      final analyzedObj = jsonDecode(analyzed);
+      final analyses = analyzedObj['analyses'] as List<dynamic>?;
+      // analyses['cleaned'] = analyses['cleaned'].toSet().toList();
+      
+      // Store the actual ParsedWord objects instead of turning them into strings
+      final cleaned = analyses?.map((a) => parseAnalyzerOutput(a['cleaned'] as String)).toList() ?? [];
+      setState(() {
+        _cleanedAnalyses = cleaned.cast<ParsedWord>();
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _serverController.dispose();
+    _wordController.dispose();
+    super.dispose();
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text("Word Lookup", style: TextStyle(fontSize: 30)),
+                          ConstrainedBox(
+                            constraints: const BoxConstraints(maxWidth: 400),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                TextField(
+                                  controller: _serverController,
+                                  decoration: const InputDecoration(
+                                    hintText: 'Analyzer Server (ex: localhost:8000)',
+                                    border: OutlineInputBorder(),
+                                  ),
+                                  onChanged: (text) {
+                                    setState(() {
+                                      _analyzerServer = text;
+                                    });
+                                  },
+                                ),
+                                const SizedBox(height: 15),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Expanded(
+                                      child: TextField(
+                                        controller: _wordController,
+                                        decoration: const InputDecoration(
+                                          hintText: 'Enter a full word',
+                                          border: OutlineInputBorder(),
+                                        ),
+                                        onChanged: (text) {
+                                          setState(() {
+                                            _textValue = text;
+                                          });
+                                        },
+                                      ),
+                                    ),
+                                    const SizedBox(width: 15),
+                                    ElevatedButton(
+                                      onPressed: _searchDictionary,
+                                      style: ElevatedButton.styleFrom(
+                                        fixedSize: const Size(50, 50),
+                                        padding: EdgeInsets.zero,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(8),
+                                        ),
+                                      ),
+                                      child: const Icon(
+                                        Icons.pageview_outlined,
+                                        size: 32,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              // Render the custom widget for each analysis
+                              children: _cleanedAnalyses.map(
+                                (parsedWord) => Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                                  child: ParsedWordWidget(word: parsedWord),
+                                ),
+                              ).toList(),
+                            ),
+                          ),
+                        ],
+                      );
+  }
 }
