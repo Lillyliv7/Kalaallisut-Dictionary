@@ -7,13 +7,13 @@ import 'databases.dart';
 
 
 String kalEngTypeToEng(String kalEngType) {
-  if (kalEngType == "taggit") {
+  if (kalEngType.toLowerCase() == "taggit") {
     return 'noun';
   }
-  if (kalEngType == 'oqaluut susaatsoq') { // intransitive
+  if (kalEngType.toLowerCase() == 'oqaluut susaatsoq') { // intransitive
     return 'verb';
   }
-  if (kalEngType == 'oqaluut susalik') { // transitive
+  if (kalEngType.toLowerCase() == 'oqaluut susalik') { // transitive
     return 'verb';
   }
   return 'other';

@@ -211,20 +211,6 @@ ParsedWord parseAnalyzerOutput(String input) {
     }
   }
 
-  // for (var i = 0; i < endingTags.length; i++) {
-  //   if(endingTags[i] == endingTags[i].toUpperCase()
-  //   && (endingTags[i] != 'N' && endingTags[i] != 'V')) {
-  //     endingTags.removeAt(i);
-  //   }
-  // }
-
-  // for (String tag in endingTags) {
-  //   if(tag == tag.toUpperCase()
-  //   && (tag != 'N' && tag != 'V')) {
-  //     endingTags.remove(tag);
-  //   }
-  // }
-
   return ParsedWord(
     root: Root(rootText, rootType, rootMarkers),
     affixes: affixes,
