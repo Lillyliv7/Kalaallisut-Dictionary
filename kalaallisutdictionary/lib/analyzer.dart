@@ -10,8 +10,9 @@ class ParsedWord {
   final Root root;
   final List<Affix> affixes;
   final Ending ending;
+  final List<Clitic> clitics;
 
-  ParsedWord({required this.root, required this.affixes, required this.ending});
+  ParsedWord({required this.root, required this.affixes, required this.ending, required this.clitics});
 
   @override
   String toString() {
@@ -78,6 +79,17 @@ class Ending {
   String toString() => tags.join(' + ');
 }
 
+class Clitic {
+  final String text;
+
+  Clitic(this.text);
+
+  @override
+  String toString() {
+    return text;
+  }
+}
+
 /// Main parser function
 ParsedWord parseAnalyzerOutput(String input) {
   final tokens = input.split('+');
@@ -87,6 +99,7 @@ ParsedWord parseAnalyzerOutput(String input) {
   final List<String> rootMarkers = [];
   final List<Affix> affixes = [];
   final List<String> endingTags = [];
+  final List<Clitic> clitics = [];
 
   String? currentAffixText;
   List<String> currentAffixMarkers = [];
@@ -182,11 +195,41 @@ ParsedWord parseAnalyzerOutput(String input) {
       rootType = 'Unknown';
     }
   }
+  for (var i = 0; i < endingTags.length; i++) {
+    if(endingTags[i] == endingTags[i].toUpperCase()
+    && (endingTags[i] != 'N' && endingTags[i] != 'V')) {
+      // Special case for mitaava
+      if (i < endingTags.length-1 && endingTags[i] == "MI" && endingTags[i+1] == "TAAVA") {
+        clitics.add(Clitic("MITAAVA"));
+        endingTags.removeAt(i);
+        endingTags.removeAt(i);
+        i++;
+      } else {
+        clitics.add(Clitic(endingTags[i]));
+        endingTags.removeAt(i);
+      }
+    }
+  }
+
+  // for (var i = 0; i < endingTags.length; i++) {
+  //   if(endingTags[i] == endingTags[i].toUpperCase()
+  //   && (endingTags[i] != 'N' && endingTags[i] != 'V')) {
+  //     endingTags.removeAt(i);
+  //   }
+  // }
+
+  // for (String tag in endingTags) {
+  //   if(tag == tag.toUpperCase()
+  //   && (tag != 'N' && tag != 'V')) {
+  //     endingTags.remove(tag);
+  //   }
+  // }
 
   return ParsedWord(
     root: Root(rootText, rootType, rootMarkers),
     affixes: affixes,
     ending: Ending(endingTags),
+    clitics: clitics
   );
 }
 

@@ -52,6 +52,14 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
               backgroundColor: Colors.orange.shade100,
               borderColor: Colors.orange.shade400,
             ),
+
+            // clitics!!!
+            ...widget.word.clitics.map((clitic) => _MorphBlock(
+              text: analyzerToMofo(clitic.text, 'Particle'),
+              tooltipText: 'Particle',
+              backgroundColor: Colors.purple.shade100,
+              borderColor: Colors.purple.shade400,
+            )),
           ],
         );
   }

@@ -151,6 +151,41 @@
             "m": "V{nəru}V"
         },
         {
+            "a": "GUSUP",
+            "t": "Verb -> Verb",
+            "m": "V{(q)gusuk}N"
+        },
+        {
+            "a": "USIQ",
+            "t": "Verb -> Noun",
+            "m": "V{-usiq}N"
+        },
+        {
+            "a": "TAQ",
+            "t": "Verb -> Noun",
+            "m": "V{-ðaq}N"
+        },
+        {
+            "a": "LIRI",
+            "t": "Noun -> Verb",
+            "m": "N{-lirə}V"
+        },
+        {
+            "a": "MI",
+            "t": "Particle",
+            "m": "*{mi}"
+        },
+        {
+            "a": "MITAAVA",
+            "t": "Particle",
+            "m": "*{mitauva}"
+        },
+        {
+            "a": "GUUQ",
+            "t": "Particle",
+            "m": "*{guuq}"
+        },
+        {
             "a": "GIIP",
             "t": "Noun -> Verb",
             "m": "N{-giik}V"
