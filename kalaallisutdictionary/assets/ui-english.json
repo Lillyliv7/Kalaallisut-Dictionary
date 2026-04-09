@@ -1,0 +1,16 @@
+{
+    "analyzer.enter-word": "Enter a full word",
+    "analyzer.title": "Word Lookup",
+    "grammar.noun": "Noun",
+    "grammar.verb": "Verb",
+    "grammar.unknown": "Unknown",
+    "grammar.root": "Root",
+    "grammar.ending": "Ending",
+    "grammar.clitic": "Enclitic",
+    "Noun -> Verb": "Noun -> Verb",
+    "Noun -> Noun": "Noun -> Noun",
+    "Verb -> Noun": "Verb -> Noun",
+    "Verb -> Verb": "Verb -> Verb",
+    "settings.language": "Language",
+    "settings.title": "Settings"
+}

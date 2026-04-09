@@ -280,12 +280,25 @@ class _analyzerPageState extends State<analyzerPage> {
       }
       final analyzedObj = jsonDecode(analyzed);
       final analyses = analyzedObj['analyses'] as List<dynamic>?;
-      // analyses['cleaned'] = analyses['cleaned'].toSet().toList();
 
-      // Store the actual ParsedWord objects instead of turning them into strings
+      List<String> analysesNoRepeats = [];
+
+      for (int i = 0; i < analyses!.length; i++) {
+        bool found = false;
+        for (int j = 0; j < analysesNoRepeats.length; j++) {
+          if (analysesNoRepeats[j] == analyses[i]['cleaned']) {
+            found = true;
+          }
+        }
+        if (!found) {
+          analysesNoRepeats.add(analyses[i]['cleaned']);
+          print(analyses[i]['cleaned']);
+        }
+      }
+
       final cleaned =
-          analyses
-              ?.map((a) => parseAnalyzerOutput(a['cleaned'] as String))
+          analysesNoRepeats
+              ?.map((a) => parseAnalyzerOutput(a as String))
               .toList() ??
           [];
       setState(() {
@@ -306,7 +319,7 @@ class _analyzerPageState extends State<analyzerPage> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text("Word Lookup", style: TextStyle(fontSize: 30)),
+        Text(uiStrings['analyzer.title'], style: TextStyle(fontSize: 30)),
         ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 400),
           child: Column(
@@ -331,8 +344,8 @@ class _analyzerPageState extends State<analyzerPage> {
                   Expanded(
                     child: TextField(
                       controller: _wordController,
-                      decoration: const InputDecoration(
-                        hintText: 'Enter a full word',
+                      decoration: InputDecoration(
+                        hintText: uiStrings['analyzer.enter-word'],
                         border: OutlineInputBorder(),
                       ),
                       onChanged: (text) {

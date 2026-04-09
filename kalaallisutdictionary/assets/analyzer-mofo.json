@@ -16,11 +16,6 @@
             "m": "V{ssa}V"
         },
         {
-            "a": "SSA",
-            "t": "Verb -> Verb",
-            "m": "V{ssa}V"
-        },
-        {
             "a": "VIK",
             "t": "Verb -> Noun",
             "m": "V{(v)vik}N"
@@ -39,6 +34,11 @@
             "a": "ARAQ",
             "t": "Noun -> Noun",
             "m": "N{-araq}N"
+        },
+        {
+            "a": "IT",
+            "t": "Noun -> Verb",
+            "m": "N{-it}V"
         },
         {
             "a": "TAR",
@@ -172,17 +172,17 @@
         },
         {
             "a": "MI",
-            "t": "Particle",
+            "t": "Clitic",
             "m": "*{mi}"
         },
         {
             "a": "MITAAVA",
-            "t": "Particle",
+            "t": "Clitic",
             "m": "*{mitauva}"
         },
         {
             "a": "GUUQ",
-            "t": "Particle",
+            "t": "Clitic",
             "m": "*{guuq}"
         },
         {

@@ -16,6 +16,9 @@ String kalEngTypeToEng(String kalEngType) {
   if (kalEngType.toLowerCase() == 'oqaluut susalik') { // transitive
     return 'verb';
   }
+  if (kalEngType.toLowerCase() == "oqaluut susaasalik") { // HTR
+    return 'verb';
+  }
   return 'other';
 }
 

@@ -1,0 +1,16 @@
+{
+    "analyzer.enter-word": "Introduzca una palabra completa",
+    "analyzer.title": "Búsqueda de Palabras",
+    "grammar.noun": "Sustantivo",
+    "grammar.verb": "Verbo",
+    "grammar.unknown": "Desconocido",
+    "grammar.root": "Raíz",
+    "grammar.ending": "Final",
+    "grammar.clitic": "Enclítico",
+    "Noun -> Verb": "Sustantivo -> Verbo",
+    "Noun -> Noun": "Sustantivo -> Sustantivo",
+    "Verb -> Noun": "Verbo -> Sustantivo",
+    "Verb -> Verb": "Verbo -> Verbo",
+    "settings.language": "Idioma",
+    "settings.title": "Ajustes"
+}

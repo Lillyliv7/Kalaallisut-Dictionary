@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'analyzer.dart';
 import 'dictionary.dart';
+import 'databases.dart';
 
 
 class ParsedWordWidget extends StatefulWidget {
@@ -32,7 +33,7 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
             _MorphBlock(
               text: widget.word.root.text,
               // Now uses the loaded definition
-              tooltipText: 'Root (${widget.word.root.type})\n${dictionarySearchType(widget.word.root.type, kalEngTypeToEng(widget.word.root.type) == 'verb' ? widget.word.root.text.substring(0,widget.word.root.text.length-1) : widget.word.root.text)}',
+              tooltipText: '${uiStrings['grammar.root']} (${uiStrings['grammar.'+widget.word.root.type.toLowerCase()]})\n${dictionarySearchType(widget.word.root.type, kalEngTypeToEng(widget.word.root.type) == 'verb' ? widget.word.root.text.substring(0,widget.word.root.text.length-1) : widget.word.root.text)}',
               backgroundColor: Colors.blue.shade100,
               borderColor: Colors.blue.shade400,
             ),
@@ -40,7 +41,7 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
             // 2. Affix Blocks
             ...widget.word.affixes.map((affix) => _MorphBlock(
               text: analyzerToMofo(affix.text, affix.joinEffect),
-              tooltipText: affix.joinEffect,
+              tooltipText: uiStrings[affix.joinEffect],
               backgroundColor: Colors.green.shade100,
               borderColor: Colors.green.shade400,
             )),
@@ -48,15 +49,15 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
             // 3. Ending Block
             _MorphBlock(
               text: '-${widget.word.ending.tags.isEmpty ? '∅' : widget.word.ending.tags.first}',
-              tooltipText: 'Ending\n${widget.word.ending.tags.join(" + ")}',
+              tooltipText: '${uiStrings['grammar.ending']}\n${widget.word.ending.tags.join(" + ")}',
               backgroundColor: Colors.orange.shade100,
               borderColor: Colors.orange.shade400,
             ),
 
             // clitics!!!
             ...widget.word.clitics.map((clitic) => _MorphBlock(
-              text: analyzerToMofo(clitic.text, 'Particle'),
-              tooltipText: 'Particle',
+              text: analyzerToMofo(clitic.text, 'Clitic'),
+              tooltipText: uiStrings['grammar.clitic'],
               backgroundColor: Colors.purple.shade100,
               borderColor: Colors.purple.shade400,
             )),
