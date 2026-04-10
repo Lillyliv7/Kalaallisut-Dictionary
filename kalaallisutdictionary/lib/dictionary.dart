@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'databases.dart';
 
 
-
 String kalEngTypeToEng(String kalEngType) {
   if (kalEngType.toLowerCase() == "taggit") {
     return 'noun';

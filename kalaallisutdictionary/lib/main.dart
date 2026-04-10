@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
         }
 
         // 3. Once it's done loading, show the real app!
+
         return MaterialApp(
           title: 'Kalaallisut Dictionary',
           theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.green)),

@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 import 'databases.dart';
+import 'language.dart';
 
 const List<String> languagesList = <String>["English", "Español"];
 
@@ -40,6 +41,8 @@ class _settingsPageState extends State<settingsPage> {
         // This is called when the user selects an item.
         setState(() {
           languageDropdown = value!;
+          preferences.setString('Language', languageDropdown);
+          changeLanguage(languageDropdown);
         });
       },
       items: languagesList.map<DropdownMenuItem<String>>((String value) {

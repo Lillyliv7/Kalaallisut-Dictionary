@@ -1,12 +1,17 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import 'language.dart';
+
 
 // import 'settings.dart';
 
 var analyzerMofoObj;
 var kalEngObj;
 var uiStrings;
+var preferences;
 
 
 Future<bool> loadDatabases() async {
@@ -16,10 +21,12 @@ Future<bool> loadDatabases() async {
   final String kalEngStr = await rootBundle.loadString('assets/kal-eng.json');
   kalEngObj = jsonDecode(kalEngStr);
 
-  final String uiStringsStr = await rootBundle.loadString('assets/ui-spanish.json');
+  final String uiStringsStr = await rootBundle.loadString('assets/ui-english.json');
   uiStrings = jsonDecode(uiStringsStr);
 
-  print(uiStrings);
+  preferences = await SharedPreferences.getInstance();
+
+  changeLanguage(preferences.getString('Language'));
 
   return true;
 }
