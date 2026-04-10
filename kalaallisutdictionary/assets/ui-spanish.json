@@ -12,5 +12,6 @@
     "Verb -> Noun": "Verbo -> Sustantivo",
     "Verb -> Verb": "Verbo -> Verbo",
     "settings.language": "Idioma",
-    "settings.title": "Ajustes"
+    "settings.title": "Ajustes",
+    "settings.credits": "Desarrollado por Lillith (lillith888 en Discord)\nTraducido al español por mi\nSoftware Gratis bajo el GNU GPL Versión 3.0\nhttps://www.gnu.org/licenses/gpl-3.0.en.html\nhttps://github.com/Lillyliv7/Kalaallisut-Dictionary"
 }

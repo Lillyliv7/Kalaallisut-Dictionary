@@ -20,6 +20,9 @@ class _settingsPageState extends State<settingsPage> {
 
   @override
   Widget build(BuildContext context) {
+    if (preferences.getString('Language') != null) {
+      languageDropdown = preferences.getString('Language');
+    }
     return ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 400),
           child: Column(
@@ -50,7 +53,9 @@ class _settingsPageState extends State<settingsPage> {
       }).toList(),
     )
           ]
-        )
+        ),
+          const SizedBox(height: 50),
+          Text(uiStrings['settings.credits'], style: TextStyle(fontSize: 15)),
         ],
     ));
   }
