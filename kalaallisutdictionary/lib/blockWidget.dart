@@ -33,7 +33,7 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
             _MorphBlock(
               text: widget.word.root.text,
               // Now uses the loaded definition
-              tooltipText: '${uiStrings['grammar.root']} (${uiStrings['grammar.'+widget.word.root.type.toLowerCase()]})\n${dictionarySearchType(widget.word.root.type, kalEngTypeToEng(widget.word.root.type) == 'verb' ? widget.word.root.text.substring(0,widget.word.root.text.length-1) : widget.word.root.text)}',
+              tooltipText: '${uiStrings['grammar.root']} (${uiStrings['grammar.'+widget.word.root.type.toLowerCase()]})\n${dictionarySearchType(widget.word.root.type, kalEngTypeToEng(widget.word.root.type) == 'verb' ? widget.word.root.text.substring(0,widget.word.root.text.length-1) : widget.word.root.text).join('\n')}',
               backgroundColor: Colors.blue.shade100,
               borderColor: Colors.blue.shade400,
             ),

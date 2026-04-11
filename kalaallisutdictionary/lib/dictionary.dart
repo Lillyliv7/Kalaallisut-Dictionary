@@ -18,7 +18,7 @@ String kalEngTypeToEng(String kalEngType) {
   if (kalEngType.toLowerCase() == "oqaluut susaasalik") { // HTR
     return 'verb';
   }
-  return 'other';
+  return 'unknown';
 }
 
 
