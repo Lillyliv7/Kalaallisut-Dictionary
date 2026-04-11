@@ -41,7 +41,7 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
             // 2. Affix Blocks
             ...widget.word.affixes.map((affix) => _MorphBlock(
               text: analyzerToMofo(affix.text, affix.joinEffect),
-              tooltipText: uiStrings[affix.joinEffect],
+              tooltipText: uiStrings[affix.joinEffect] ?? '',
               backgroundColor: Colors.green.shade100,
               borderColor: Colors.green.shade400,
             )),
