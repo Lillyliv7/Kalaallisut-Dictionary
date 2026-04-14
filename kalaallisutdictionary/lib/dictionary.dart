@@ -5,6 +5,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'databases.dart';
 
+const double dictionaryElementHeight = 50;
+
 String kalEngTypeToEng(String? kalEngType) {
   if (kalEngType == null) {
     return 'unknown';
@@ -82,28 +84,78 @@ class dictionaryPage extends StatefulWidget {
 }
 
 class _dictionaryPageState extends State<dictionaryPage> {
+  final _scrollController = ScrollController();
+
+  final TextEditingController _wordController = TextEditingController();
+
+  String _textValue = '';
+
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("Dictionary View", style: TextStyle(fontSize: 30)),
-        Expanded(child: 
-          ListView.builder(
-            itemExtent: 50.0, 
+        Text(uiStrings['dictionary.title'], style: TextStyle(fontSize: 30)),
+        ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 400),
+          child: Row(
+            children: [
+              Expanded(child:
+              TextField(
+                controller: _wordController,
+                decoration: InputDecoration(
+                  hintText: uiStrings['dictionary.enter-word'],
+                  border: OutlineInputBorder(),
+                ),
+                onChanged: (text) {
+                  setState(() {
+                    _textValue = text;
+                  });
+                },
+              )),
+              ElevatedButton(
+                onPressed: () {
+                  var index = 0;
+                  for (var i = 0; i < kalEngObj['entries'].length; i++) {
+                    if (kalEngObj['entries'][i]['eng'] == _textValue || kalEngObj['entries'][i]['kal'] == _textValue) {
+                      index = i;
+                    }
+                  }
+                  _scrollController.animateTo(
+                    index * dictionaryElementHeight,
+                    duration: Duration(milliseconds: 500),
+                    curve: Curves.easeIn,
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(50, 50),
+                  padding: EdgeInsets.zero,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+                child: const Icon(Icons.pageview_outlined, size: 32),
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+          child: ListView.builder(
+            controller: _scrollController,
+            itemExtent: dictionaryElementHeight,
             itemCount: kalEngObj['entries'].length,
             itemBuilder: (context, index) {
               return Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(kalEngObj['entries'][index]['kal']),
-                  Text(kalEngObj['entries'][index]['type']),
-                  Text(kalEngObj['entries'][index]['eng']),
+                  Expanded(child: Text(kalEngObj['entries'][index]['kal'])),
+                  Expanded(child: Text(kalEngObj['entries'][index]['type'])),
+                  Expanded(child: Text(kalEngObj['entries'][index]['eng'])),
                 ],
               );
-            }
-          )
-        )
+            },
+          ),
+        ),
       ],
     );
   }
