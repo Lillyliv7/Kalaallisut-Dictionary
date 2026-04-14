@@ -7,12 +7,12 @@
         },
         {
             "kal": "aapanna",
-            "type": null,
+            "type": "unknown",
             "eng": "that one way up there"
         },
         {
             "kal": "aapanna",
-            "type": null,
+            "type": "unknown",
             "eng": "there in the east"
         },
         {
@@ -37,12 +37,12 @@
         },
         {
             "kal": "aapikku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "those up there"
         },
         {
             "kal": "aapinnga",
-            "type": null,
+            "type": "unknown",
             "eng": "that one up there"
         },
         {
@@ -392,12 +392,12 @@
         },
         {
             "kal": "aarimmi!",
-            "type": null,
+            "type": "unknown",
             "eng": "How about that! Well what do you know! Whaddaya know!"
         },
         {
             "kal": "aarit!",
-            "type": null,
+            "type": "unknown",
             "eng": "You see?"
         },
         {
@@ -527,22 +527,22 @@
         },
         {
             "kal": "aasakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "there toward the west"
         },
         {
             "kal": "aasakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "those in the west"
         },
         {
             "kal": "aasanna",
-            "type": null,
+            "type": "unknown",
             "eng": "that one down there"
         },
         {
             "kal": "aasanna",
-            "type": null,
+            "type": "unknown",
             "eng": "there toward the west"
         },
         {
@@ -602,7 +602,7 @@
         },
         {
             "kal": "aasaru",
-            "type": null,
+            "type": "unknown",
             "eng": "next summer; this coming summer"
         },
         {
@@ -617,17 +617,17 @@
         },
         {
             "kal": "aasiilli",
-            "type": null,
+            "type": "unknown",
             "eng": "I can assure you that…; it's very likely that…"
         },
         {
             "kal": "aasiillimi",
-            "type": null,
+            "type": "unknown",
             "eng": "I can assure you that…; it's very likely that…"
         },
         {
             "kal": "aasiit",
-            "type": null,
+            "type": "unknown",
             "eng": "as usual; unsurpisingly"
         },
         {
@@ -717,17 +717,17 @@
         },
         {
             "kal": "aatsaaginnaq",
-            "type": null,
+            "type": "unknown",
             "eng": "a little while ago; a moment ago"
         },
         {
             "kal": "aatsaannguummat",
-            "type": null,
+            "type": "unknown",
             "eng": "a little while ago; a moment ago"
         },
         {
             "kal": "aatsaarluinnaq",
-            "type": null,
+            "type": "unknown",
             "eng": "a little while ago; a moment ago"
         },
         {
@@ -742,7 +742,7 @@
         },
         {
             "kal": "aatsaat-tassa!",
-            "type": null,
+            "type": "unknown",
             "eng": "That's the point!; Exactly!; Perfect!"
         },
         {
@@ -932,7 +932,7 @@
         },
         {
             "kal": "affa",
-            "type": null,
+            "type": "unknown",
             "eng": "up there toward the north"
         },
         {
@@ -1317,7 +1317,7 @@
         },
         {
             "kal": "ajjaa!",
-            "type": null,
+            "type": "unknown",
             "eng": "That was close!"
         },
         {
@@ -1922,7 +1922,7 @@
         },
         {
             "kal": "ak!",
-            "type": null,
+            "type": "unknown",
             "eng": "Here you are! Here you go!"
         },
         {
@@ -2847,7 +2847,7 @@
         },
         {
             "kal": "akku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "there in the north"
         },
         {
@@ -2887,12 +2887,12 @@
         },
         {
             "kal": "akornanni",
-            "type": null,
+            "type": "unknown",
             "eng": "among them"
         },
         {
             "kal": "akornganni",
-            "type": null,
+            "type": "unknown",
             "eng": "among them"
         },
         {
@@ -3167,12 +3167,12 @@
         },
         {
             "kal": "akuni",
-            "type": null,
+            "type": "unknown",
             "eng": "a long time"
         },
         {
             "kal": "akuni!",
-            "type": null,
+            "type": "unknown",
             "eng": "Hurry!"
         },
         {
@@ -3337,7 +3337,7 @@
         },
         {
             "kal": "alaa!",
-            "type": null,
+            "type": "unknown",
             "eng": "That was close! Phew!"
         },
         {
@@ -3502,12 +3502,12 @@
         },
         {
             "kal": "alianaak!",
-            "type": null,
+            "type": "unknown",
             "eng": "How nice to see you again!"
         },
         {
             "kal": "alianaak!",
-            "type": null,
+            "type": "unknown",
             "eng": "How nice! What lovely weather!"
         },
         {
@@ -4617,7 +4617,7 @@
         },
         {
             "kal": "aluu!",
-            "type": null,
+            "type": "unknown",
             "eng": "Hi! Hello!"
         },
         {
@@ -4737,7 +4737,7 @@
         },
         {
             "kal": "amen",
-            "type": null,
+            "type": "unknown",
             "eng": "amen"
         },
         {
@@ -5177,7 +5177,7 @@
         },
         {
             "kal": "ammut",
-            "type": null,
+            "type": "unknown",
             "eng": "downward; down"
         },
         {
@@ -5452,7 +5452,7 @@
         },
         {
             "kal": "anersa",
-            "type": null,
+            "type": "unknown",
             "eng": "it might well be that…"
         },
         {
@@ -5512,7 +5512,7 @@
         },
         {
             "kal": "anersalu!",
-            "type": null,
+            "type": "unknown",
             "eng": "Thanks a lot! That's very nice of you!"
         },
         {
@@ -6507,7 +6507,7 @@
         },
         {
             "kal": "anna",
-            "type": null,
+            "type": "unknown",
             "eng": "up there in the north"
         },
         {
@@ -7972,42 +7972,42 @@
         },
         {
             "kal": "arfernat",
-            "type": null,
+            "type": "unknown",
             "eng": "the sixth"
         },
         {
             "kal": "arfersaneq-marluk",
-            "type": null,
+            "type": "unknown",
             "eng": "seventeen"
         },
         {
             "kal": "arfersaneq-pingasut",
-            "type": null,
+            "type": "unknown",
             "eng": "eighteen"
         },
         {
             "kal": "arfersaneq-sisamat",
-            "type": null,
+            "type": "unknown",
             "eng": "nineteen"
         },
         {
             "kal": "arfersanillit",
-            "type": null,
+            "type": "unknown",
             "eng": "sixteen"
         },
         {
             "kal": "arfineq",
-            "type": null,
+            "type": "unknown",
             "eng": "six"
         },
         {
             "kal": "arfineq-aappaat",
-            "type": null,
+            "type": "unknown",
             "eng": "the seventh"
         },
         {
             "kal": "arfineq-aappassaanik",
-            "type": null,
+            "type": "unknown",
             "eng": "for the seventh time"
         },
         {
@@ -8022,7 +8022,7 @@
         },
         {
             "kal": "arfineq-marluk",
-            "type": null,
+            "type": "unknown",
             "eng": "seven"
         },
         {
@@ -8032,12 +8032,12 @@
         },
         {
             "kal": "arfineq-pingajuat",
-            "type": null,
+            "type": "unknown",
             "eng": "the eighth"
         },
         {
             "kal": "arfineq-pingajussaanik",
-            "type": null,
+            "type": "unknown",
             "eng": "for the eighth time"
         },
         {
@@ -8127,7 +8127,7 @@
         },
         {
             "kal": "arfininngornikkut",
-            "type": null,
+            "type": "unknown",
             "eng": "Saturdays; every Saturday"
         },
         {
@@ -8187,7 +8187,7 @@
         },
         {
             "kal": "arlaanni",
-            "type": null,
+            "type": "unknown",
             "eng": "at some point; sometime"
         },
         {
@@ -8202,7 +8202,7 @@
         },
         {
             "kal": "arlaat",
-            "type": null,
+            "type": "unknown",
             "eng": "one of them"
         },
         {
@@ -9032,12 +9032,12 @@
         },
         {
             "kal": "ass.",
-            "type": null,
+            "type": "unknown",
             "eng": "same as; identical to ¶ illustreret/assiliisoq ⇒"
         },
         {
             "kal": "assaa!",
-            "type": null,
+            "type": "unknown",
             "eng": "Wow!; That's impressive!; That was amazing!"
         },
         {
@@ -9377,7 +9377,7 @@
         },
         {
             "kal": "assilerut",
-            "type": null,
+            "type": "unknown",
             "eng": "equative case"
         },
         {
@@ -9547,7 +9547,7 @@
         },
         {
             "kal": "assuatigut",
-            "type": null,
+            "type": "unknown",
             "eng": "upwind of…; to windward of…"
         },
         {
@@ -9557,7 +9557,7 @@
         },
         {
             "kal": "assuma",
-            "type": null,
+            "type": "unknown",
             "eng": "the person standing to the north ¶ assuma suaarpaatigut ⇒"
         },
         {
@@ -9567,12 +9567,12 @@
         },
         {
             "kal": "assumut",
-            "type": null,
+            "type": "unknown",
             "eng": "toward the wind; to windward"
         },
         {
             "kal": "assumut saaterpoq",
-            "type": null,
+            "type": "unknown",
             "eng": "turns upwind; turns into the wind"
         },
         {
@@ -9592,17 +9592,17 @@
         },
         {
             "kal": "asu!",
-            "type": null,
+            "type": "unknown",
             "eng": "That's enough! Stop! Don't!"
         },
         {
             "kal": "asuki",
-            "type": null,
+            "type": "unknown",
             "eng": "I don't know."
         },
         {
             "kal": "asukiaq",
-            "type": null,
+            "type": "unknown",
             "eng": "I don't know."
         },
         {
@@ -9612,7 +9612,7 @@
         },
         {
             "kal": "asuli",
-            "type": null,
+            "type": "unknown",
             "eng": "for fun; without any real purpose"
         },
         {
@@ -9627,32 +9627,32 @@
         },
         {
             "kal": "asuliuna",
-            "type": null,
+            "type": "unknown",
             "eng": "that's just for fun"
         },
         {
             "kal": "asuliunngitsumik",
-            "type": null,
+            "type": "unknown",
             "eng": "not just for fun; with a serious purpose in mind"
         },
         {
             "kal": "asulu",
-            "type": null,
+            "type": "unknown",
             "eng": "in addition; moreover; furthermore"
         },
         {
             "kal": "ata",
-            "type": null,
+            "type": "unknown",
             "eng": "caution statement / asking someone to be careful ¶ ata orluniaqinak! ⇒ be careful and don't fall again"
         },
         {
             "kal": "ataa",
-            "type": null,
+            "type": "unknown",
             "eng": "underneath it; beneath it"
         },
         {
             "kal": "ataani",
-            "type": null,
+            "type": "unknown",
             "eng": "at the base of it"
         },
         {
@@ -9702,7 +9702,7 @@
         },
         {
             "kal": "ataas.",
-            "type": null,
+            "type": "unknown",
             "eng": "singular; singular grammatical form"
         },
         {
@@ -9782,7 +9782,7 @@
         },
         {
             "kal": "ataasinngornikkut",
-            "type": null,
+            "type": "unknown",
             "eng": "Mondays; on Mondays"
         },
         {
@@ -9862,7 +9862,7 @@
         },
         {
             "kal": "ataatsikkut",
-            "type": null,
+            "type": "unknown",
             "eng": "at the same time; simultaneously"
         },
         {
@@ -9952,12 +9952,12 @@
         },
         {
             "kal": "atagu",
-            "type": null,
+            "type": "unknown",
             "eng": "Let me see it; let me see what happens."
         },
         {
             "kal": "atagu",
-            "type": null,
+            "type": "unknown",
             "eng": "We'll just wait and see. Let's just see what happens"
         },
         {
@@ -9977,7 +9977,7 @@
         },
         {
             "kal": "atamanna",
-            "type": null,
+            "type": "unknown",
             "eng": "well! ¶ atamanna iteriartoq ⇒ wakes up extra early"
         },
         {
@@ -10737,7 +10737,7 @@
         },
         {
             "kal": "attarmik",
-            "type": null,
+            "type": "unknown",
             "eng": "together"
         },
         {
@@ -11472,7 +11472,7 @@
         },
         {
             "kal": "avani",
-            "type": null,
+            "type": "unknown",
             "eng": "there in the north"
         },
         {
@@ -11532,7 +11532,7 @@
         },
         {
             "kal": "avannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from the north; northerly (said of wind)"
         },
         {
@@ -11792,12 +11792,12 @@
         },
         {
             "kal": "avunga",
-            "type": null,
+            "type": "unknown",
             "eng": "toward the north; northward"
         },
         {
             "kal": "avungaraallak",
-            "type": null,
+            "type": "unknown",
             "eng": "far away ¶ avungaraallak miloriuppaa ⇒ throws it a long way off"
         },
         {
@@ -11812,7 +11812,7 @@
         },
         {
             "kal": "avuuna",
-            "type": null,
+            "type": "unknown",
             "eng": "round the north ¶ avuuna ingerlavoq ⇒ walk north from here"
         },
         {
@@ -12492,7 +12492,7 @@
         },
         {
             "kal": "danskisut",
-            "type": null,
+            "type": "unknown",
             "eng": "in Danish"
         },
         {
@@ -13227,7 +13227,7 @@
         },
         {
             "kal": "eqqaani",
-            "type": null,
+            "type": "unknown",
             "eng": "in his/her/its vicinity; near him/her/it"
         },
         {
@@ -13357,12 +13357,12 @@
         },
         {
             "kal": "eqqanaq!",
-            "type": null,
+            "type": "unknown",
             "eng": "Oh no! That's awful!"
         },
         {
             "kal": "eqqanaraluttuaq!",
-            "type": null,
+            "type": "unknown",
             "eng": "How will this end! The outcome looks bleak!"
         },
         {
@@ -13857,7 +13857,7 @@
         },
         {
             "kal": "Eqqumiitsuliortunngorniartut Ilinniarfiat",
-            "type": null,
+            "type": "unknown",
             "eng": "The Royal Danish Academy of Fine Arts"
         },
         {
@@ -14077,7 +14077,7 @@
         },
         {
             "kal": "erininaq!",
-            "type": null,
+            "type": "unknown",
             "eng": "It's taking so long! When is it ever going to happen?"
         },
         {
@@ -15402,12 +15402,12 @@
         },
         {
             "kal": "ha?",
-            "type": null,
+            "type": "unknown",
             "eng": "What?; What did you say?; What was that?"
         },
         {
             "kal": "haa!",
-            "type": null,
+            "type": "unknown",
             "eng": "Look!"
         },
         {
@@ -15427,7 +15427,7 @@
         },
         {
             "kal": "hej!",
-            "type": null,
+            "type": "unknown",
             "eng": "Hi!; Hey!"
         },
         {
@@ -15492,7 +15492,7 @@
         },
         {
             "kal": "hii!",
-            "type": null,
+            "type": "unknown",
             "eng": "oh my!"
         },
         {
@@ -15552,7 +15552,7 @@
         },
         {
             "kal": "horaa!",
-            "type": null,
+            "type": "unknown",
             "eng": "Hurrah!"
         },
         {
@@ -15727,7 +15727,7 @@
         },
         {
             "kal": "igaajuk?",
-            "type": null,
+            "type": "unknown",
             "eng": "how do you feel about that? ¶ qanoq igaajuk? ⇒ how do you feel about that?"
         },
         {
@@ -15952,7 +15952,7 @@
         },
         {
             "kal": "iggu!",
-            "type": null,
+            "type": "unknown",
             "eng": "So cute! What a cutie you are!"
         },
         {
@@ -16087,7 +16087,7 @@
         },
         {
             "kal": "iikasilliaasiit",
-            "type": null,
+            "type": "unknown",
             "eng": "as usual! ¶ iikasilliaasiit siallerpoq ⇒ it's raining as usual"
         },
         {
@@ -16337,12 +16337,12 @@
         },
         {
             "kal": "ikani",
-            "type": null,
+            "type": "unknown",
             "eng": "over here; over there"
         },
         {
             "kal": "ikannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from here"
         },
         {
@@ -16902,7 +16902,7 @@
         },
         {
             "kal": "ikkii!",
-            "type": null,
+            "type": "unknown",
             "eng": "exclamation expressing the feeling being immersed in cold water"
         },
         {
@@ -16932,7 +16932,7 @@
         },
         {
             "kal": "ikku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "them over there"
         },
         {
@@ -17127,7 +17127,7 @@
         },
         {
             "kal": "ikunga",
-            "type": null,
+            "type": "unknown",
             "eng": "there; to there"
         },
         {
@@ -17187,12 +17187,12 @@
         },
         {
             "kal": "ikuuna",
-            "type": null,
+            "type": "unknown",
             "eng": "through there ¶ ikuuna ingerlavoq ⇒ goes that way"
         },
         {
             "kal": "ikuuna!",
-            "type": null,
+            "type": "unknown",
             "eng": "that way!"
         },
         {
@@ -17232,17 +17232,17 @@
         },
         {
             "kal": "ila-ila",
-            "type": null,
+            "type": "unknown",
             "eng": "indeed; you bet; absolutely"
         },
         {
             "kal": "ila-tupinnaq!",
-            "type": null,
+            "type": "unknown",
             "eng": "Have you ever seen such a thing?; Would you look at that!"
         },
         {
             "kal": "ilaa?",
-            "type": null,
+            "type": "unknown",
             "eng": "right?"
         },
         {
@@ -17262,7 +17262,7 @@
         },
         {
             "kal": "ilaana",
-            "type": null,
+            "type": "unknown",
             "eng": "Absolutely right!; Indeed!"
         },
         {
@@ -17627,7 +17627,7 @@
         },
         {
             "kal": "ilarpa!",
-            "type": null,
+            "type": "unknown",
             "eng": "You bet!; For sure!"
         },
         {
@@ -17952,7 +17952,7 @@
         },
         {
             "kal": "ili-ili!",
-            "type": null,
+            "type": "unknown",
             "eng": "order to a dog team to turn right"
         },
         {
@@ -18472,7 +18472,7 @@
         },
         {
             "kal": "ilisinermi malitsit",
-            "type": null,
+            "type": "unknown",
             "eng": "funeral procession"
         },
         {
@@ -18517,12 +18517,12 @@
         },
         {
             "kal": "ilissi",
-            "type": null,
+            "type": "unknown",
             "eng": "you (pl); your (pl);"
         },
         {
             "kal": "ilissilu",
-            "type": null,
+            "type": "unknown",
             "eng": "thanks yourself; thank you too"
         },
         {
@@ -18592,7 +18592,7 @@
         },
         {
             "kal": "ilittut",
-            "type": null,
+            "type": "unknown",
             "eng": "like you"
         },
         {
@@ -18792,7 +18792,7 @@
         },
         {
             "kal": "illernartut",
-            "type": null,
+            "type": "unknown",
             "eng": "holy ¶ Allakkat Illernartut ⇒ the Holy Scriptures"
         },
         {
@@ -19062,7 +19062,7 @@
         },
         {
             "kal": "illuk!",
-            "type": null,
+            "type": "unknown",
             "eng": "Oh, cousin!;"
         },
         {
@@ -19197,7 +19197,7 @@
         },
         {
             "kal": "illuttut",
-            "type": null,
+            "type": "unknown",
             "eng": "on both sides"
         },
         {
@@ -19267,7 +19267,7 @@
         },
         {
             "kal": "ilorfaallak!",
-            "type": null,
+            "type": "unknown",
             "eng": "Oh, that helped a lot; Oh, that is much better"
         },
         {
@@ -19282,7 +19282,7 @@
         },
         {
             "kal": "ilorliut",
-            "type": null,
+            "type": "unknown",
             "eng": "primer ¶ qalipaat ilorliut, ilorliummik qalipappaa ⇒ base coat; apply a base coat to it; primes it (before actually painting it)"
         },
         {
@@ -19297,7 +19297,7 @@
         },
         {
             "kal": "ilorraallak!",
-            "type": null,
+            "type": "unknown",
             "eng": "Oh, that helped a lot; Oh, that is much better"
         },
         {
@@ -19347,7 +19347,7 @@
         },
         {
             "kal": "iluaallak!",
-            "type": null,
+            "type": "unknown",
             "eng": "Oh, that helped a lot; Oh, that is much better"
         },
         {
@@ -19962,7 +19962,7 @@
         },
         {
             "kal": "imaallaat",
-            "type": null,
+            "type": "unknown",
             "eng": "luckily; fortunately"
         },
         {
@@ -19977,7 +19977,7 @@
         },
         {
             "kal": "imaannaq",
-            "type": null,
+            "type": "unknown",
             "eng": "right of way ¶ imaannaq pisassaanngilaq ⇒ is not that easy to do; is not simple to handle"
         },
         {
@@ -20022,7 +20022,7 @@
         },
         {
             "kal": "imaattu",
-            "type": null,
+            "type": "unknown",
             "eng": "… how should I say ..."
         },
         {
@@ -20427,12 +20427,12 @@
         },
         {
             "kal": "imlt.",
-            "type": null,
+            "type": "unknown",
             "eng": "abbrev. or (see imaluunniit)"
         },
         {
             "kal": "immakanneq!",
-            "type": null,
+            "type": "unknown",
             "eng": "not so hard!"
         },
         {
@@ -20647,7 +20647,7 @@
         },
         {
             "kal": "immikkut",
-            "type": null,
+            "type": "unknown",
             "eng": "separate; individuated"
         },
         {
@@ -20692,7 +20692,7 @@
         },
         {
             "kal": "imminik",
-            "type": null,
+            "type": "unknown",
             "eng": "himself; herself"
         },
         {
@@ -20707,7 +20707,7 @@
         },
         {
             "kal": "imminut",
-            "type": null,
+            "type": "unknown",
             "eng": "himself/herself; to himself/herself; for himself/herself"
         },
         {
@@ -20952,7 +20952,7 @@
         },
         {
             "kal": "imunga",
-            "type": null,
+            "type": "unknown",
             "eng": "a long time"
         },
         {
@@ -20962,7 +20962,7 @@
         },
         {
             "kal": "imungaraallak",
-            "type": null,
+            "type": "unknown",
             "eng": "a rather long time; a fairly long time"
         },
         {
@@ -20987,7 +20987,7 @@
         },
         {
             "kal": "in.",
-            "type": null,
+            "type": "unknown",
             "eng": "abbrev. born (e. g. in a short biography, see inuuvoq);"
         },
         {
@@ -21742,7 +21742,7 @@
         },
         {
             "kal": "inna",
-            "type": null,
+            "type": "unknown",
             "eng": "that one over there"
         },
         {
@@ -21857,7 +21857,7 @@
         },
         {
             "kal": "innarlummut",
-            "type": null,
+            "type": "unknown",
             "eng": "in the opposite direction; toward the wrong side"
         },
         {
@@ -21957,7 +21957,7 @@
         },
         {
             "kal": "innga",
-            "type": null,
+            "type": "unknown",
             "eng": "that one over there"
         },
         {
@@ -22697,7 +22697,7 @@
         },
         {
             "kal": "inuugujoq",
-            "type": null,
+            "type": "unknown",
             "eng": "Great to see you again! Long time on see!"
         },
         {
@@ -22747,7 +22747,7 @@
         },
         {
             "kal": "inuulluarit!",
-            "type": null,
+            "type": "unknown",
             "eng": "Goodbye! Be well! See you!"
         },
         {
@@ -22797,7 +22797,7 @@
         },
         {
             "kal": "inuummersorli!",
-            "type": null,
+            "type": "unknown",
             "eng": "Long may he/she live!"
         },
         {
@@ -23222,27 +23222,27 @@
         },
         {
             "kal": "ippassaammat",
-            "type": null,
+            "type": "unknown",
             "eng": "the day before that …"
         },
         {
             "kal": "ippassaani",
-            "type": null,
+            "type": "unknown",
             "eng": "the day before yesterday"
         },
         {
             "kal": "ippassaanissaani",
-            "type": null,
+            "type": "unknown",
             "eng": "three days ago"
         },
         {
             "kal": "ippassaanitsiaannaq",
-            "type": null,
+            "type": "unknown",
             "eng": "just a few days ago"
         },
         {
             "kal": "ippassaq",
-            "type": null,
+            "type": "unknown",
             "eng": "yesterday"
         },
         {
@@ -23252,7 +23252,7 @@
         },
         {
             "kal": "ippassigami",
-            "type": null,
+            "type": "unknown",
             "eng": "some days ago"
         },
         {
@@ -23352,7 +23352,7 @@
         },
         {
             "kal": "ippoq",
-            "type": null,
+            "type": "unknown",
             "eng": "be (on/ like something) ¶ nunami ippoq; ujaqqatut ippoq ⇒ is in the country; is like stone"
         },
         {
@@ -24222,7 +24222,7 @@
         },
         {
             "kal": "issaligami",
-            "type": null,
+            "type": "unknown",
             "eng": "some time ago; a while ago"
         },
         {
@@ -24282,7 +24282,7 @@
         },
         {
             "kal": "issaq",
-            "type": null,
+            "type": "unknown",
             "eng": "the other day; a short while ago"
         },
         {
@@ -24567,7 +24567,7 @@
         },
         {
             "kal": "issuma",
-            "type": null,
+            "type": "unknown",
             "eng": "that one over there ¶ issuma qaaqquaatigut ⇒ that one over there is calling to us"
         },
         {
@@ -25457,12 +25457,12 @@
         },
         {
             "kal": "itsaligami",
-            "type": null,
+            "type": "unknown",
             "eng": "many years ago; a long time ago; in the old days"
         },
         {
             "kal": "itsaq",
-            "type": null,
+            "type": "unknown",
             "eng": "in the old days; in the olden days"
         },
         {
@@ -25652,7 +25652,7 @@
         },
         {
             "kal": "iu-iu!",
-            "type": null,
+            "type": "unknown",
             "eng": "to the left! (command to sled dogs)"
         },
         {
@@ -26692,7 +26692,7 @@
         },
         {
             "kal": "kakkaak!",
-            "type": null,
+            "type": "unknown",
             "eng": "Wow! That's great! That's a lot!"
         },
         {
@@ -26777,7 +26777,7 @@
         },
         {
             "kal": "kakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "those down there"
         },
         {
@@ -27442,7 +27442,7 @@
         },
         {
             "kal": "kanna",
-            "type": null,
+            "type": "unknown",
             "eng": "the one down there"
         },
         {
@@ -27567,7 +27567,7 @@
         },
         {
             "kal": "kanunga",
-            "type": null,
+            "type": "unknown",
             "eng": "down there (where indicated)"
         },
         {
@@ -27577,7 +27577,7 @@
         },
         {
             "kal": "kanuuna",
-            "type": null,
+            "type": "unknown",
             "eng": "down there ¶ kanuuna ingerlavoq ⇒ goes down there; goes down there for us"
         },
         {
@@ -27842,7 +27842,7 @@
         },
         {
             "kal": "kassuma",
-            "type": null,
+            "type": "unknown",
             "eng": "down there ¶ kassuma suaarpaanga ⇒ the one down there is calling to me"
         },
         {
@@ -27877,7 +27877,7 @@
         },
         {
             "kal": "kasuutta!",
-            "type": null,
+            "type": "unknown",
             "eng": "Cheers! Here's to you!"
         },
         {
@@ -28087,7 +28087,7 @@
         },
         {
             "kal": "katinngarmik",
-            "type": null,
+            "type": "unknown",
             "eng": "in association; in common"
         },
         {
@@ -28167,17 +28167,17 @@
         },
         {
             "kal": "katsorani",
-            "type": null,
+            "type": "unknown",
             "eng": "before too long; in a little while"
         },
         {
             "kal": "katsorna",
-            "type": null,
+            "type": "unknown",
             "eng": "soon"
         },
         {
             "kal": "katsornannguaq",
-            "type": null,
+            "type": "unknown",
             "eng": "in just a bit"
         },
         {
@@ -28277,12 +28277,12 @@
         },
         {
             "kal": "katuullit grækerilerisut",
-            "type": null,
+            "type": "unknown",
             "eng": "Greek Orthodox"
         },
         {
             "kal": "katuullit ruumalerisut",
-            "type": null,
+            "type": "unknown",
             "eng": "Roman Catholic"
         },
         {
@@ -28312,7 +28312,7 @@
         },
         {
             "kal": "keermiaasiit",
-            "type": null,
+            "type": "unknown",
             "eng": "as usual"
         },
         {
@@ -28337,7 +28337,7 @@
         },
         {
             "kal": "kemiimi eqqagassat",
-            "type": null,
+            "type": "unknown",
             "eng": "chemical waste"
         },
         {
@@ -28352,7 +28352,7 @@
         },
         {
             "kal": "kg",
-            "type": null,
+            "type": "unknown",
             "eng": "abbrev. kilogram"
         },
         {
@@ -28362,7 +28362,7 @@
         },
         {
             "kal": "kia(p)",
-            "type": null,
+            "type": "unknown",
             "eng": "whose ¶ kia(p) nalunaaqutaa? kia(p) tiguaa? ⇒ Whose watch is it? Who took it?"
         },
         {
@@ -28372,7 +28372,7 @@
         },
         {
             "kal": "kiaana",
-            "type": null,
+            "type": "unknown",
             "eng": "who/ whose ¶ kiaana nalunaaqutaa? Kiaana tigugamiuk? ⇒ Whose watch is it? Who took it?"
         },
         {
@@ -28387,7 +28387,7 @@
         },
         {
             "kal": "kiak!",
-            "type": null,
+            "type": "unknown",
             "eng": "Boy, it's hot!;"
         },
         {
@@ -28397,7 +28397,7 @@
         },
         {
             "kal": "kiakkiullugu",
-            "type": null,
+            "type": "unknown",
             "eng": "sweats heavily ¶ kiakkiullugu sulivoq ⇒ sweats heavily from hard work"
         },
         {
@@ -28587,12 +28587,12 @@
         },
         {
             "kal": "kigani",
-            "type": null,
+            "type": "unknown",
             "eng": "down there in the south"
         },
         {
             "kal": "kigannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from the south"
         },
         {
@@ -28692,7 +28692,7 @@
         },
         {
             "kal": "kigunga",
-            "type": null,
+            "type": "unknown",
             "eng": "down there (toward the south)"
         },
         {
@@ -28732,7 +28732,7 @@
         },
         {
             "kal": "kigutaarnat nagguii",
-            "type": null,
+            "type": "unknown",
             "eng": "bog bilberry, Vaccinium uliginosum;"
         },
         {
@@ -28787,7 +28787,7 @@
         },
         {
             "kal": "kigutinut saligut",
-            "type": null,
+            "type": "unknown",
             "eng": "toothbrush"
         },
         {
@@ -28802,7 +28802,7 @@
         },
         {
             "kal": "kiguuna",
-            "type": null,
+            "type": "unknown",
             "eng": "to the south of us ¶ Kiguuna ingerlavoq. Kiguuna ingerlavoq ⇒ Goes to the south of us. Passes us by outside"
         },
         {
@@ -28917,27 +28917,27 @@
         },
         {
             "kal": "kiisa",
-            "type": null,
+            "type": "unknown",
             "eng": "finally; at last"
         },
         {
             "kal": "kiisaana",
-            "type": null,
+            "type": "unknown",
             "eng": "finally; at last"
         },
         {
             "kal": "kiisalu",
-            "type": null,
+            "type": "unknown",
             "eng": "and finally…"
         },
         {
             "kal": "kiisami",
-            "type": null,
+            "type": "unknown",
             "eng": "finally; at long last"
         },
         {
             "kal": "kiisamiaasiit",
-            "type": null,
+            "type": "unknown",
             "eng": "as usual"
         },
         {
@@ -29037,7 +29037,7 @@
         },
         {
             "kal": "kikku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "those outside"
         },
         {
@@ -29062,12 +29062,12 @@
         },
         {
             "kal": "kikkunuku?",
-            "type": null,
+            "type": "unknown",
             "eng": "Who are those people?"
         },
         {
             "kal": "kikkut",
-            "type": null,
+            "type": "unknown",
             "eng": "who? (plural)"
         },
         {
@@ -29347,7 +29347,7 @@
         },
         {
             "kal": "killuatungaani",
-            "type": null,
+            "type": "unknown",
             "eng": "on the wrong side"
         },
         {
@@ -29502,12 +29502,12 @@
         },
         {
             "kal": "kimit",
-            "type": null,
+            "type": "unknown",
             "eng": "From whom"
         },
         {
             "kal": "kimit?",
-            "type": null,
+            "type": "unknown",
             "eng": "From whom?"
         },
         {
@@ -29612,12 +29612,12 @@
         },
         {
             "kal": "kina",
-            "type": null,
+            "type": "unknown",
             "eng": "Who? (singular)"
         },
         {
             "kal": "kinaana?",
-            "type": null,
+            "type": "unknown",
             "eng": "Who is that?"
         },
         {
@@ -29627,7 +29627,7 @@
         },
         {
             "kal": "kinaanna?",
-            "type": null,
+            "type": "unknown",
             "eng": "Who said so? Who do you hear that from?"
         },
         {
@@ -29657,12 +29657,12 @@
         },
         {
             "kal": "kinalikiaq?",
-            "type": null,
+            "type": "unknown",
             "eng": "Who, I wonder?;"
         },
         {
             "kal": "kinaluunniit",
-            "type": null,
+            "type": "unknown",
             "eng": "anyone; whoever"
         },
         {
@@ -30152,7 +30152,7 @@
         },
         {
             "kal": "kinnga",
-            "type": null,
+            "type": "unknown",
             "eng": "over there in the south"
         },
         {
@@ -30522,7 +30522,7 @@
         },
         {
             "kal": "kissaallak!",
-            "type": null,
+            "type": "unknown",
             "eng": "How nice it feels (when …)! How it warms your heart (when …)!"
         },
         {
@@ -30672,7 +30672,7 @@
         },
         {
             "kal": "kissuma",
-            "type": null,
+            "type": "unknown",
             "eng": "the one to the south ¶ Kissuma suaarpaanga. Kissuma ornippaanga ⇒ that one out there or to the south is calling to me//that one to the south is approaching me"
         },
         {
@@ -30857,7 +30857,7 @@
         },
         {
             "kal": "kiuit?",
-            "type": null,
+            "type": "unknown",
             "eng": "Who are you?"
         },
         {
@@ -31227,17 +31227,17 @@
         },
         {
             "kal": "kr.",
-            "type": null,
+            "type": "unknown",
             "eng": "kr. Danish appreviation for Kroner"
         },
         {
             "kal": "Kr. in. king.",
-            "type": null,
+            "type": "unknown",
             "eng": "A. D/AD Anno Domini"
         },
         {
             "kal": "Kr. in. si.",
-            "type": null,
+            "type": "unknown",
             "eng": "B. C/BC Before Christ"
         },
         {
@@ -31287,12 +31287,12 @@
         },
         {
             "kal": "Kristusip inunngornerata kingornagut",
-            "type": null,
+            "type": "unknown",
             "eng": "A. C"
         },
         {
             "kal": "Kristusip inunngornerata siornagut",
-            "type": null,
+            "type": "unknown",
             "eng": "B. C"
         },
         {
@@ -31857,7 +31857,7 @@
         },
         {
             "kal": "kumoorn!",
-            "type": null,
+            "type": "unknown",
             "eng": "Good morning!"
         },
         {
@@ -32072,7 +32072,7 @@
         },
         {
             "kal": "kussaap qilaatai",
-            "type": null,
+            "type": "unknown",
             "eng": "snow whitlow grass, Draba nivalis; ¶ flower ⇒"
         },
         {
@@ -32102,7 +32102,7 @@
         },
         {
             "kal": "kussanngarmi",
-            "type": null,
+            "type": "unknown",
             "eng": "with head down"
         },
         {
@@ -32797,12 +32797,12 @@
         },
         {
             "kal": "maannamiit",
-            "type": null,
+            "type": "unknown",
             "eng": "from now on"
         },
         {
             "kal": "maannangaaq",
-            "type": null,
+            "type": "unknown",
             "eng": "already; in time"
         },
         {
@@ -32817,12 +32817,12 @@
         },
         {
             "kal": "maannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from here"
         },
         {
             "kal": "maanngaanniit",
-            "type": null,
+            "type": "unknown",
             "eng": "from here"
         },
         {
@@ -33152,12 +33152,12 @@
         },
         {
             "kal": "makku",
-            "type": null,
+            "type": "unknown",
             "eng": "these"
         },
         {
             "kal": "makkua",
-            "type": null,
+            "type": "unknown",
             "eng": "these"
         },
         {
@@ -34727,7 +34727,7 @@
         },
         {
             "kal": "massuma",
-            "type": null,
+            "type": "unknown",
             "eng": "this"
         },
         {
@@ -34927,17 +34927,17 @@
         },
         {
             "kal": "matuma",
-            "type": null,
+            "type": "unknown",
             "eng": "this; of this"
         },
         {
             "kal": "matumannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from this; off of this; than this one"
         },
         {
             "kal": "matumannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from this; off of this; than this one"
         },
         {
@@ -36707,7 +36707,7 @@
         },
         {
             "kal": "na’aa!",
-            "type": null,
+            "type": "unknown",
             "eng": "Ouch!; That hurts!"
         },
         {
@@ -36747,7 +36747,7 @@
         },
         {
             "kal": "naaggagooq",
-            "type": null,
+            "type": "unknown",
             "eng": "he/she says \"no\""
         },
         {
@@ -36832,7 +36832,7 @@
         },
         {
             "kal": "naakkinassusia!",
-            "type": null,
+            "type": "unknown",
             "eng": "What a shame!"
         },
         {
@@ -37382,22 +37382,22 @@
         },
         {
             "kal": "naamerluinnaq",
-            "type": null,
+            "type": "unknown",
             "eng": "not at all; absolutely not"
         },
         {
             "kal": "naami",
-            "type": null,
+            "type": "unknown",
             "eng": "No. ; No, there aren't any."
         },
         {
             "kal": "naamik",
-            "type": null,
+            "type": "unknown",
             "eng": "No.; No, there aren't any."
         },
         {
             "kal": "naamivik",
-            "type": null,
+            "type": "unknown",
             "eng": "No, indeed. ;"
         },
         {
@@ -37617,7 +37617,7 @@
         },
         {
             "kal": "naapinnerit tamaasa",
-            "type": null,
+            "type": "unknown",
             "eng": "every time we/they meet…"
         },
         {
@@ -40102,7 +40102,7 @@
         },
         {
             "kal": "nannaa!",
-            "type": null,
+            "type": "unknown",
             "eng": "Owie! Ouch!"
         },
         {
@@ -40412,7 +40412,7 @@
         },
         {
             "kal": "napparmi",
-            "type": null,
+            "type": "unknown",
             "eng": "vertically; in a vertical orientation"
         },
         {
@@ -43667,7 +43667,7 @@
         },
         {
             "kal": "nuann!",
-            "type": null,
+            "type": "unknown",
             "eng": "Great! That's nice! That's fun!"
         },
         {
@@ -43752,7 +43752,7 @@
         },
         {
             "kal": "nuanni!",
-            "type": null,
+            "type": "unknown",
             "eng": "lovely"
         },
         {
@@ -44242,7 +44242,7 @@
         },
         {
             "kal": "nukingiinnaq",
-            "type": null,
+            "type": "unknown",
             "eng": "with great haste; very quickly"
         },
         {
@@ -44587,7 +44587,7 @@
         },
         {
             "kal": "Nunani Avannarlerni Piorsarsimassutsikkut Attaveqaat (naal N. A. P. A. )",
-            "type": null,
+            "type": "unknown",
             "eng": "Nordic Institute in Greenland"
         },
         {
@@ -46052,7 +46052,7 @@
         },
         {
             "kal": "oqaluttartoq",
-            "type": null,
+            "type": "unknown",
             "eng": "phonograph"
         },
         {
@@ -46402,7 +46402,7 @@
         },
         {
             "kal": "oqilaq!",
-            "type": null,
+            "type": "unknown",
             "eng": "Wow; he/she is quick! He/she runs fast!"
         },
         {
@@ -48012,7 +48012,7 @@
         },
         {
             "kal": "paffa",
-            "type": null,
+            "type": "unknown",
             "eng": "up there"
         },
         {
@@ -48152,12 +48152,12 @@
         },
         {
             "kal": "pakkorsii",
-            "type": null,
+            "type": "unknown",
             "eng": "you folks up there"
         },
         {
             "kal": "pakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "those up there; those in the East"
         },
         {
@@ -48537,7 +48537,7 @@
         },
         {
             "kal": "panna",
-            "type": null,
+            "type": "unknown",
             "eng": "there in the east; that one high up"
         },
         {
@@ -49152,22 +49152,22 @@
         },
         {
             "kal": "pavani",
-            "type": null,
+            "type": "unknown",
             "eng": "there in the east; high up there"
         },
         {
             "kal": "pavannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from the east; from way up there"
         },
         {
             "kal": "pavunga",
-            "type": null,
+            "type": "unknown",
             "eng": "eastward; to the east; upward; to high up"
         },
         {
             "kal": "pavungaraallak",
-            "type": null,
+            "type": "unknown",
             "eng": "to rather high up"
         },
         {
@@ -50742,12 +50742,12 @@
         },
         {
             "kal": "pikani",
-            "type": null,
+            "type": "unknown",
             "eng": "up there"
         },
         {
             "kal": "pikannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from up there"
         },
         {
@@ -50827,7 +50827,7 @@
         },
         {
             "kal": "pikkori",
-            "type": null,
+            "type": "unknown",
             "eng": "Gee; you're good! Boy is he/she good!"
         },
         {
@@ -50862,7 +50862,7 @@
         },
         {
             "kal": "pikku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "those up there"
         },
         {
@@ -50962,7 +50962,7 @@
         },
         {
             "kal": "pikunga",
-            "type": null,
+            "type": "unknown",
             "eng": "upwards; to up there"
         },
         {
@@ -52097,7 +52097,7 @@
         },
         {
             "kal": "pinnga",
-            "type": null,
+            "type": "unknown",
             "eng": "that one up there"
         },
         {
@@ -55462,17 +55462,17 @@
         },
         {
             "kal": "qaa!",
-            "type": null,
+            "type": "unknown",
             "eng": "Let's go! Let's do it!"
         },
         {
             "kal": "qaagit!",
-            "type": null,
+            "type": "unknown",
             "eng": "Come here!"
         },
         {
             "kal": "qaaguk!",
-            "type": null,
+            "type": "unknown",
             "eng": "Give me that!; Let me have it!"
         },
         {
@@ -55532,12 +55532,12 @@
         },
         {
             "kal": "qaali!",
-            "type": null,
+            "type": "unknown",
             "eng": "Let's get going!; Come on; let's do it!"
         },
         {
             "kal": "qaali!",
-            "type": null,
+            "type": "unknown",
             "eng": "Let him/her come!"
         },
         {
@@ -55657,7 +55657,7 @@
         },
         {
             "kal": "qaammarpoq",
-            "type": null,
+            "type": "unknown",
             "eng": "is lovely; is pleasant"
         },
         {
@@ -55802,7 +55802,7 @@
         },
         {
             "kal": "qaangiukkaangata",
-            "type": null,
+            "type": "unknown",
             "eng": "when they passes by; when they passes away ¶ ullut sisamat qaangiukkaangata ⇒ every fourth day"
         },
         {
@@ -55922,7 +55922,7 @@
         },
         {
             "kal": "qaaqaa!",
-            "type": null,
+            "type": "unknown",
             "eng": "Hurry up! Step on it!"
         },
         {
@@ -56277,7 +56277,7 @@
         },
         {
             "kal": "qaffa",
-            "type": null,
+            "type": "unknown",
             "eng": "southward"
         },
         {
@@ -56552,12 +56552,12 @@
         },
         {
             "kal": "qakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "those inside (said when outside); those outside (said when inside); those in the next room"
         },
         {
             "kal": "qakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "those in the south"
         },
         {
@@ -56997,7 +56997,7 @@
         },
         {
             "kal": "qallunaatsiaqarfik avannarleq",
-            "type": null,
+            "type": "unknown",
             "eng": "The Northern Norsemen area in Greenland"
         },
         {
@@ -57157,17 +57157,17 @@
         },
         {
             "kal": "qamani",
-            "type": null,
+            "type": "unknown",
             "eng": "out there (said when inside); in there (said when outside); in the next room"
         },
         {
             "kal": "qamannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from out there (said when inside); from in there (said when outside); from the next room"
         },
         {
             "kal": "qamannga pisumik",
-            "type": null,
+            "type": "unknown",
             "eng": "deeply felt; heartily"
         },
         {
@@ -57222,7 +57222,7 @@
         },
         {
             "kal": "qamma",
-            "type": null,
+            "type": "unknown",
             "eng": "in there"
         },
         {
@@ -57242,7 +57242,7 @@
         },
         {
             "kal": "qamunga",
-            "type": null,
+            "type": "unknown",
             "eng": "into it"
         },
         {
@@ -57322,7 +57322,7 @@
         },
         {
             "kal": "qamuuna",
-            "type": null,
+            "type": "unknown",
             "eng": "in through there; out through there"
         },
         {
@@ -57362,12 +57362,12 @@
         },
         {
             "kal": "qanga",
-            "type": null,
+            "type": "unknown",
             "eng": "when (in the past)"
         },
         {
             "kal": "qanga",
-            "type": null,
+            "type": "unknown",
             "eng": "a long time ago; in the old days"
         },
         {
@@ -57377,7 +57377,7 @@
         },
         {
             "kal": "qangaammat",
-            "type": null,
+            "type": "unknown",
             "eng": "then (in the past); at that time"
         },
         {
@@ -57387,27 +57387,27 @@
         },
         {
             "kal": "qangali",
-            "type": null,
+            "type": "unknown",
             "eng": "a long time ago"
         },
         {
             "kal": "qangaligami",
-            "type": null,
+            "type": "unknown",
             "eng": "much earlier; quite a while ago"
         },
         {
             "kal": "qangalimi takunarmat",
-            "type": null,
+            "type": "unknown",
             "eng": "it's been a long time since we've seen eachother"
         },
         {
             "kal": "qangalimitaava",
-            "type": null,
+            "type": "unknown",
             "eng": "that certainly was a long time ago"
         },
         {
             "kal": "qangamaanna?",
-            "type": null,
+            "type": "unknown",
             "eng": "now; how long ago was that; do you recall when that was"
         },
         {
@@ -57452,7 +57452,7 @@
         },
         {
             "kal": "qangatsiaq",
-            "type": null,
+            "type": "unknown",
             "eng": "some time ago; several years ago"
         },
         {
@@ -57597,12 +57597,12 @@
         },
         {
             "kal": "qanittukkut",
-            "type": null,
+            "type": "unknown",
             "eng": "a little while ago"
         },
         {
             "kal": "qanittukkut",
-            "type": null,
+            "type": "unknown",
             "eng": "in the near future; in a short while"
         },
         {
@@ -57617,12 +57617,12 @@
         },
         {
             "kal": "qanna",
-            "type": null,
+            "type": "unknown",
             "eng": "there; in the south"
         },
         {
             "kal": "qanna",
-            "type": null,
+            "type": "unknown",
             "eng": "the one who is inside (when said outside); the one who is outside (when said inside); the one in the next room"
         },
         {
@@ -57692,7 +57692,7 @@
         },
         {
             "kal": "qanoq?",
-            "type": null,
+            "type": "unknown",
             "eng": "How? How's that? What did you say?"
         },
         {
@@ -57712,7 +57712,7 @@
         },
         {
             "kal": "qanortoq",
-            "type": null,
+            "type": "unknown",
             "eng": "if only; would it were; I wish …"
         },
         {
@@ -58172,27 +58172,27 @@
         },
         {
             "kal": "qaqugorsuarmut",
-            "type": null,
+            "type": "unknown",
             "eng": "a long time from now; far in the future"
         },
         {
             "kal": "qaqugu",
-            "type": null,
+            "type": "unknown",
             "eng": "when (in the future)"
         },
         {
             "kal": "qaquguluunniit",
-            "type": null,
+            "type": "unknown",
             "eng": "some time in future; whenever in future; sometime in the future"
         },
         {
             "kal": "qaqugumulluunniit",
-            "type": null,
+            "type": "unknown",
             "eng": "never/ever ¶ qaqugumulluunniit puigussanngilara ⇒ I'll never forget him/her/it"
         },
         {
             "kal": "qaquguuna",
-            "type": null,
+            "type": "unknown",
             "eng": "if only soon ¶ qaquguuna tikissava ⇒ if only he/she/it would get here soon"
         },
         {
@@ -58227,22 +58227,22 @@
         },
         {
             "kal": "qaqutiguinnaq",
-            "type": null,
+            "type": "unknown",
             "eng": "only rarely"
         },
         {
             "kal": "qaqutigut",
-            "type": null,
+            "type": "unknown",
             "eng": "seldom; rarely"
         },
         {
             "kal": "qaqutigut tamaana",
-            "type": null,
+            "type": "unknown",
             "eng": "once in a while; infrequently"
         },
         {
             "kal": "qaqutikkut",
-            "type": null,
+            "type": "unknown",
             "eng": "seldom"
         },
         {
@@ -58742,7 +58742,7 @@
         },
         {
             "kal": "qassiat",
-            "type": null,
+            "type": "unknown",
             "eng": "What’s today’s date ¶ ullumi qassiat? ⇒ What's today's date?"
         },
         {
@@ -58777,7 +58777,7 @@
         },
         {
             "kal": "qassinik",
-            "type": null,
+            "type": "unknown",
             "eng": "how many"
         },
         {
@@ -58792,12 +58792,12 @@
         },
         {
             "kal": "qassinut?",
-            "type": null,
+            "type": "unknown",
             "eng": "when? what time?(in the future)"
         },
         {
             "kal": "qassissaa",
-            "type": null,
+            "type": "unknown",
             "eng": "how many times?"
         },
         {
@@ -58812,7 +58812,7 @@
         },
         {
             "kal": "qassit?",
-            "type": null,
+            "type": "unknown",
             "eng": "how many?"
         },
         {
@@ -59222,12 +59222,12 @@
         },
         {
             "kal": "qavani",
-            "type": null,
+            "type": "unknown",
             "eng": "there in the south"
         },
         {
             "kal": "qavannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from the south"
         },
         {
@@ -59247,7 +59247,7 @@
         },
         {
             "kal": "qavunga",
-            "type": null,
+            "type": "unknown",
             "eng": "southward; toward the south"
         },
         {
@@ -59257,7 +59257,7 @@
         },
         {
             "kal": "qavuuna",
-            "type": null,
+            "type": "unknown",
             "eng": "to the south of us ¶ qavuuna ingerlavoq ⇒ goes to the south of us"
         },
         {
@@ -59672,7 +59672,7 @@
         },
         {
             "kal": "qianngarmi",
-            "type": null,
+            "type": "unknown",
             "eng": "she/he is about to cry"
         },
         {
@@ -59692,7 +59692,7 @@
         },
         {
             "kal": "qiassani nunuaa",
-            "type": null,
+            "type": "unknown",
             "eng": "fights back tears"
         },
         {
@@ -59992,7 +59992,7 @@
         },
         {
             "kal": "qilamik",
-            "type": null,
+            "type": "unknown",
             "eng": "soon"
         },
         {
@@ -60037,7 +60037,7 @@
         },
         {
             "kal": "qilannguamik",
-            "type": null,
+            "type": "unknown",
             "eng": "very soon; in a short while"
         },
         {
@@ -60297,7 +60297,7 @@
         },
         {
             "kal": "qiloqqusoq!",
-            "type": null,
+            "type": "unknown",
             "eng": "if only that were me!"
         },
         {
@@ -61027,7 +61027,7 @@
         },
         {
             "kal": "qinngarnaq!",
-            "type": null,
+            "type": "unknown",
             "eng": "That is so bothersome! Boy is he/she irritating! He/she is intolerable!"
         },
         {
@@ -62157,7 +62157,7 @@
         },
         {
             "kal": "qivi",
-            "type": null,
+            "type": "unknown",
             "eng": "Look, …;"
         },
         {
@@ -62322,7 +62322,7 @@
         },
         {
             "kal": "qoqassiivoq",
-            "type": null,
+            "type": "unknown",
             "eng": "surprices somebody unpleasantly"
         },
         {
@@ -62742,12 +62742,12 @@
         },
         {
             "kal": "qujanaq!",
-            "type": null,
+            "type": "unknown",
             "eng": "Thank you; Thanks ¶ kaffimut qujanaq ⇒ thanks for the coffee"
         },
         {
             "kal": "qujanaqaarmi",
-            "type": null,
+            "type": "unknown",
             "eng": "Thank God!; Boy, was it lucky that …; What a stroke of luck!"
         },
         {
@@ -62762,17 +62762,17 @@
         },
         {
             "kal": "qujanarsuaq!",
-            "type": null,
+            "type": "unknown",
             "eng": "Thank you very much; Thanks a lot"
         },
         {
             "kal": "qujanarujussuaq!",
-            "type": null,
+            "type": "unknown",
             "eng": "Thanky you very, very much; My profound thanks to you;"
         },
         {
             "kal": "qujanassusia!",
-            "type": null,
+            "type": "unknown",
             "eng": "Oh, that's nice; that's good to hear; How nice;"
         },
         {
@@ -63422,7 +63422,7 @@
         },
         {
             "kal": "qummut",
-            "type": null,
+            "type": "unknown",
             "eng": "upward; to a higher place ¶ quliniit qummut ⇒ upwards of ten; ten or more"
         },
         {
@@ -63642,7 +63642,7 @@
         },
         {
             "kal": "qupisivoq",
-            "type": null,
+            "type": "unknown",
             "eng": "splits it; cuts it in half; divides it in the middles"
         },
         {
@@ -63717,7 +63717,7 @@
         },
         {
             "kal": "quppiivoq",
-            "type": null,
+            "type": "unknown",
             "eng": "looks it up (in a book)"
         },
         {
@@ -64357,7 +64357,7 @@
         },
         {
             "kal": "saamimmut!",
-            "type": null,
+            "type": "unknown",
             "eng": "to the left! to port!"
         },
         {
@@ -64602,7 +64602,7 @@
         },
         {
             "kal": "saarnga:",
-            "type": null,
+            "type": "unknown",
             "eng": ": (niaqqup) cranium; skull ¶ niaqqup saarnga ⇒ cranium; skull"
         },
         {
@@ -64732,7 +64732,7 @@
         },
         {
             "kal": "saavani",
-            "type": null,
+            "type": "unknown",
             "eng": "in front of him/her"
         },
         {
@@ -64807,7 +64807,7 @@
         },
         {
             "kal": "sajunnera:",
-            "type": null,
+            "type": "unknown",
             "eng": ": (nunap) earthquake ¶ nunap sajunnera ⇒ earthquake"
         },
         {
@@ -64947,12 +64947,12 @@
         },
         {
             "kal": "sakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "those in the west"
         },
         {
             "kal": "sakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "those down there"
         },
         {
@@ -65177,7 +65177,7 @@
         },
         {
             "kal": "salloqaatit!",
-            "type": null,
+            "type": "unknown",
             "eng": "You're lying; That isn't true; That's wrong"
         },
         {
@@ -65217,7 +65217,7 @@
         },
         {
             "kal": "sallu!",
-            "type": null,
+            "type": "unknown",
             "eng": "You're lying; That isn't true; That's wrong"
         },
         {
@@ -65322,22 +65322,22 @@
         },
         {
             "kal": "samani",
-            "type": null,
+            "type": "unknown",
             "eng": "down there"
         },
         {
             "kal": "samani",
-            "type": null,
+            "type": "unknown",
             "eng": "there in the west"
         },
         {
             "kal": "samannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from the west"
         },
         {
             "kal": "samannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from down there"
         },
         {
@@ -65347,12 +65347,12 @@
         },
         {
             "kal": "samma",
-            "type": null,
+            "type": "unknown",
             "eng": "that one out there in the west"
         },
         {
             "kal": "samma",
-            "type": null,
+            "type": "unknown",
             "eng": "down there"
         },
         {
@@ -65407,17 +65407,17 @@
         },
         {
             "kal": "samunga",
-            "type": null,
+            "type": "unknown",
             "eng": "westward; toward the west"
         },
         {
             "kal": "samunga",
-            "type": null,
+            "type": "unknown",
             "eng": "to down there"
         },
         {
             "kal": "samungaraallak",
-            "type": null,
+            "type": "unknown",
             "eng": "rather far out; fairly deep down"
         },
         {
@@ -65432,7 +65432,7 @@
         },
         {
             "kal": "samuuna",
-            "type": null,
+            "type": "unknown",
             "eng": "to the west of us; down there ¶ samuuna ingerlavoq ⇒ goes to the west of us; goes down there"
         },
         {
@@ -65472,7 +65472,7 @@
         },
         {
             "kal": "Sanaartornermi Taarsigassarsisarfik",
-            "type": null,
+            "type": "unknown",
             "eng": "Greenland Credit Union"
         },
         {
@@ -65842,17 +65842,17 @@
         },
         {
             "kal": "sanna",
-            "type": null,
+            "type": "unknown",
             "eng": "there in the west; those in the west"
         },
         {
             "kal": "sanna",
-            "type": null,
+            "type": "unknown",
             "eng": "the one down there"
         },
         {
             "kal": "sannaa",
-            "type": null,
+            "type": "unknown",
             "eng": "its structure; its form; its construction"
         },
         {
@@ -66062,7 +66062,7 @@
         },
         {
             "kal": "sapaatiummat",
-            "type": null,
+            "type": "unknown",
             "eng": "last Sunday"
         },
         {
@@ -66242,7 +66242,7 @@
         },
         {
             "kal": "sapinngisamik",
-            "type": null,
+            "type": "unknown",
             "eng": "as well as he/she can; to the best of his/her ability"
         },
         {
@@ -66692,7 +66692,7 @@
         },
         {
             "kal": "sassuma",
-            "type": null,
+            "type": "unknown",
             "eng": "(suaarpaanga) the one down there is calling to me ¶ sassuma suaarpaanga ⇒ the one down there is calling to me"
         },
         {
@@ -67747,7 +67747,7 @@
         },
         {
             "kal": "sianiik!",
-            "type": null,
+            "type": "unknown",
             "eng": "Boy, is he/she dumb! What an idiot!;"
         },
         {
@@ -67987,7 +67987,7 @@
         },
         {
             "kal": "siggorpaa",
-            "type": null,
+            "type": "unknown",
             "eng": "wrings the water out of it; wrings out a cloth; wrings out clothing"
         },
         {
@@ -68607,7 +68607,7 @@
         },
         {
             "kal": "silagik!",
-            "type": null,
+            "type": "unknown",
             "eng": "Beautiful weather, isn't it.;"
         },
         {
@@ -68682,7 +68682,7 @@
         },
         {
             "kal": "silap assinga",
-            "type": null,
+            "type": "unknown",
             "eng": "weather map"
         },
         {
@@ -68717,7 +68717,7 @@
         },
         {
             "kal": "silaqaraluarpit?",
-            "type": null,
+            "type": "unknown",
             "eng": "Are you nuts?"
         },
         {
@@ -69187,7 +69187,7 @@
         },
         {
             "kal": "sinaagippoq",
-            "type": null,
+            "type": "unknown",
             "eng": "(siku) the edge of the ice is firm ¶ siku sinaagippoq ⇒ the edge of the ice is firm"
         },
         {
@@ -69962,7 +69962,7 @@
         },
         {
             "kal": "siorngaligami",
-            "type": null,
+            "type": "unknown",
             "eng": "some years ago"
         },
         {
@@ -70742,12 +70742,12 @@
         },
         {
             "kal": "siumut",
-            "type": null,
+            "type": "unknown",
             "eng": "(iseqarpoq) is prescient; (saappoq) turns toward the front, has turned a corner in an illness or crisis; ¶ siumut iseqarpoq // siumut saappoq ⇒ is prescient; / / turns toward the front, has turned a corner in an illness or crisis"
         },
         {
             "kal": "siumut",
-            "type": null,
+            "type": "unknown",
             "eng": "forward"
         },
         {
@@ -71172,47 +71172,47 @@
         },
         {
             "kal": "sooq",
-            "type": null,
+            "type": "unknown",
             "eng": "why, Why?;"
         },
         {
             "kal": "soorlikiaq",
-            "type": null,
+            "type": "unknown",
             "eng": "of course"
         },
         {
             "kal": "soorlu",
-            "type": null,
+            "type": "unknown",
             "eng": "for example; just like …"
         },
         {
             "kal": "soorlu imaattoq",
-            "type": null,
+            "type": "unknown",
             "eng": "this; for example: …"
         },
         {
             "kal": "soorlu imaattut",
-            "type": null,
+            "type": "unknown",
             "eng": "these; for example: …"
         },
         {
             "kal": "soorlu oqareersunga",
-            "type": null,
+            "type": "unknown",
             "eng": "as I said; as I have already said"
         },
         {
             "kal": "sooruna",
-            "type": null,
+            "type": "unknown",
             "eng": "of course"
         },
         {
             "kal": "sooruna",
-            "type": null,
+            "type": "unknown",
             "eng": "(taamaattoq) why is it so? ¶ sooruna taamaattoq? ⇒ why is it so?"
         },
         {
             "kal": "soorunami",
-            "type": null,
+            "type": "unknown",
             "eng": "naturally; of course"
         },
         {
@@ -71242,7 +71242,7 @@
         },
         {
             "kal": "soqquppiuk?",
-            "type": null,
+            "type": "unknown",
             "eng": "(qeqertaq) which way did you sail in relation to the island? ¶ qeqertaq soqquppiuk? ⇒ which way did you sail in relation to the island?"
         },
         {
@@ -71337,7 +71337,7 @@
         },
         {
             "kal": "soraaqqullugu nalunaarfigaa",
-            "type": null,
+            "type": "unknown",
             "eng": "has fired him/her; has let him/her go"
         },
         {
@@ -71437,7 +71437,7 @@
         },
         {
             "kal": "sorleq",
-            "type": null,
+            "type": "unknown",
             "eng": "which of them"
         },
         {
@@ -71767,12 +71767,12 @@
         },
         {
             "kal": "suami",
-            "type": null,
+            "type": "unknown",
             "eng": "just a little bit; not too much"
         },
         {
             "kal": "suamitassa",
-            "type": null,
+            "type": "unknown",
             "eng": "that wasn't so much"
         },
         {
@@ -72147,7 +72147,7 @@
         },
         {
             "kal": "sukkut",
-            "type": null,
+            "type": "unknown",
             "eng": "which way?"
         },
         {
@@ -72157,7 +72157,7 @@
         },
         {
             "kal": "sukkut tamaana",
-            "type": null,
+            "type": "unknown",
             "eng": "here and there"
         },
         {
@@ -72537,7 +72537,7 @@
         },
         {
             "kal": "suliuna",
-            "type": null,
+            "type": "unknown",
             "eng": "(allattoq) Just imagine; he/she is still writing ¶ : suliuna allattoq ⇒ Just imagine; he/she is still writing"
         },
         {
@@ -72687,7 +72687,7 @@
         },
         {
             "kal": "sulluni",
-            "type": null,
+            "type": "unknown",
             "eng": "(ajussava) It will surely work out, (lit: How will it turn out badly?); (oqassava) He/she will definitely not say anything (lit: what will he/she say?); ¶ sulluni ajussava // sulluni oqassava ⇒ It will surely work out; (lit: How will it turn out badly?) //He/she will definitely not say anything (lit: what will he/she say?)("
         },
         {
@@ -72792,7 +72792,7 @@
         },
         {
             "kal": "sumi",
-            "type": null,
+            "type": "unknown",
             "eng": "where?"
         },
         {
@@ -72802,7 +72802,7 @@
         },
         {
             "kal": "sumi tamaani",
-            "type": null,
+            "type": "unknown",
             "eng": "everywhere; all over"
         },
         {
@@ -72837,32 +72837,32 @@
         },
         {
             "kal": "sumik",
-            "type": null,
+            "type": "unknown",
             "eng": "what? what thing?"
         },
         {
             "kal": "sumik",
-            "type": null,
+            "type": "unknown",
             "eng": "(isumajunnaarpoq) has stopped worrying; (isumaqanngitsoq) someone who doesn't suspect anything; ¶ sumik isumajunnaarpoq // sumik isumaqanngitsoq ⇒ has stopped worrying//someone who doesn't suspect anything"
         },
         {
             "kal": "sumilluunniit",
-            "type": null,
+            "type": "unknown",
             "eng": "with anything; anything at all"
         },
         {
             "kal": "sumilluunniit",
-            "type": null,
+            "type": "unknown",
             "eng": "from wherever; from anywhere"
         },
         {
             "kal": "sumiluunniit",
-            "type": null,
+            "type": "unknown",
             "eng": "anywhere; wherever"
         },
         {
             "kal": "sumininnguamik",
-            "type": null,
+            "type": "unknown",
             "eng": "the tiniest bit"
         },
         {
@@ -72872,72 +72872,72 @@
         },
         {
             "kal": "sumiuuit?",
-            "type": null,
+            "type": "unknown",
             "eng": "where are you from; where do you come from?"
         },
         {
             "kal": "sumorsuaq",
-            "type": null,
+            "type": "unknown",
             "eng": "for a long time"
         },
         {
             "kal": "sumorsuaq",
-            "type": null,
+            "type": "unknown",
             "eng": "far away"
         },
         {
             "kal": "sumulluunniit",
-            "type": null,
+            "type": "unknown",
             "eng": "to wherever; to anywhere"
         },
         {
             "kal": "sumunnarpit?",
-            "type": null,
+            "type": "unknown",
             "eng": "Where are you going?"
         },
         {
             "kal": "sumut",
-            "type": null,
+            "type": "unknown",
             "eng": "where to?"
         },
         {
             "kal": "sumut piva?",
-            "type": null,
+            "type": "unknown",
             "eng": "where did he/she go?"
         },
         {
             "kal": "sumut tamaanga",
-            "type": null,
+            "type": "unknown",
             "eng": "in all directions; all around"
         },
         {
             "kal": "suna",
-            "type": null,
+            "type": "unknown",
             "eng": "what?"
         },
         {
             "kal": "suna:",
-            "type": null,
+            "type": "unknown",
             "eng": ": (pineqarpa?) what is it all about?, what applies to the case?; (pivaa?) What does he/she mean? What's he/she talking about?, What, is he/she aiming at?; ¶ suna pineqarpa? // suna pivaa? ⇒ what is it all about?; what applies to the case? / / What does he/she mean? What's he/she talking about?; What; is he/she aiming at?"
         },
         {
             "kal": "sunaaffa!",
-            "type": null,
+            "type": "unknown",
             "eng": "Just think! It turns out that …"
         },
         {
             "kal": "sunaana?",
-            "type": null,
+            "type": "unknown",
             "eng": "what is this? what's that?"
         },
         {
             "kal": "sunaluunniit",
-            "type": null,
+            "type": "unknown",
             "eng": "anything at all; whatever"
         },
         {
             "kal": "sunatoq",
-            "type": null,
+            "type": "unknown",
             "eng": "(una) I wish I knew what this is; What do you suppose this is? ¶ : una sunatoq? ⇒ I wish I knew what this is; What do you suppose this is?"
         },
         {
@@ -73102,7 +73102,7 @@
         },
         {
             "kal": "sunnguit tamaasa",
-            "type": null,
+            "type": "unknown",
             "eng": "every single thing"
         },
         {
@@ -73267,17 +73267,17 @@
         },
         {
             "kal": "susoruna?",
-            "type": null,
+            "type": "unknown",
             "eng": "what is the matter with him/her?"
         },
         {
             "kal": "susoruna?",
-            "type": null,
+            "type": "unknown",
             "eng": "what is he/she doing? what is that he/she is making?"
         },
         {
             "kal": "sussa",
-            "type": null,
+            "type": "unknown",
             "eng": "that doesn't matter; never mind that; we don't care about that"
         },
         {
@@ -73297,7 +73297,7 @@
         },
         {
             "kal": "sussaq?",
-            "type": null,
+            "type": "unknown",
             "eng": "what is it good for? what can it be used for?"
         },
         {
@@ -73312,7 +73312,7 @@
         },
         {
             "kal": "sussasoq",
-            "type": null,
+            "type": "unknown",
             "eng": "to heck with that; that doesn't matter; that'doesn't mean a thing"
         },
         {
@@ -73382,12 +73382,12 @@
         },
         {
             "kal": "suuki",
-            "type": null,
+            "type": "unknown",
             "eng": "that doesn't matter; never mind that; we don't care about that"
         },
         {
             "kal": "suukiartassa",
-            "type": null,
+            "type": "unknown",
             "eng": "It doesn't make any difference; that doesn't matter; never mind that; we don't care about that"
         },
         {
@@ -73397,7 +73397,7 @@
         },
         {
             "kal": "suulluunniit",
-            "type": null,
+            "type": "unknown",
             "eng": "anything at all; any one of them"
         },
         {
@@ -73407,12 +73407,12 @@
         },
         {
             "kal": "suunuku?",
-            "type": null,
+            "type": "unknown",
             "eng": "what are these?"
         },
         {
             "kal": "suup ujaraa?",
-            "type": null,
+            "type": "unknown",
             "eng": "where does the stone come from?"
         },
         {
@@ -73422,7 +73422,7 @@
         },
         {
             "kal": "suut",
-            "type": null,
+            "type": "unknown",
             "eng": "which ones"
         },
         {
@@ -73502,7 +73502,7 @@
         },
         {
             "kal": "ta!",
-            "type": null,
+            "type": "unknown",
             "eng": "Listen, what do I hear?;"
         },
         {
@@ -73537,22 +73537,22 @@
         },
         {
             "kal": "taajakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "them to the north"
         },
         {
             "kal": "taajanna",
-            "type": null,
+            "type": "unknown",
             "eng": "there toward the north"
         },
         {
             "kal": "taajassuma",
-            "type": null,
+            "type": "unknown",
             "eng": "to the north ¶ taajassuma qaqqai ⇒ the mountains to the north"
         },
         {
             "kal": "taaka",
-            "type": null,
+            "type": "unknown",
             "eng": "over there"
         },
         {
@@ -73577,12 +73577,12 @@
         },
         {
             "kal": "taakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "they; those; their"
         },
         {
             "kal": "taakuuna",
-            "type": null,
+            "type": "unknown",
             "eng": "through there ¶ taakuuna ingerlavoq ⇒ goes there; goes to that place"
         },
         {
@@ -73667,12 +73667,12 @@
         },
         {
             "kal": "taama",
-            "type": null,
+            "type": "unknown",
             "eng": "in that way; in the way just mentioned"
         },
         {
             "kal": "taama!",
-            "type": null,
+            "type": "unknown",
             "eng": "that's enough! that's it! stop!"
         },
         {
@@ -73697,17 +73697,17 @@
         },
         {
             "kal": "taamaalilluni",
-            "type": null,
+            "type": "unknown",
             "eng": "doing that"
         },
         {
             "kal": "taamaalilluni",
-            "type": null,
+            "type": "unknown",
             "eng": "so; thus; as; following; accordingly"
         },
         {
             "kal": "taamaalinerani",
-            "type": null,
+            "type": "unknown",
             "eng": "at that time"
         },
         {
@@ -73727,27 +73727,27 @@
         },
         {
             "kal": "taamaallaat",
-            "type": null,
+            "type": "unknown",
             "eng": "only; just"
         },
         {
             "kal": "taamaalli!",
-            "type": null,
+            "type": "unknown",
             "eng": "Enough! Stop! No more!"
         },
         {
             "kal": "taamaalluni",
-            "type": null,
+            "type": "unknown",
             "eng": "finally; it's about time"
         },
         {
             "kal": "taamaammat",
-            "type": null,
+            "type": "unknown",
             "eng": "therefore; that being the case"
         },
         {
             "kal": "taamaannerani",
-            "type": null,
+            "type": "unknown",
             "eng": "at that time"
         },
         {
@@ -73807,12 +73807,12 @@
         },
         {
             "kal": "taamaattoq",
-            "type": null,
+            "type": "unknown",
             "eng": "although; nevertheless"
         },
         {
             "kal": "taamaattoq!",
-            "type": null,
+            "type": "unknown",
             "eng": "that's enough"
         },
         {
@@ -73822,62 +73822,62 @@
         },
         {
             "kal": "taamaattumik",
-            "type": null,
+            "type": "unknown",
             "eng": "therefore"
         },
         {
             "kal": "taamak",
-            "type": null,
+            "type": "unknown",
             "eng": "in that way; like that"
         },
         {
             "kal": "taamak!",
-            "type": null,
+            "type": "unknown",
             "eng": "that's enough! now stop!"
         },
         {
             "kal": "taamani",
-            "type": null,
+            "type": "unknown",
             "eng": "then; at that time"
         },
         {
             "kal": "taamanikkulli",
-            "type": null,
+            "type": "unknown",
             "eng": "even then; already at that time"
         },
         {
             "kal": "taamanikkut",
-            "type": null,
+            "type": "unknown",
             "eng": "then; during that period of time"
         },
         {
             "kal": "taamanili",
-            "type": null,
+            "type": "unknown",
             "eng": "but back then; already at that time"
         },
         {
             "kal": "taamannak",
-            "type": null,
+            "type": "unknown",
             "eng": "that way; in that fashion"
         },
         {
             "kal": "taamattaaq",
-            "type": null,
+            "type": "unknown",
             "eng": "in addition; also"
         },
         {
             "kal": "taamatut",
-            "type": null,
+            "type": "unknown",
             "eng": "in the same way; in that fashion"
         },
         {
             "kal": "taamunga",
-            "type": null,
+            "type": "unknown",
             "eng": "without directions; by guesswork;"
         },
         {
             "kal": "taamungaannaq",
-            "type": null,
+            "type": "unknown",
             "eng": "without directions; just by guesswork;"
         },
         {
@@ -73912,7 +73912,7 @@
         },
         {
             "kal": "taanna",
-            "type": null,
+            "type": "unknown",
             "eng": "this one (just mentioned)"
         },
         {
@@ -73922,12 +73922,12 @@
         },
         {
             "kal": "taannaqa",
-            "type": null,
+            "type": "unknown",
             "eng": "I suspected as much; that's what I thought; no wonder that …"
         },
         {
             "kal": "taannaqaana",
-            "type": null,
+            "type": "unknown",
             "eng": "I suspected as much; that's what I thought; no wonder that …"
         },
         {
@@ -73972,7 +73972,7 @@
         },
         {
             "kal": "taarpaallak!",
-            "type": null,
+            "type": "unknown",
             "eng": "how dark it's become!"
         },
         {
@@ -74197,12 +74197,12 @@
         },
         {
             "kal": "taassuma",
-            "type": null,
+            "type": "unknown",
             "eng": "he/she/it; his/her/its"
         },
         {
             "kal": "taassuminnga",
-            "type": null,
+            "type": "unknown",
             "eng": "with that ¶ taassuminnga anaavaa ⇒"
         },
         {
@@ -74267,17 +74267,17 @@
         },
         {
             "kal": "taatuuna!",
-            "type": null,
+            "type": "unknown",
             "eng": "You're awful! You're terrible!"
         },
         {
             "kal": "taava",
-            "type": null,
+            "type": "unknown",
             "eng": "then; so; after that"
         },
         {
             "kal": "taava",
-            "type": null,
+            "type": "unknown",
             "eng": "there in the north"
         },
         {
@@ -74302,22 +74302,22 @@
         },
         {
             "kal": "taavaaku nunguttut",
-            "type": null,
+            "type": "unknown",
             "eng": "All of a sudden; there are no more; There are absolutely no more now"
         },
         {
             "kal": "taavaana nunguppoq",
-            "type": null,
+            "type": "unknown",
             "eng": "there is absolutely no more (example for milk etc) ¶ taavaana qaammalersoq ⇒"
         },
         {
             "kal": "taavaannaq",
-            "type": null,
+            "type": "unknown",
             "eng": "suddenly; at that very moment"
         },
         {
             "kal": "taavani",
-            "type": null,
+            "type": "unknown",
             "eng": "there toward the north"
         },
         {
@@ -74352,7 +74352,7 @@
         },
         {
             "kal": "taggisit taartissaat",
-            "type": null,
+            "type": "unknown",
             "eng": "gram. pronoun"
         },
         {
@@ -74407,12 +74407,12 @@
         },
         {
             "kal": "takanani",
-            "type": null,
+            "type": "unknown",
             "eng": "down there"
         },
         {
             "kal": "takanannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from down there"
         },
         {
@@ -74427,22 +74427,22 @@
         },
         {
             "kal": "takanna",
-            "type": null,
+            "type": "unknown",
             "eng": "the one down there"
         },
         {
             "kal": "takanna!",
-            "type": null,
+            "type": "unknown",
             "eng": "Bon appetit! (regularly said when food is presented or diners are called to the table)"
         },
         {
             "kal": "takanunga",
-            "type": null,
+            "type": "unknown",
             "eng": "to that place down there"
         },
         {
             "kal": "takassa!",
-            "type": null,
+            "type": "unknown",
             "eng": "Bon appetit! (regularly said when food is presented or diners are called to the table)"
         },
         {
@@ -74477,22 +74477,22 @@
         },
         {
             "kal": "takkiga",
-            "type": null,
+            "type": "unknown",
             "eng": "that one outside"
         },
         {
             "kal": "takkiga",
-            "type": null,
+            "type": "unknown",
             "eng": "that one to the south"
         },
         {
             "kal": "takkigani",
-            "type": null,
+            "type": "unknown",
             "eng": "in the south"
         },
         {
             "kal": "takkigani",
-            "type": null,
+            "type": "unknown",
             "eng": "outside"
         },
         {
@@ -74502,12 +74502,12 @@
         },
         {
             "kal": "takkinnga",
-            "type": null,
+            "type": "unknown",
             "eng": "that one outside"
         },
         {
             "kal": "takkinnga",
-            "type": null,
+            "type": "unknown",
             "eng": "that one toward the south"
         },
         {
@@ -74542,7 +74542,7 @@
         },
         {
             "kal": "takkuani",
-            "type": null,
+            "type": "unknown",
             "eng": "right in front of his/her eyes/In his/her sight"
         },
         {
@@ -74557,7 +74557,7 @@
         },
         {
             "kal": "takkuuk!",
-            "type": null,
+            "type": "unknown",
             "eng": "take a look!; Look!; see …"
         },
         {
@@ -74892,7 +74892,7 @@
         },
         {
             "kal": "takuuk!",
-            "type": null,
+            "type": "unknown",
             "eng": "Look! Take a look! see …"
         },
         {
@@ -74942,12 +74942,12 @@
         },
         {
             "kal": "talerpiata tungaa",
-            "type": null,
+            "type": "unknown",
             "eng": "the right side of it"
         },
         {
             "kal": "talerpiata tungaa",
-            "type": null,
+            "type": "unknown",
             "eng": "toward the right ¶ umiarsuup talerpiatungaa (aquaniit) ⇒ the starboard side of the ship"
         },
         {
@@ -75047,7 +75047,7 @@
         },
         {
             "kal": "tallimanngorpat",
-            "type": null,
+            "type": "unknown",
             "eng": "this coming Friday"
         },
         {
@@ -75062,7 +75062,7 @@
         },
         {
             "kal": "tallimanngortoq tannaartoq",
-            "type": null,
+            "type": "unknown",
             "eng": "Good Friday"
         },
         {
@@ -75072,7 +75072,7 @@
         },
         {
             "kal": "tallimassaanik",
-            "type": null,
+            "type": "unknown",
             "eng": "for the fifth time"
         },
         {
@@ -75147,52 +75147,52 @@
         },
         {
             "kal": "tamaana",
-            "type": null,
+            "type": "unknown",
             "eng": "this way; through here"
         },
         {
             "kal": "tamaanga",
-            "type": null,
+            "type": "unknown",
             "eng": "to here"
         },
         {
             "kal": "tamaani",
-            "type": null,
+            "type": "unknown",
             "eng": "here; in here"
         },
         {
             "kal": "tamaannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from here"
         },
         {
             "kal": "tamaanngaanniit",
-            "type": null,
+            "type": "unknown",
             "eng": "from here"
         },
         {
             "kal": "tamaasa",
-            "type": null,
+            "type": "unknown",
             "eng": "all of them"
         },
         {
             "kal": "tamaasa",
-            "type": null,
+            "type": "unknown",
             "eng": "all of them ¶ atit tamaasa ⇒ full name"
         },
         {
             "kal": "tamaat",
-            "type": null,
+            "type": "unknown",
             "eng": "all of it; the whole thing"
         },
         {
             "kal": "tamaginni",
-            "type": null,
+            "type": "unknown",
             "eng": "everywhere; all over"
         },
         {
             "kal": "tamakkerlutik",
-            "type": null,
+            "type": "unknown",
             "eng": "all together; as one"
         },
         {
@@ -75227,7 +75227,7 @@
         },
         {
             "kal": "tamakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "those; their"
         },
         {
@@ -75262,52 +75262,52 @@
         },
         {
             "kal": "tamangajaasa",
-            "type": null,
+            "type": "unknown",
             "eng": "almost all of them"
         },
         {
             "kal": "tamangajaat",
-            "type": null,
+            "type": "unknown",
             "eng": "almost all of it"
         },
         {
             "kal": "tamangajammik",
-            "type": null,
+            "type": "unknown",
             "eng": "almost all of them"
         },
         {
             "kal": "tamani",
-            "type": null,
+            "type": "unknown",
             "eng": "everywhere; all over"
         },
         {
             "kal": "tamani tamaani",
-            "type": null,
+            "type": "unknown",
             "eng": "here and there"
         },
         {
             "kal": "tamanna",
-            "type": null,
+            "type": "unknown",
             "eng": "this; that"
         },
         {
             "kal": "tamanna pillugu",
-            "type": null,
+            "type": "unknown",
             "eng": "because of that; therefore; for that reason"
         },
         {
             "kal": "tamanut ammasoq",
-            "type": null,
+            "type": "unknown",
             "eng": "public"
         },
         {
             "kal": "tamanut ammasumik",
-            "type": null,
+            "type": "unknown",
             "eng": "open to all"
         },
         {
             "kal": "tamanut saqqumisumik",
-            "type": null,
+            "type": "unknown",
             "eng": "openly; publicly"
         },
         {
@@ -75327,17 +75327,17 @@
         },
         {
             "kal": "tamarma",
-            "type": null,
+            "type": "unknown",
             "eng": "all of me ¶ tamarma sajuppunga ⇒ my entirety/my whole body"
         },
         {
             "kal": "tamarmi",
-            "type": null,
+            "type": "unknown",
             "eng": "in his/her/its entirety; all of him/her/it"
         },
         {
             "kal": "tamarmik",
-            "type": null,
+            "type": "unknown",
             "eng": "all of them"
         },
         {
@@ -75352,17 +75352,17 @@
         },
         {
             "kal": "tamassa",
-            "type": null,
+            "type": "unknown",
             "eng": "here it is; this is it: this is ..."
         },
         {
             "kal": "tamassa",
-            "type": null,
+            "type": "unknown",
             "eng": "please come in; come on in"
         },
         {
             "kal": "tamassi",
-            "type": null,
+            "type": "unknown",
             "eng": "all of you"
         },
         {
@@ -75397,17 +75397,17 @@
         },
         {
             "kal": "tamatigorluinnaq",
-            "type": null,
+            "type": "unknown",
             "eng": "absolutely every time; at every opportunity"
         },
         {
             "kal": "tamatigut",
-            "type": null,
+            "type": "unknown",
             "eng": "always; at all times"
         },
         {
             "kal": "tamatigut tamaana",
-            "type": null,
+            "type": "unknown",
             "eng": "here and there"
         },
         {
@@ -75417,32 +75417,32 @@
         },
         {
             "kal": "tamatta",
-            "type": null,
+            "type": "unknown",
             "eng": "all of us; we all; us all"
         },
         {
             "kal": "tamatuma",
-            "type": null,
+            "type": "unknown",
             "eng": "this; that"
         },
         {
             "kal": "tamatuma",
-            "type": null,
+            "type": "unknown",
             "eng": "this one ¶ tamatuma sikua ⇒ the ice there"
         },
         {
             "kal": "tamatuma kingorna",
-            "type": null,
+            "type": "unknown",
             "eng": "after that; then"
         },
         {
             "kal": "tamatumuuna",
-            "type": null,
+            "type": "unknown",
             "eng": "that time; at that time"
         },
         {
             "kal": "tamatumuuna",
-            "type": null,
+            "type": "unknown",
             "eng": "through here; through there"
         },
         {
@@ -75462,17 +75462,17 @@
         },
         {
             "kal": "tamaviat",
-            "type": null,
+            "type": "unknown",
             "eng": "with all his/her might"
         },
         {
             "kal": "tamaviat",
-            "type": null,
+            "type": "unknown",
             "eng": "all of it; the whole of it"
         },
         {
             "kal": "tamavimmik",
-            "type": null,
+            "type": "unknown",
             "eng": "absolutely all of them"
         },
         {
@@ -75902,42 +75902,42 @@
         },
         {
             "kal": "tappanna",
-            "type": null,
+            "type": "unknown",
             "eng": "high up there"
         },
         {
             "kal": "tappanna",
-            "type": null,
+            "type": "unknown",
             "eng": "in the east"
         },
         {
             "kal": "tappassuma",
-            "type": null,
+            "type": "unknown",
             "eng": "the one/ something up there ¶ tappassuma aputaa ⇒ the snow high up there"
         },
         {
             "kal": "tappava",
-            "type": null,
+            "type": "unknown",
             "eng": "there in the east"
         },
         {
             "kal": "tappava",
-            "type": null,
+            "type": "unknown",
             "eng": "way up there"
         },
         {
             "kal": "tappavani",
-            "type": null,
+            "type": "unknown",
             "eng": "in the east"
         },
         {
             "kal": "tappavani",
-            "type": null,
+            "type": "unknown",
             "eng": "up there"
         },
         {
             "kal": "tappavuuna",
-            "type": null,
+            "type": "unknown",
             "eng": "via high up there ¶ tappavuuna ingerlavoq, tappavuuna nuivoq ⇒ goes to the east; goes high up"
         },
         {
@@ -75957,12 +75957,12 @@
         },
         {
             "kal": "tappika",
-            "type": null,
+            "type": "unknown",
             "eng": "there higher up"
         },
         {
             "kal": "tappikani",
-            "type": null,
+            "type": "unknown",
             "eng": "up there"
         },
         {
@@ -75977,12 +75977,12 @@
         },
         {
             "kal": "tappikunga",
-            "type": null,
+            "type": "unknown",
             "eng": "up there"
         },
         {
             "kal": "tappikuuna",
-            "type": null,
+            "type": "unknown",
             "eng": "via up there ¶ tappikuuna tarrippoq ⇒ disappeared up there"
         },
         {
@@ -75992,7 +75992,7 @@
         },
         {
             "kal": "tappinnga",
-            "type": null,
+            "type": "unknown",
             "eng": "it up there"
         },
         {
@@ -76142,47 +76142,47 @@
         },
         {
             "kal": "taqqakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "in the south"
         },
         {
             "kal": "taqqakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "those inside the house (when speaker is outside); those in the next room"
         },
         {
             "kal": "taqqakku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "those outside (when speaker is inside)"
         },
         {
             "kal": "taqqama",
-            "type": null,
+            "type": "unknown",
             "eng": "inside the house (when speaker is outside); in the next room"
         },
         {
             "kal": "taqqama",
-            "type": null,
+            "type": "unknown",
             "eng": "outside the house (when speaker is inside)"
         },
         {
             "kal": "taqqamik milittoorneq",
-            "type": null,
+            "type": "unknown",
             "eng": "blood clot; thrombosis"
         },
         {
             "kal": "taqqanna",
-            "type": null,
+            "type": "unknown",
             "eng": "the one in the south"
         },
         {
             "kal": "taqqanna",
-            "type": null,
+            "type": "unknown",
             "eng": "he/him/she/her/it outside of the housing"
         },
         {
             "kal": "taqqanna",
-            "type": null,
+            "type": "unknown",
             "eng": "the one inside the house (when speaker is outside); the one inside the house (when speaker is outside); in the next room"
         },
         {
@@ -76197,12 +76197,12 @@
         },
         {
             "kal": "taqqava",
-            "type": null,
+            "type": "unknown",
             "eng": "there in the south"
         },
         {
             "kal": "taqqavani",
-            "type": null,
+            "type": "unknown",
             "eng": "in the south"
         },
         {
@@ -76297,7 +76297,7 @@
         },
         {
             "kal": "taraluttuaq!",
-            "type": null,
+            "type": "unknown",
             "eng": "The you'll se! Just wait and see! Wait till you see this!"
         },
         {
@@ -76362,12 +76362,12 @@
         },
         {
             "kal": "tarnikkut",
-            "type": null,
+            "type": "unknown",
             "eng": "mentally"
         },
         {
             "kal": "tarnikkut napparsimasoq",
-            "type": null,
+            "type": "unknown",
             "eng": "mentally ill"
         },
         {
@@ -76382,17 +76382,17 @@
         },
         {
             "kal": "tarnip nalunngissusia",
-            "type": null,
+            "type": "unknown",
             "eng": "conscience"
         },
         {
             "kal": "tarnip nappaataanut nakorsaq",
-            "type": null,
+            "type": "unknown",
             "eng": "psychiatrist"
         },
         {
             "kal": "tarnip pissusiinik ilisimatooq",
-            "type": null,
+            "type": "unknown",
             "eng": "psychologist"
         },
         {
@@ -76512,7 +76512,7 @@
         },
         {
             "kal": "tarrup ataani",
-            "type": null,
+            "type": "unknown",
             "eng": "in the dark"
         },
         {
@@ -76522,7 +76522,7 @@
         },
         {
             "kal": "tarsiallaannaq",
-            "type": null,
+            "type": "unknown",
             "eng": "very speedy; extremely fast"
         },
         {
@@ -76532,7 +76532,7 @@
         },
         {
             "kal": "tarsiinnaq",
-            "type": null,
+            "type": "unknown",
             "eng": "very speedy; extremely fast"
         },
         {
@@ -76572,27 +76572,27 @@
         },
         {
             "kal": "tasama",
-            "type": null,
+            "type": "unknown",
             "eng": "down there"
         },
         {
             "kal": "tasama",
-            "type": null,
+            "type": "unknown",
             "eng": "there toward the west"
         },
         {
             "kal": "tasanna",
-            "type": null,
+            "type": "unknown",
             "eng": "the one down there"
         },
         {
             "kal": "tasanna",
-            "type": null,
+            "type": "unknown",
             "eng": "the one there in the west"
         },
         {
             "kal": "tasassuma",
-            "type": null,
+            "type": "unknown",
             "eng": "the one down there ¶ tasassuma suaarpaanga ⇒"
         },
         {
@@ -76727,12 +76727,12 @@
         },
         {
             "kal": "tassa",
-            "type": null,
+            "type": "unknown",
             "eng": "that is; in other words; namely; so"
         },
         {
             "kal": "tassa!",
-            "type": null,
+            "type": "unknown",
             "eng": "OK, that's enough; \"When!\""
         },
         {
@@ -76747,42 +76747,42 @@
         },
         {
             "kal": "tassami",
-            "type": null,
+            "type": "unknown",
             "eng": "indeed; in any case"
         },
         {
             "kal": "tassani",
-            "type": null,
+            "type": "unknown",
             "eng": "in there; at that place; there"
         },
         {
             "kal": "tassannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from there"
         },
         {
             "kal": "tassanngaannaq",
-            "type": null,
+            "type": "unknown",
             "eng": "suddenly; all of a sudden"
         },
         {
             "kal": "tassaqa",
-            "type": null,
+            "type": "unknown",
             "eng": "I doubt it; I don't think so; probably not"
         },
         {
             "kal": "tassataava",
-            "type": null,
+            "type": "unknown",
             "eng": "a moment ago"
         },
         {
             "kal": "tassataavaannaq",
-            "type": null,
+            "type": "unknown",
             "eng": "just a moment ago"
         },
         {
             "kal": "tassataavannguaq",
-            "type": null,
+            "type": "unknown",
             "eng": "just an instant ago"
         },
         {
@@ -76807,7 +76807,7 @@
         },
         {
             "kal": "tassunga",
-            "type": null,
+            "type": "unknown",
             "eng": "to there; at that place"
         },
         {
@@ -76817,17 +76817,17 @@
         },
         {
             "kal": "tassuuguinnaq",
-            "type": null,
+            "type": "unknown",
             "eng": "in a very short time; very soon"
         },
         {
             "kal": "tassuugunngortoq",
-            "type": null,
+            "type": "unknown",
             "eng": "after a little while"
         },
         {
             "kal": "tassuuna",
-            "type": null,
+            "type": "unknown",
             "eng": "that way; through there"
         },
         {
@@ -76862,7 +76862,7 @@
         },
         {
             "kal": "tatigalugu anngiiarfigaa",
-            "type": null,
+            "type": "unknown",
             "eng": "confides in him/her"
         },
         {
@@ -77037,7 +77037,7 @@
         },
         {
             "kal": "tb",
-            "type": null,
+            "type": "unknown",
             "eng": "abbrev. TB; tuberculosis"
         },
         {
@@ -77057,7 +77057,7 @@
         },
         {
             "kal": "teknikkikkut avatangiisinullu ingerlatsivik",
-            "type": null,
+            "type": "unknown",
             "eng": "engineering and environmental administration"
         },
         {
@@ -77087,12 +77087,12 @@
         },
         {
             "kal": "telefonikkut ataatsimiinneq",
-            "type": null,
+            "type": "unknown",
             "eng": "conference call; telephone conference"
         },
         {
             "kal": "telefonikkut naalagiarneq",
-            "type": null,
+            "type": "unknown",
             "eng": "telephone religious service"
         },
         {
@@ -78022,7 +78022,7 @@
         },
         {
             "kal": "tillitanik pisineq",
-            "type": null,
+            "type": "unknown",
             "eng": "buying stolen goods"
         },
         {
@@ -78172,7 +78172,7 @@
         },
         {
             "kal": "timip inuussutissaminik suliarinninnera",
-            "type": null,
+            "type": "unknown",
             "eng": "metabolism"
         },
         {
@@ -78342,12 +78342,12 @@
         },
         {
             "kal": "timmisartumik tigusarinninneq",
-            "type": null,
+            "type": "unknown",
             "eng": "aiplane hijacking"
         },
         {
             "kal": "timmisartunut iniliaq",
-            "type": null,
+            "type": "unknown",
             "eng": "airplane hangar"
         },
         {
@@ -78357,7 +78357,7 @@
         },
         {
             "kal": "timmissanik nalunaaqutsersuineq",
-            "type": null,
+            "type": "unknown",
             "eng": "bird banding"
         },
         {
@@ -78382,7 +78382,7 @@
         },
         {
             "kal": "timmut",
-            "type": null,
+            "type": "unknown",
             "eng": "toward the interior; landward"
         },
         {
@@ -78507,12 +78507,12 @@
         },
         {
             "kal": "tinimut aallarpoq",
-            "type": null,
+            "type": "unknown",
             "eng": "it (the tide) is starting to fall; it (the tide) is beginning to ebb"
         },
         {
             "kal": "tinimut inerpoq",
-            "type": null,
+            "type": "unknown",
             "eng": "it is low water; it (the tide) is all the way out"
         },
         {
@@ -79202,7 +79202,7 @@
         },
         {
             "kal": "toqqaannartumik",
-            "type": null,
+            "type": "unknown",
             "eng": "directly; without stopping"
         },
         {
@@ -79462,12 +79462,12 @@
         },
         {
             "kal": "toqusut inaat",
-            "type": null,
+            "type": "unknown",
             "eng": "mortuary; funeral home"
         },
         {
             "kal": "toqusut inaat",
-            "type": null,
+            "type": "unknown",
             "eng": "the land of the dead; hades; the grave"
         },
         {
@@ -79477,7 +79477,7 @@
         },
         {
             "kal": "toqutassanut nivinngaavik",
-            "type": null,
+            "type": "unknown",
             "eng": "gallows"
         },
         {
@@ -79562,7 +79562,7 @@
         },
         {
             "kal": "torersumik",
-            "type": null,
+            "type": "unknown",
             "eng": "properly ¶ torersumik pissuseqarpoq ⇒ is a nice and genuine person; behaves properly"
         },
         {
@@ -79632,7 +79632,7 @@
         },
         {
             "kal": "torrak!",
-            "type": null,
+            "type": "unknown",
             "eng": "That was great! That was terrific! Nice job!"
         },
         {
@@ -79782,12 +79782,12 @@
         },
         {
             "kal": "tuavi!",
-            "type": null,
+            "type": "unknown",
             "eng": "Hurry up! Hurry!"
         },
         {
             "kal": "tuaviinnaq",
-            "type": null,
+            "type": "unknown",
             "eng": "quickly; fast; hurrying"
         },
         {
@@ -79992,7 +79992,7 @@
         },
         {
             "kal": "tukimut",
-            "type": null,
+            "type": "unknown",
             "eng": "lengthwise"
         },
         {
@@ -80192,7 +80192,7 @@
         },
         {
             "kal": "tullimut asanninneq",
-            "type": null,
+            "type": "unknown",
             "eng": "love for one's neighbor; selflessness"
         },
         {
@@ -80267,7 +80267,7 @@
         },
         {
             "kal": "tulugatsiaap tumaasai",
-            "type": null,
+            "type": "unknown",
             "eng": "marsh cinquefoil, Comarum palustre;"
         },
         {
@@ -80297,12 +80297,12 @@
         },
         {
             "kal": "tuluttut",
-            "type": null,
+            "type": "unknown",
             "eng": "in English"
         },
         {
             "kal": "tuluttuut",
-            "type": null,
+            "type": "unknown",
             "eng": "in English ¶ atuakkat tuluttuut ⇒ English language books"
         },
         {
@@ -80497,12 +80497,12 @@
         },
         {
             "kal": "tungaani",
-            "type": null,
+            "type": "unknown",
             "eng": "in his/her/its direction"
         },
         {
             "kal": "tungaanut",
-            "type": null,
+            "type": "unknown",
             "eng": "towards him/her/it"
         },
         {
@@ -80722,7 +80722,7 @@
         },
         {
             "kal": "tunisat allagartaat",
-            "type": null,
+            "type": "unknown",
             "eng": "invoice; bill"
         },
         {
@@ -80972,17 +80972,17 @@
         },
         {
             "kal": "tunummut",
-            "type": null,
+            "type": "unknown",
             "eng": "backwards"
         },
         {
             "kal": "tunummut",
-            "type": null,
+            "type": "unknown",
             "eng": "towards land"
         },
         {
             "kal": "tunummut sammisoq",
-            "type": null,
+            "type": "unknown",
             "eng": "backwards"
         },
         {
@@ -81012,7 +81012,7 @@
         },
         {
             "kal": "tunussutigiillutik",
-            "type": null,
+            "type": "unknown",
             "eng": "they turn their backs to each other and go their way ¶ tunussutigiillutik aallarput ⇒"
         },
         {
@@ -81092,7 +81092,7 @@
         },
         {
             "kal": "tupat qiortakkat",
-            "type": null,
+            "type": "unknown",
             "eng": "shagtobacco (shagpipe)"
         },
         {
@@ -81102,7 +81102,7 @@
         },
         {
             "kal": "tupeq napparpaat",
-            "type": null,
+            "type": "unknown",
             "eng": "they raise the tent"
         },
         {
@@ -81167,7 +81167,7 @@
         },
         {
             "kal": "tupinnaq!",
-            "type": null,
+            "type": "unknown",
             "eng": "surprising; wonderfull; unbelievable; incredibly; amazing; extremely; stunning; astonishing; astounding"
         },
         {
@@ -81542,7 +81542,7 @@
         },
         {
             "kal": "tusindi",
-            "type": null,
+            "type": "unknown",
             "eng": "thousand"
         },
         {
@@ -81597,27 +81597,27 @@
         },
         {
             "kal": "tussiut juullisiut",
-            "type": null,
+            "type": "unknown",
             "eng": "carol; christmas hymn(s)"
         },
         {
             "kal": "tussiut piinsisiut",
-            "type": null,
+            "type": "unknown",
             "eng": "pentecost hymn"
         },
         {
             "kal": "tussiut poorskisiut",
-            "type": null,
+            "type": "unknown",
             "eng": "easter hymn(s)"
         },
         {
             "kal": "tussiut ullaarsiut",
-            "type": null,
+            "type": "unknown",
             "eng": "morning song"
         },
         {
             "kal": "tussiut unnussiut",
-            "type": null,
+            "type": "unknown",
             "eng": "eveningsong"
         },
         {
@@ -81657,7 +81657,7 @@
         },
         {
             "kal": "tutsaani",
-            "type": null,
+            "type": "unknown",
             "eng": "within his hearing; in his inquiry"
         },
         {
@@ -81682,7 +81682,7 @@
         },
         {
             "kal": "tutseruttoraa",
-            "type": null,
+            "type": "unknown",
             "eng": "be in the middle of ¶ sinini tutseruttoraa ⇒ right in the middle of his sleep"
         },
         {
@@ -81837,17 +81837,17 @@
         },
         {
             "kal": "tv-kkut aallakaatitassat",
-            "type": null,
+            "type": "unknown",
             "eng": "television program"
         },
         {
             "kal": "tv-kkut naalagiarneq",
-            "type": null,
+            "type": "unknown",
             "eng": "worship on the tv"
         },
         {
             "kal": "tv-mik isiginnaarpoq",
-            "type": null,
+            "type": "unknown",
             "eng": "watching TV (television)"
         },
         {
@@ -81872,27 +81872,27 @@
         },
         {
             "kal": "tyskisut",
-            "type": null,
+            "type": "unknown",
             "eng": "in german"
         },
         {
             "kal": "tyskisuut",
-            "type": null,
+            "type": "unknown",
             "eng": "in german ¶ atuakkat tyskisuut ⇒ books in german; german books"
         },
         {
             "kal": "Tyskit Kangilliit",
-            "type": null,
+            "type": "unknown",
             "eng": "East Germany"
         },
         {
             "kal": "Tyskit Killiit",
-            "type": null,
+            "type": "unknown",
             "eng": "West Germany"
         },
         {
             "kal": "Tyskit Nunaat",
-            "type": null,
+            "type": "unknown",
             "eng": "Germany"
         },
         {
@@ -81912,7 +81912,7 @@
         },
         {
             "kal": "uaalu!",
-            "type": null,
+            "type": "unknown",
             "eng": "I'd like some, too.; Give me some!"
         },
         {
@@ -81957,12 +81957,12 @@
         },
         {
             "kal": "ualeru",
-            "type": null,
+            "type": "unknown",
             "eng": "this coming afternoon"
         },
         {
             "kal": "ualiarsaaq",
-            "type": null,
+            "type": "unknown",
             "eng": "early in the afternoon"
         },
         {
@@ -81992,7 +81992,7 @@
         },
         {
             "kal": "uaneralaannguaq",
-            "type": null,
+            "type": "unknown",
             "eng": "right close by"
         },
         {
@@ -82002,12 +82002,12 @@
         },
         {
             "kal": "uangaana",
-            "type": null,
+            "type": "unknown",
             "eng": "It's me! That was me."
         },
         {
             "kal": "uani",
-            "type": null,
+            "type": "unknown",
             "eng": "here; there"
         },
         {
@@ -82022,7 +82022,7 @@
         },
         {
             "kal": "uannga",
-            "type": null,
+            "type": "unknown",
             "eng": "from here"
         },
         {
@@ -82052,32 +82052,32 @@
         },
         {
             "kal": "uatsi!",
-            "type": null,
+            "type": "unknown",
             "eng": "Wait a bit!\""
         },
         {
             "kal": "uatsiaq",
-            "type": null,
+            "type": "unknown",
             "eng": "yesterday morning"
         },
         {
             "kal": "uatsilaaq!",
-            "type": null,
+            "type": "unknown",
             "eng": "Wait just a bit!; Just a moment!"
         },
         {
             "kal": "uatsinni",
-            "type": null,
+            "type": "unknown",
             "eng": "at our place; in our home"
         },
         {
             "kal": "uatsitut",
-            "type": null,
+            "type": "unknown",
             "eng": "just like us"
         },
         {
             "kal": "uattut",
-            "type": null,
+            "type": "unknown",
             "eng": "just like me"
         },
         {
@@ -82172,12 +82172,12 @@
         },
         {
             "kal": "uffa",
-            "type": null,
+            "type": "unknown",
             "eng": "although; even though; in spite of"
         },
         {
             "kal": "uffami",
-            "type": null,
+            "type": "unknown",
             "eng": "Yes, that's right;. I hope that…; if only…; would that…"
         },
         {
@@ -82192,12 +82192,12 @@
         },
         {
             "kal": "ugga",
-            "type": null,
+            "type": "unknown",
             "eng": "although; even though; in spite of"
         },
         {
             "kal": "uggami",
-            "type": null,
+            "type": "unknown",
             "eng": "Yea, that's right.; I hope that…; if only…; would that…"
         },
         {
@@ -82207,7 +82207,7 @@
         },
         {
             "kal": "uggornaq!",
-            "type": null,
+            "type": "unknown",
             "eng": "That's a pity!; My, that's irritating!"
         },
         {
@@ -82217,7 +82217,7 @@
         },
         {
             "kal": "ugguuna",
-            "type": null,
+            "type": "unknown",
             "eng": "this way; in this direction"
         },
         {
@@ -82487,7 +82487,7 @@
         },
         {
             "kal": "uisoriinnaq",
-            "type": null,
+            "type": "unknown",
             "eng": "at the same time; right away; in the blink of an eye"
         },
         {
@@ -82567,7 +82567,7 @@
         },
         {
             "kal": "uitsarmi",
-            "type": null,
+            "type": "unknown",
             "eng": "with eyes (wide) open"
         },
         {
@@ -82912,7 +82912,7 @@
         },
         {
             "kal": "ukiakkut",
-            "type": null,
+            "type": "unknown",
             "eng": "during the fall; during the autumn"
         },
         {
@@ -82932,7 +82932,7 @@
         },
         {
             "kal": "ukiarmi",
-            "type": null,
+            "type": "unknown",
             "eng": "in the fall; in the autumn"
         },
         {
@@ -82947,12 +82947,12 @@
         },
         {
             "kal": "ukiaru",
-            "type": null,
+            "type": "unknown",
             "eng": "next autumn; next fall"
         },
         {
             "kal": "ukiigatta",
-            "type": null,
+            "type": "unknown",
             "eng": "last year"
         },
         {
@@ -83032,7 +83032,7 @@
         },
         {
             "kal": "ukiortaami pilluarit!",
-            "type": null,
+            "type": "unknown",
             "eng": "Happy New Year!"
         },
         {
@@ -83047,7 +83047,7 @@
         },
         {
             "kal": "ukioru",
-            "type": null,
+            "type": "unknown",
             "eng": "this coming winter; next winter"
         },
         {
@@ -83062,17 +83062,17 @@
         },
         {
             "kal": "ukiukkut",
-            "type": null,
+            "type": "unknown",
             "eng": "in the winter"
         },
         {
             "kal": "ukiumi",
-            "type": null,
+            "type": "unknown",
             "eng": "in the winter; during the winter"
         },
         {
             "kal": "ukiumoortumik",
-            "type": null,
+            "type": "unknown",
             "eng": "annual"
         },
         {
@@ -83087,7 +83087,7 @@
         },
         {
             "kal": "ukiumut",
-            "type": null,
+            "type": "unknown",
             "eng": "annually; per year; this coming year;"
         },
         {
@@ -83202,17 +83202,17 @@
         },
         {
             "kal": "ukorsii!",
-            "type": null,
+            "type": "unknown",
             "eng": "Come on! Really! I think not!"
         },
         {
             "kal": "ukorsii!",
-            "type": null,
+            "type": "unknown",
             "eng": "You should hear this! Listen!"
         },
         {
             "kal": "uku(a)",
-            "type": null,
+            "type": "unknown",
             "eng": "this; this one's"
         },
         {
@@ -83242,7 +83242,7 @@
         },
         {
             "kal": "ukumartoq",
-            "type": null,
+            "type": "unknown",
             "eng": "rocking ¶ issiavik ukumartoq ⇒ rocking chair; rocker"
         },
         {
@@ -83542,7 +83542,7 @@
         },
         {
             "kal": "ullaakkut",
-            "type": null,
+            "type": "unknown",
             "eng": "in the morning; during the morning"
         },
         {
@@ -83622,7 +83622,7 @@
         },
         {
             "kal": "ulloq unnuarlu",
-            "type": null,
+            "type": "unknown",
             "eng": "a 24 hour period; a day and a night"
         },
         {
@@ -83712,7 +83712,7 @@
         },
         {
             "kal": "ullormut",
-            "type": null,
+            "type": "unknown",
             "eng": "daily"
         },
         {
@@ -83762,7 +83762,7 @@
         },
         {
             "kal": "ullorullartoq",
-            "type": null,
+            "type": "unknown",
             "eng": "for most of the day"
         },
         {
@@ -83772,7 +83772,7 @@
         },
         {
             "kal": "ulluinnarni",
-            "type": null,
+            "type": "unknown",
             "eng": "weekdays; daily"
         },
         {
@@ -83807,12 +83807,12 @@
         },
         {
             "kal": "ullukkut",
-            "type": null,
+            "type": "unknown",
             "eng": "in the daytime; during the day"
         },
         {
             "kal": "ulluleqqaarnerani",
-            "type": null,
+            "type": "unknown",
             "eng": "early in the morning; at dawn"
         },
         {
@@ -83832,17 +83832,17 @@
         },
         {
             "kal": "ulluminngortoq",
-            "type": null,
+            "type": "unknown",
             "eng": "later today"
         },
         {
             "kal": "ullumiummat",
-            "type": null,
+            "type": "unknown",
             "eng": "earlier today"
         },
         {
             "kal": "ulluni makkunani",
-            "type": null,
+            "type": "unknown",
             "eng": "these days; at present"
         },
         {
@@ -83867,7 +83867,7 @@
         },
         {
             "kal": "ullut arlaanni",
-            "type": null,
+            "type": "unknown",
             "eng": "one of these days; some time or another"
         },
         {
@@ -83882,17 +83882,17 @@
         },
         {
             "kal": "ullut tamaasa",
-            "type": null,
+            "type": "unknown",
             "eng": "every day; day to day"
         },
         {
             "kal": "ullut tamaviisa",
-            "type": null,
+            "type": "unknown",
             "eng": "every single day; day in, day out"
         },
         {
             "kal": "ullut tulleriiaat",
-            "type": null,
+            "type": "unknown",
             "eng": "day after day; many days in a row"
         },
         {
@@ -83902,7 +83902,7 @@
         },
         {
             "kal": "ulluunerani",
-            "type": null,
+            "type": "unknown",
             "eng": "while it is day; during the day"
         },
         {
@@ -84397,7 +84397,7 @@
         },
         {
             "kal": "una",
-            "type": null,
+            "type": "unknown",
             "eng": "this; that"
         },
         {
@@ -84542,7 +84542,7 @@
         },
         {
             "kal": "ungalia",
-            "type": null,
+            "type": "unknown",
             "eng": "the one that is farther away"
         },
         {
@@ -84627,7 +84627,7 @@
         },
         {
             "kal": "ungasianiit",
-            "type": null,
+            "type": "unknown",
             "eng": "from a long distance away"
         },
         {
@@ -84647,7 +84647,7 @@
         },
         {
             "kal": "ungasiinnarmi",
-            "type": null,
+            "type": "unknown",
             "eng": "far away"
         },
         {
@@ -84662,12 +84662,12 @@
         },
         {
             "kal": "ungasinngitsukkut",
-            "type": null,
+            "type": "unknown",
             "eng": "in the near future; soon"
         },
         {
             "kal": "ungasinngitsukkut",
-            "type": null,
+            "type": "unknown",
             "eng": "recently; not very long ago; the other day"
         },
         {
@@ -85157,12 +85157,12 @@
         },
         {
             "kal": "unnia",
-            "type": null,
+            "type": "unknown",
             "eng": "it is said that…; one hears that…"
         },
         {
             "kal": "unniit",
-            "type": null,
+            "type": "unknown",
             "eng": "although; despite; even though"
         },
         {
@@ -85172,12 +85172,12 @@
         },
         {
             "kal": "unnit",
-            "type": null,
+            "type": "unknown",
             "eng": "although; despite; even though"
         },
         {
             "kal": "unnuakkut",
-            "type": null,
+            "type": "unknown",
             "eng": "during the night"
         },
         {
@@ -85207,7 +85207,7 @@
         },
         {
             "kal": "unnuaru",
-            "type": null,
+            "type": "unknown",
             "eng": "tonight; tomorrow night"
         },
         {
@@ -85222,7 +85222,7 @@
         },
         {
             "kal": "unnugu",
-            "type": null,
+            "type": "unknown",
             "eng": "this evening (in the future)"
         },
         {
@@ -85257,7 +85257,7 @@
         },
         {
             "kal": "unnukkut",
-            "type": null,
+            "type": "unknown",
             "eng": "during the evening"
         },
         {
@@ -85267,7 +85267,7 @@
         },
         {
             "kal": "unnulernerani",
-            "type": null,
+            "type": "unknown",
             "eng": "just before evening"
         },
         {
@@ -85292,7 +85292,7 @@
         },
         {
             "kal": "unnuup-ilaa",
-            "type": null,
+            "type": "unknown",
             "eng": "in the course of the evening"
         },
         {
@@ -85397,7 +85397,7 @@
         },
         {
             "kal": "upernaakkut",
-            "type": null,
+            "type": "unknown",
             "eng": "during the spring"
         },
         {
@@ -85412,7 +85412,7 @@
         },
         {
             "kal": "upernaaru",
-            "type": null,
+            "type": "unknown",
             "eng": "next spring; this coming spring"
         },
         {
@@ -85742,17 +85742,17 @@
         },
         {
             "kal": "usiiffa",
-            "type": null,
+            "type": "unknown",
             "eng": "I thought that… (but was wrong); I had assumed that ..."
         },
         {
             "kal": "usiimma",
-            "type": null,
+            "type": "unknown",
             "eng": "I thought that… (but was wrong); I had assumed that ..."
         },
         {
             "kal": "usiinna",
-            "type": null,
+            "type": "unknown",
             "eng": "in fact; by the way"
         },
         {
@@ -85772,7 +85772,7 @@
         },
         {
             "kal": "usimaanna",
-            "type": null,
+            "type": "unknown",
             "eng": "in fact; by the way"
         },
         {
@@ -85807,7 +85807,7 @@
         },
         {
             "kal": "usiuffa",
-            "type": null,
+            "type": "unknown",
             "eng": "I thought that… (but was wrong); I had assumed that ..."
         },
         {
@@ -86067,7 +86067,7 @@
         },
         {
             "kal": "utaqqiisaa",
-            "type": null,
+            "type": "unknown",
             "eng": "in the meantime; in the interim"
         },
         {
@@ -86252,7 +86252,7 @@
         },
         {
             "kal": "utimut",
-            "type": null,
+            "type": "unknown",
             "eng": "route back; return to starting point of a trip"
         },
         {
@@ -86347,7 +86347,7 @@
         },
         {
             "kal": "utoqqarmut",
-            "type": null,
+            "type": "unknown",
             "eng": "a saying used of someone old or an advanced age doing something despite their age"
         },
         {
@@ -86592,12 +86592,12 @@
         },
         {
             "kal": "uuma",
-            "type": null,
+            "type": "unknown",
             "eng": "this; its"
         },
         {
             "kal": "uumaak",
-            "type": null,
+            "type": "unknown",
             "eng": "hey, you!;"
         },
         {
@@ -86647,7 +86647,7 @@
         },
         {
             "kal": "uumasoq nunamiutaq",
-            "type": null,
+            "type": "unknown",
             "eng": "land animal"
         },
         {
@@ -86752,12 +86752,12 @@
         },
         {
             "kal": "uuminakasik!",
-            "type": null,
+            "type": "unknown",
             "eng": "Boy, is he/she irritating!;"
         },
         {
             "kal": "uuminaq",
-            "type": null,
+            "type": "unknown",
             "eng": "irritating"
         },
         {
@@ -86877,12 +86877,12 @@
         },
         {
             "kal": "uummataasiorpoq",
-            "type": null,
+            "type": "unknown",
             "eng": "weaves Christmas heart"
         },
         {
             "kal": "uummatikkut iluunngarlunga",
-            "type": null,
+            "type": "unknown",
             "eng": "with all my heart"
         },
         {
@@ -86932,7 +86932,7 @@
         },
         {
             "kal": "uunga",
-            "type": null,
+            "type": "unknown",
             "eng": "in that direction; to there; thither"
         },
         {

@@ -76,10 +76,7 @@ class _appState extends State<app> {
                   child: TabBarView(
                     children: [
                       const analyzerPage(),
-                      const Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [Text("Dictionary View", style: TextStyle(fontSize: 30))],
-                      ),
+                      const dictionaryPage(),
                       const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [Text("Flashcards", style: TextStyle(fontSize: 30))],
