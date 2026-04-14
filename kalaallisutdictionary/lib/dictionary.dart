@@ -92,12 +92,6 @@ class _dictionaryPageState extends State<dictionaryPage> {
           ListView.builder(
             itemExtent: 50.0, 
             itemCount: kalEngObj['entries'].length,
-            // itemBuilder: (context, index) {
-            //   return ListTile(
-            //     leading: CircleAvatar(child: Text("${index + 1}")),
-            //     title: Text(kalEngObj['entries'][index]['kal']),
-            //     subtitle: const Text("Tap to view details"),
-            //   );
             itemBuilder: (context, index) {
               return Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
