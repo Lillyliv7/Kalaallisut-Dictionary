@@ -5,8 +5,14 @@ import 'package:flutter/services.dart';
 import 'databases.dart';
 
 
-String kalEngTypeToEng(String kalEngType) {
-  if (kalEngType.toLowerCase() == "taggit") {
+String kalEngTypeToEng(String? kalEngType) {
+  if (kalEngType == null) {
+    return 'unknown';
+  }
+  if (kalEngType.toLowerCase() == "proprium/egennavn") { // noun
+    return 'noun';
+  }
+  if (kalEngType.toLowerCase() == "taggit") { // proper noun
     return 'noun';
   }
   if (kalEngType.toLowerCase() == 'oqaluut susaatsoq') { // intransitive
@@ -30,7 +36,7 @@ List<String> dictionarySearchType(String type, String term) {
 
 
   for (int i = 0; i < kalEngObj['entries'].length; i++) {
-    if (kalEngObj['entries'][i]['kal'].startsWith(term)) {
+    if (kalEngObj['entries'][i]['kal'].toLowerCase().startsWith(term.toLowerCase())) {
       if (kalEngTypeToEng(kalEngObj['entries'][i]['type']) == type.toLowerCase()) {
         engOutputs.add(kalEngObj['entries'][i]['eng']);
         lengths.add(kalEngObj['entries'][i]['kal'].length);
