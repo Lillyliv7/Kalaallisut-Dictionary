@@ -13,6 +13,10 @@
     "Verb -> Verb": "Verb -> Verb",
     "dictionary.title": "Dictionary",
     "dictionary.enter-word": "Enter a word",
+    "tagging.title": "Tagging",
+    "tagging.file": "File",
+    "tagging.save": "Save",
+    "tagging.tooltip": "FIXME",
     "settings.language": "Language",
     "settings.title": "Settings",
     "settings.credits": "Developed by Lillith (lillith888 on Discord)\nFree Software under the GNU GPL Version 3.0\nhttps://www.gnu.org/licenses/gpl-3.0.en.html\nhttps://github.com/Lillyliv7/Kalaallisut-Dictionary"

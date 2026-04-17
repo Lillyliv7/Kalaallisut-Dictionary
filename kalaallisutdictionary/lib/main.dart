@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
+import 'package:kalaallisutdictionary/assistedTagging.dart';
 import 'dart:convert';
 
 import 'analyzer.dart';
@@ -77,10 +78,7 @@ class _appState extends State<app> {
                     children: [
                       const analyzerPage(),
                       const dictionaryPage(),
-                      const Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [Text("Flashcards", style: TextStyle(fontSize: 30))],
-                      ),
+                      const taggingPage(),
                       const settingsPage()
                     ],
                   ),

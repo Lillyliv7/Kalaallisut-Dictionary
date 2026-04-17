@@ -141,6 +141,11 @@
             "m": "V{galuaq}V"
         },
         {
+            "a": "GI",
+            "t": "Verb -> Verb",
+            "m": "V{gi}V"
+        },
+        {
             "a": "QQIP",
             "t": "Verb -> Verb",
             "m": "V{nqik}V"
