@@ -90,6 +90,91 @@ class _dictionaryPageState extends State<dictionaryPage> {
 
   String _textValue = '';
 
+  @pragma('vm:entry-point')
+  static Route<Object?> _dialogBuilder(
+    BuildContext context,
+    Object? arguments,
+  ) {
+    return DialogRoute<void>(
+      context: context,
+      builder: (BuildContext context) {
+        final List<dynamic> indexes = arguments as List<dynamic>;
+        return AlertDialog(
+          title: Text(uiStrings['dictionary.search']),
+          // content: Expanded(
+          // child: Center(
+          content: 
+          ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 600, maxHeight: 800),
+          child: SizedBox(
+  width: double.maxFinite, // Ensures the dialog takes up proper width
+  height: double.maxFinite,           // Give it a specific height
+  child: 
+            // child: ConstrainedBox(
+            //   constraints: const BoxConstraints(maxWidth: 1000),
+              // child: ListView.builder(
+              ListView.builder(
+                padding: EdgeInsets.all(15),
+                // controller: _scrollController,
+                itemExtent: dictionaryElementHeight,
+                itemCount: indexes.length,
+
+                itemBuilder: (context, index) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide(
+                          color: Colors.grey.shade300,
+                          width: 1.0,
+                        ),
+                      ),
+                    ),
+
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            indexes[index]['kal'] +
+                                ' (${indexes[index]['type'].toLowerCase()})',
+                          ),
+                        ),
+                        Expanded(
+                          child: Tooltip(
+                            message: indexes[index]['eng'],
+                            child: Text(
+                              indexes[index]['eng'],
+                              textAlign: TextAlign.end,
+                              softWrap: true,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+          ),
+          ),
+            // ),
+        //   ),
+        // ),
+          actions: <Widget>[
+            TextButton(
+              style: TextButton.styleFrom(
+                textStyle: Theme.of(context).textTheme.labelLarge,
+              ),
+              child: Text(uiStrings['ui.close']),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -139,11 +224,23 @@ class _dictionaryPageState extends State<dictionaryPage> {
                       index = i;
                     }
                   }
-                  _scrollController.animateTo(
-                    index * dictionaryElementHeight,
-                    duration: Duration(milliseconds: 500),
-                    curve: Curves.easeIn,
-                  );
+                  if (index != 0) { // found an exact match
+                    _scrollController.animateTo(
+                      index * dictionaryElementHeight,
+                      duration: Duration(milliseconds: 500),
+                      curve: Curves.easeIn,
+                    );
+                    return;
+                  } else { // no exact match found, search for the closest ones
+                    List<Object> indexes = [];
+                    for (var i = 0; i < kalEngObj['entries'].length; i++) {
+                      if (kalEngObj['entries'][i]['eng'].startsWith(_textValue) ||
+                          kalEngObj['entries'][i]['kal'].startsWith(_textValue)) {
+                        indexes.add({"eng":kalEngObj['entries'][i]['eng'], "kal":kalEngObj['entries'][i]['kal'],"type":kalEngObj['entries'][i]['type'],});
+                      }
+                    }
+                    Navigator.of(context).restorablePush(_dialogBuilder, arguments: indexes);
+                  }
                 },
                 style: ElevatedButton.styleFrom(
                   fixedSize: const Size(50, 50),
@@ -159,51 +256,51 @@ class _dictionaryPageState extends State<dictionaryPage> {
         ),
         Expanded(
           child: Center(
-            child: ConstrainedBox(constraints: const BoxConstraints(maxWidth: 1000), child:
-            
-          ListView.builder(
-            padding: EdgeInsets.all(15),
-            controller: _scrollController,
-            itemExtent: dictionaryElementHeight,
-            itemCount: kalEngObj['entries'].length,
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 1000),
+              child: ListView.builder(
+                padding: EdgeInsets.all(15),
+                controller: _scrollController,
+                itemExtent: dictionaryElementHeight,
+                itemCount: kalEngObj['entries'].length,
 
-            itemBuilder: (context, index) {
-              return Container(
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: Colors.grey.shade300,
-                      width: 1.0,
-                    ),
-                  ),
-                ),
-
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: Text(
-                        kalEngObj['entries'][index]['kal'] +
-                            ' (${kalEngObj['entries'][index]['type'].toLowerCase()})',
-                      ),
-                    ),
-                    Expanded(
-                      child: Tooltip(
-                        message: kalEngObj['entries'][index]['eng'],
-                        child: Text(
-                          kalEngObj['entries'][index]['eng'],
-                          textAlign: TextAlign.end,
-                          softWrap: true,
+                itemBuilder: (context, index) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide(
+                          color: Colors.grey.shade300,
+                          width: 1.0,
                         ),
                       ),
                     ),
-                  ],
-                ),
-              );
-            },
+
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            kalEngObj['entries'][index]['kal'] +
+                                ' (${kalEngObj['entries'][index]['type'].toLowerCase()})',
+                          ),
+                        ),
+                        Expanded(
+                          child: Tooltip(
+                            message: kalEngObj['entries'][index]['eng'],
+                            child: Text(
+                              kalEngObj['entries'][index]['eng'],
+                              textAlign: TextAlign.end,
+                              softWrap: true,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ),
           ),
-          )
-          )
         ),
       ],
     );

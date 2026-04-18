@@ -1,4 +1,5 @@
 {
+    "ui.close": "Close",
     "analyzer.enter-word": "Enter a full word",
     "analyzer.title": "Word Lookup",
     "grammar.noun": "Noun",
@@ -13,6 +14,7 @@
     "Verb -> Verb": "Verb -> Verb",
     "dictionary.title": "Dictionary",
     "dictionary.enter-word": "Enter a word",
+    "dictionary.search": "Search",
     "tagging.title": "Tagging",
     "tagging.file": "File",
     "tagging.save": "Save",

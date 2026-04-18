@@ -1,4 +1,5 @@
 {
+    "ui.close": "Cerrar",
     "analyzer.enter-word": "Introduzca una palabra completa",
     "analyzer.title": "Búsqueda de Palabras",
     "grammar.noun": "Sustantivo",
@@ -13,6 +14,7 @@
     "Verb -> Verb": "Verbo -> Verbo",
     "dictionary.title": "Diccionario",
     "dictionary.enter-word": "Introduzca una palabra",
+    "dictionary.search": "Búsqueda",
     "tagging.title": "Etiquetar",
     "tagging.file": "Achivo",
     "tagging.save": "Guardar",
