@@ -12,11 +12,11 @@ String kalEngTypeToEng(String? kalEngType) {
     return 'unknown';
   }
   if (kalEngType.toLowerCase() == "proprium/egennavn") {
-    // noun
+    // proper noun
     return 'noun';
   }
   if (kalEngType.toLowerCase() == "taggit") {
-    // proper noun
+    // noun
     return 'noun';
   }
   if (kalEngType.toLowerCase() == 'oqaluut susaatsoq') {
@@ -100,24 +100,23 @@ class _dictionaryPageState extends State<dictionaryPage> {
           constraints: const BoxConstraints(maxWidth: 400),
           child: Row(
             children: [
-              Expanded(child:
-              TextField(
-                controller: _wordController,
-                decoration: InputDecoration(
-                  hintText: uiStrings['dictionary.enter-word'],
-                  border: OutlineInputBorder(),
+              Expanded(
+                child: TextField(
+                  controller: _wordController,
+                  decoration: InputDecoration(
+                    hintText: uiStrings['dictionary.enter-word'],
+                    border: OutlineInputBorder(),
+                  ),
+                  onChanged: (text) {
+                    setState(() {
+                      _textValue = text;
+                    });
+                  },
                 ),
-                onChanged: (text) {
-                  setState(() {
-                    _textValue = text;
-                  });
-                },
-              )),
+              ),
               const SizedBox(width: 15),
               ElevatedButton(
-                onPressed: () {
-                  
-                },
+                onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   fixedSize: const Size(50, 50),
                   padding: EdgeInsets.zero,
@@ -130,9 +129,13 @@ class _dictionaryPageState extends State<dictionaryPage> {
               const SizedBox(width: 15),
               ElevatedButton(
                 onPressed: () {
+                  if (_textValue == '') {
+                    return;
+                  }
                   var index = 0;
                   for (var i = 0; i < kalEngObj['entries'].length; i++) {
-                    if (kalEngObj['entries'][i]['eng'] == _textValue || kalEngObj['entries'][i]['kal'] == _textValue) {
+                    if (kalEngObj['entries'][i]['eng'] == _textValue ||
+                        kalEngObj['entries'][i]['kal'] == _textValue) {
                       index = i;
                     }
                   }
@@ -155,22 +158,52 @@ class _dictionaryPageState extends State<dictionaryPage> {
           ),
         ),
         Expanded(
-          child: ListView.builder(
+          child: Center(
+            child: ConstrainedBox(constraints: const BoxConstraints(maxWidth: 1000), child:
+            
+          ListView.builder(
             padding: EdgeInsets.all(15),
             controller: _scrollController,
             itemExtent: dictionaryElementHeight,
             itemCount: kalEngObj['entries'].length,
+
             itemBuilder: (context, index) {
-              return Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(child: Text(kalEngObj['entries'][index]['kal'] + ' (${kalEngObj['entries'][index]['type']})')),
-                  // Expanded(child: Text(kalEngObj['entries'][index]['type'])),
-                  Expanded(child: Text(kalEngObj['entries'][index]['eng'])),
-                ],
+              return Container(
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: Colors.grey.shade300,
+                      width: 1.0,
+                    ),
+                  ),
+                ),
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        kalEngObj['entries'][index]['kal'] +
+                            ' (${kalEngObj['entries'][index]['type'].toLowerCase()})',
+                      ),
+                    ),
+                    Expanded(
+                      child: Tooltip(
+                        message: kalEngObj['entries'][index]['eng'],
+                        child: Text(
+                          kalEngObj['entries'][index]['eng'],
+                          textAlign: TextAlign.end,
+                          softWrap: true,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               );
             },
           ),
+          )
+          )
         ),
       ],
     );
