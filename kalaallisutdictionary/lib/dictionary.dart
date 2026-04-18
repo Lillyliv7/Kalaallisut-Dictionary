@@ -113,6 +113,21 @@ class _dictionaryPageState extends State<dictionaryPage> {
                   });
                 },
               )),
+              const SizedBox(width: 15),
+              ElevatedButton(
+                onPressed: () {
+                  
+                },
+                style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(50, 50),
+                  padding: EdgeInsets.zero,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+                child: const Icon(Icons.settings, size: 32),
+              ),
+              const SizedBox(width: 15),
               ElevatedButton(
                 onPressed: () {
                   var index = 0;
@@ -141,6 +156,7 @@ class _dictionaryPageState extends State<dictionaryPage> {
         ),
         Expanded(
           child: ListView.builder(
+            padding: EdgeInsets.all(15),
             controller: _scrollController,
             itemExtent: dictionaryElementHeight,
             itemCount: kalEngObj['entries'].length,
@@ -148,8 +164,8 @@ class _dictionaryPageState extends State<dictionaryPage> {
               return Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Expanded(child: Text(kalEngObj['entries'][index]['kal'])),
-                  Expanded(child: Text(kalEngObj['entries'][index]['type'])),
+                  Expanded(child: Text(kalEngObj['entries'][index]['kal'] + ' (${kalEngObj['entries'][index]['type']})')),
+                  // Expanded(child: Text(kalEngObj['entries'][index]['type'])),
                   Expanded(child: Text(kalEngObj['entries'][index]['eng'])),
                 ],
               );
