@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'dart:convert';
 
 import 'databases.dart';
+import 'analyzer.dart';
+import 'blockWidget.dart';
 
 class taggingPage extends StatefulWidget {
   const taggingPage({super.key});
@@ -10,7 +13,60 @@ class taggingPage extends StatefulWidget {
 }
 
 class _taggingPageState extends State<taggingPage> {
+  final TextEditingController _serverController = TextEditingController();
+  final TextEditingController _wordController = TextEditingController();
+
+  String _textValue = '';
+  String _analyzerServer = 'imlillith888.xyz:8000';
+
+  // Changed from List<String> to List<ParsedWord>
+  List<ParsedWord> _cleanedAnalyses = [];
+
+  void _searchDictionary() {
+    setState(() {
+      _cleanedAnalyses = [];
+    });
+    analyzerRequest(_analyzerServer, _textValue).then((analyzed) {
+      if (analyzed == null) {
+        setState(() {
+          _cleanedAnalyses = [];
+        });
+        return;
+      }
+      final analyzedObj = jsonDecode(analyzed);
+      final analyses = analyzedObj['analyses'] as List<dynamic>?;
+
+      List<String> analysesNoRepeats = [];
+
+      for (int i = 0; i < analyses!.length; i++) {
+        bool found = false;
+        for (int j = 0; j < analysesNoRepeats.length; j++) {
+          if (analysesNoRepeats[j] == analyses[i]['cleaned']) {
+            found = true;
+          }
+        }
+        if (!found) {
+          analysesNoRepeats.add(analyses[i]['cleaned']);
+          print(analyses[i]['cleaned']);
+        }
+      }
+
+      final cleaned = analysesNoRepeats
+          .map((a) => parseAnalyzerOutput(a))
+          .toList();
+      setState(() {
+        _cleanedAnalyses = cleaned;
+      });
+    });
+  }
+
   @override
+  void dispose() {
+    _serverController.dispose();
+    _wordController.dispose();
+    super.dispose();
+  }
+
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -71,13 +127,62 @@ class _taggingPageState extends State<taggingPage> {
                       ),
                     ],
                   ),
-
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      
-                  
-                    ],
+                ],
+              ),
+              const SizedBox(width: 15),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 400),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          child: TextField(
+                            controller: _wordController,
+                            decoration: InputDecoration(
+                              hintText: uiStrings['analyzer.enter-word'],
+                              border: OutlineInputBorder(),
+                            ),
+                            onChanged: (text) {
+                              setState(() {
+                                _textValue = text;
+                              });
+                            },
+                          ),
+                        ),
+                        const SizedBox(width: 15),
+                        ElevatedButton(
+                          onPressed: _searchDictionary,
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: const Size(50, 50),
+                            padding: EdgeInsets.zero,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                          child: const Icon(Icons.pageview_outlined, size: 32),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      // Render the custom widget for each analysis
+                      children: _cleanedAnalyses
+                          .map(
+                            (parsedWord) => Padding(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 8.0,
+                              ),
+                              child: ParsedWordWidget(word: parsedWord),
+                            ),
+                          )
+                          .toList(),
+                    ),
                   ),
                 ],
               ),
