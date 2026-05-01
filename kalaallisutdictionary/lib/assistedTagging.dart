@@ -138,6 +138,18 @@ class _taggingPageState extends State<taggingPage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: const Size(50, 50),
+                            padding: EdgeInsets.zero,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                          child: const Icon(Icons.arrow_left_sharp, size: 48),
+                        ),
+                        const SizedBox(width: 15),
                         Expanded(
                           child: TextField(
                             controller: _wordController,
@@ -151,6 +163,18 @@ class _taggingPageState extends State<taggingPage> {
                               });
                             },
                           ),
+                        ),
+                        const SizedBox(width: 15),
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: const Size(50, 50),
+                            padding: EdgeInsets.zero,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                          child: const Icon(Icons.arrow_right_sharp, size: 48),
                         ),
                         const SizedBox(width: 15),
                         ElevatedButton(
