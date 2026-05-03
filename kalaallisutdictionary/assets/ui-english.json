@@ -1,5 +1,6 @@
 {
     "ui.close": "Close",
+    "ui.ok": "OK",
     "analyzer.enter-word": "Enter a full word",
     "analyzer.title": "Word Lookup",
     "grammar.noun": "Noun",
@@ -15,6 +16,9 @@
     "dictionary.title": "Dictionary",
     "dictionary.enter-word": "Enter a word",
     "dictionary.search": "Search",
+    "dictionary.settings": "Settings",
+    "dictionary.english": "English",
+    "dictionary.greenlandic": "Greenlandic",
     "tagging.title": "Tagging",
     "tagging.file": "File",
     "tagging.save": "Save",

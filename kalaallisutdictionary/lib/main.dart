@@ -6,7 +6,6 @@ import 'package:kalaallisutdictionary/conjugationTables.dart';
 import 'dart:convert';
 
 import 'analyzer.dart';
-import 'blockWidget.dart';
 import 'dictionary.dart';
 import 'databases.dart';
 import 'settings.dart';
@@ -36,7 +35,10 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'Kalaallisut Dictionary',
           theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.green,
+              brightness: Brightness.light,
+            ),
           ),
           home: const app(),
         );

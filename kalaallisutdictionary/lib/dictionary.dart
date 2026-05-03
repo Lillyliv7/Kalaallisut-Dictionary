@@ -90,8 +90,67 @@ class _dictionaryPageState extends State<dictionaryPage> {
 
   String _textValue = '';
 
+  bool searchGreenlandic = true;
+  bool searchEnglish = true;
+
+  void _optionsBuilder() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return StatefulBuilder(
+          builder: (context, setState) {
+            return AlertDialog(
+              title: Text(uiStrings['dictionary.settings']),
+              content: ConstrainedBox(
+                constraints: const BoxConstraints(
+                  maxWidth: 600,
+                  maxHeight: 800,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(uiStrings['dictionary.english']),
+
+                        Switch(
+                          value: searchEnglish,
+                          onChanged: (value) {
+                            setState(() {
+                              searchEnglish = value;
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(uiStrings['dictionary.greenlandic']),
+
+                        Switch(
+                          value: searchGreenlandic,
+                          onChanged: (value) {
+                            setState(() {
+                              searchGreenlandic = value;
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
   @pragma('vm:entry-point')
-  static Route<Object?> _dialogBuilder(
+  static Route<Object?> _resultsBuilder(
     BuildContext context,
     Object? arguments,
   ) {
@@ -101,19 +160,13 @@ class _dictionaryPageState extends State<dictionaryPage> {
         final List<dynamic> indexes = arguments as List<dynamic>;
         return AlertDialog(
           title: Text(uiStrings['dictionary.search']),
-          // content: Expanded(
-          // child: Center(
-          content: 
-          ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 600, maxHeight: 800),
-          child: SizedBox(
-  width: double.maxFinite, // Ensures the dialog takes up proper width
-  height: double.maxFinite,           // Give it a specific height
-  child: 
-            // child: ConstrainedBox(
-            //   constraints: const BoxConstraints(maxWidth: 1000),
-              // child: ListView.builder(
-              ListView.builder(
+          content: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 600, maxHeight: 800),
+            child: SizedBox(
+              width:
+                  double.maxFinite, // Ensures the dialog takes up proper width
+              height: double.maxFinite, // Give it a specific height
+              child: ListView.builder(
                 padding: EdgeInsets.all(15),
                 // controller: _scrollController,
                 itemExtent: dictionaryElementHeight,
@@ -154,11 +207,8 @@ class _dictionaryPageState extends State<dictionaryPage> {
                   );
                 },
               ),
+            ),
           ),
-          ),
-            // ),
-        //   ),
-        // ),
           actions: <Widget>[
             TextButton(
               style: TextButton.styleFrom(
@@ -201,7 +251,10 @@ class _dictionaryPageState extends State<dictionaryPage> {
               ),
               const SizedBox(width: 15),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  // Navigator.of(context).restorablePush(_optionsBuilder);
+                  _optionsBuilder();
+                },
                 style: ElevatedButton.styleFrom(
                   fixedSize: const Size(50, 50),
                   padding: EdgeInsets.zero,
@@ -224,22 +277,36 @@ class _dictionaryPageState extends State<dictionaryPage> {
                       index = i;
                     }
                   }
-                  if (index != 0) { // found an exact match
+                  if (index != 0) {
+                    // found an exact match
                     _scrollController.animateTo(
                       index * dictionaryElementHeight,
                       duration: Duration(milliseconds: 500),
                       curve: Curves.easeIn,
                     );
                     return;
-                  } else { // no exact match found, search for the closest ones
+                  } else {
+                    // no exact match found, search for the closest ones
                     List<Object> indexes = [];
                     for (var i = 0; i < kalEngObj['entries'].length; i++) {
-                      if (kalEngObj['entries'][i]['eng'].startsWith(_textValue) ||
-                          kalEngObj['entries'][i]['kal'].startsWith(_textValue)) {
-                        indexes.add({"eng":kalEngObj['entries'][i]['eng'], "kal":kalEngObj['entries'][i]['kal'],"type":kalEngObj['entries'][i]['type'],});
+                      if ((searchEnglish &&
+                              kalEngObj['entries'][i]['eng']
+                                  .toLowerCase()
+                                  .startsWith(_textValue.toLowerCase())) ||
+                          (searchGreenlandic &&
+                              kalEngObj['entries'][i]['kal']
+                                  .toLowerCase()
+                                  .startsWith(_textValue.toLowerCase()))) {
+                        indexes.add({
+                          "eng": kalEngObj['entries'][i]['eng'],
+                          "kal": kalEngObj['entries'][i]['kal'],
+                          "type": kalEngObj['entries'][i]['type'],
+                        });
                       }
                     }
-                    Navigator.of(context).restorablePush(_dialogBuilder, arguments: indexes);
+                    Navigator.of(
+                      context,
+                    ).restorablePush(_resultsBuilder, arguments: indexes);
                   }
                 },
                 style: ElevatedButton.styleFrom(
