@@ -1,9 +1,37 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'dart:convert';
+import 'package:file_picker/file_picker.dart';
 
 import 'databases.dart';
 import 'analyzer.dart';
 import 'blockWidget.dart';
+
+Future<String?> pickFile() async {
+  FilePickerResult? result = await FilePicker.pickFiles();
+
+  if (result != null) {
+    File file = File(result.files.single.path!);
+    return await file.readAsString();
+  } else {
+    return null;
+  }
+}
+
+void saveFile(String text) async {
+  String? outputFile = await FilePicker.saveFile(
+    dialogTitle: 'Please select an output file:',
+    fileName: 'output.txt',
+  );
+
+  if (outputFile == null) {
+    return;
+  } else {
+    File file = File(outputFile);
+    await file.writeAsString(text);
+  }
+}
 
 class taggingPage extends StatefulWidget {
   const taggingPage({super.key});
@@ -18,6 +46,8 @@ class _taggingPageState extends State<taggingPage> {
 
   String _textValue = '';
   String _analyzerServer = 'imlillith888.xyz:8000';
+
+  String file = '';
 
   // Changed from List<String> to List<ParsedWord>
   List<ParsedWord> _cleanedAnalyses = [];
@@ -97,7 +127,10 @@ class _taggingPageState extends State<taggingPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () async {
+                          file = (await pickFile())!;
+                          print(file);
+                        },
                         style: ElevatedButton.styleFrom(
                           // fixedSize: const Size(50, 50),
                           padding: EdgeInsets.all(8),
@@ -112,7 +145,9 @@ class _taggingPageState extends State<taggingPage> {
                       ),
                       const SizedBox(width: 15),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          saveFile(file);
+                        },
                         style: ElevatedButton.styleFrom(
                           // fixedSize: const Size(50, 50),
                           padding: EdgeInsets.all(8),

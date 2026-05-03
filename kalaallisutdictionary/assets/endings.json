@@ -1,0 +1,27 @@
+{
+    "nouns": {
+        "singular": {
+            "absolutive": "Ø",
+            "ergative": "(u)p",
+            "instrumental": "mik",
+            "allative": "mut",
+            "locative": "mi",
+            "ablative": "mit",
+            "prolative": "kkut",
+            "equative": "tut"
+        },
+        "plural": {
+            "absolutive": "(i)t",
+            "ergative": "(i)t",
+            "instrumental": "nik",
+            "allative": "nut",
+            "locative": "ni",
+            "ablative": "nit",
+            "prolative": "tigut",
+            "equative": "tut"
+        }
+    },
+    "verbs": {
+
+    }
+}
