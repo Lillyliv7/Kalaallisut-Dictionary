@@ -1,28 +1,4 @@
 {
-    "nouns": {
-        "singular": {
-            "absolutive": "Ø",
-            "ergative": "(u)p",
-            "instrumental": "mik",
-            "allative": "mut",
-            "ablative": "mit",
-            "prolative": "kkut",
-            "equative": "tut"
-        },
-        "plural": {
-            "absolutive": "(i)t",
-            "ergative": "(i)t",
-            "instrumental": "nik",
-            "allative": "nut",
-            "ablative": "nit",
-            "prolative": "tigut",
-            "equative": "tut"
-        }
-    },
-    "verbs": {
-
-    },
-
     "endings": [
         {
             "tag": "endings.noun.loc.sg",
@@ -33,6 +9,110 @@
             "tag": "endings.noun.loc.pl",
             "analyzer": "N + Lok + Pl",
             "mofo": "N{ni}"
+        },
+        {
+            "tag": "endings.noun.abs.sg",
+            "analyzer": "N + Abs + Sg",
+            "mofo": "N{Ø}"
+        },
+        {
+            "tag": "endings.noun.abs.pl",
+            "analyzer": "N + Abs + Pl",
+            "mofo": "N{(i)t}"
+        },
+        {
+            "tag": "endings.noun.erg.sg",
+            "analyzer": "N + Rel + Sg",
+            "mofo": "N{(u)p}"
+        },
+        {
+            "tag": "endings.noun.erg.pl",
+            "analyzer": "N + Rel + Pl",
+            "mofo": "N{(i)t}"
+        },
+        {
+            "tag": "endings.noun.ins.sg",
+            "analyzer": "N + Ins + Sg",
+            "mofo": "N{mik}"
+        },
+        {
+            "tag": "endings.noun.ins.pl",
+            "analyzer": "N + Ins + Pl",
+            "mofo": "N{nik}"
+        },
+        {
+            "tag": "endings.noun.all.sg",
+            "analyzer": "N + Trm + Sg",
+            "mofo": "N{mut}"
+        },
+        {
+            "tag": "endings.noun.all.pl",
+            "analyzer": "N + Trm + Pl",
+            "mofo": "N{nut}"
+        },
+        {
+            "tag": "endings.noun.abl.sg",
+            "analyzer": "N + Abl + Sg",
+            "mofo": "N{mit}"
+        },
+        {
+            "tag": "endings.noun.abl.pl",
+            "analyzer": "N + Abl + Pl",
+            "mofo": "N{nit}"
+        },
+        {
+            "tag": "endings.noun.via.sg",
+            "analyzer": "N + Via + Sg",
+            "mofo": "N{kkut}"
+        },
+        {
+            "tag": "endings.noun.via.pl",
+            "analyzer": "N + Via + Pl",
+            "mofo": "N{tigut}"
+        },
+        {
+            "tag": "endings.noun.equ.sg",
+            "analyzer": "N + Aeq + Sg",
+            "mofo": "N{kkut}"
+        },
+        {
+            "tag": "endings.noun.equ.pl",
+            "analyzer": "N + Aeq + Pl",
+            "mofo": "N{tigut}"
         }
-    ]
+    ],
+    "tables": {
+        "noun": {
+            "title": "tables.noun",
+            "geometry": [2, 8],
+            "table": [
+                {
+                    "title": "tables.noun.singular",
+                    "contents": [
+                        "endings.noun.abs.sg",
+                        "endings.noun.erg.sg",
+                        "endings.noun.loc.sg",
+                        "endings.noun.all.sg",
+                        "endings.noun.abl.sg",
+                        "endings.noun.ins.sg",
+                        "endings.noun.equ.sg",
+                        "endings.noun.via.sg"
+                    ]
+                },
+                {
+                    "title": "tables.noun.plural",
+                    "contents": [
+                        "endings.noun.abs.pl",
+                        "endings.noun.erg.pl",
+                        "endings.noun.loc.pl",
+                        "endings.noun.all.pl",
+                        "endings.noun.abl.pl",
+                        "endings.noun.ins.pl",
+                        "endings.noun.equ.pl",
+                        "endings.noun.via.pl"
+                    ]
+                }
+            ]
+        }
+    }
 }
