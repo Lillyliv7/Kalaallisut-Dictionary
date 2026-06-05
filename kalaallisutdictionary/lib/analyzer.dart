@@ -275,24 +275,27 @@ ParsedWord parseWord(String str) {
   List<Morpheme> morphemes = [];
   bool inEnding = false;
   bool nextIsHyb = false;
+  String currentEnding = '';
 
   for (var i = 0; i < parts.length; i++) {
     final part = parts[i];
     if (part == 'Gram/Hyb') {
       nextIsHyb = true;
+      inEnding = false;
+      continue;
     }
     if (part.toUpperCase() == part) {
       // all caps, either an affix or an ending marker
       if (part == 'V' || part == 'N' || part == "Adv" || part == "Conj") {
         // ending start
         inEnding = true;
+        morphemes.add(Morpheme(join: 'end', type: 'end', form: part));
       } else {
         // affix or enclitic
-        if (inEnding) {
-          if (nextIsHyb) {
-            inEnding = false;
-            nextIsHyb = false;
-          }
+        if (nextIsHyb) {
+          nextIsHyb = false;
+          morphemes.add(Morpheme(join: 'ev', type: 'enc', form: part));
+        } else if (inEnding) {
           morphemes.add(Morpheme(join: 'enc', type: 'enc', form: part));
         } else {
           // affix
@@ -313,6 +316,13 @@ ParsedWord parseWord(String str) {
       if (morphemes[0].join == '?') {
         // has not found base join marker yet
         morphemes[0].join = analyzerTypeConverter(part).split('')[0];
+      }
+      // add ending part (after ending marker)
+      for (var m = morphemes.length - 1; m >= 0; m--) {
+        if (morphemes[m].type == 'end') {
+          morphemes[m].endForm += ' + $part';
+          break;
+        }
       }
     }
   }
