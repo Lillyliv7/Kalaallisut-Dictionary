@@ -299,13 +299,18 @@ ParsedWord parseWord(String str) {
           morphemes.add(Morpheme(join: 'enc', type: 'enc', form: part));
         } else {
           // affix
-          morphemes.add(
-            Morpheme(
-              join: analyzerTypeConverter(parts[i + 1]),
-              type: 'aff',
-              form: part,
-            ),
-          );
+          if (i != parts.length - 1) {
+            morphemes.add(
+              Morpheme(
+                join: analyzerTypeConverter(parts[i + 1]),
+                type: 'aff',
+                form: part,
+              ),
+            );
+          } else {
+            // probably an enclitic on an adverb since the analyzer doesnt show end forms for those (so inEnding is always false)
+            morphemes.add(Morpheme(join: 'enc', type: 'enc', form: part));
+          }
         }
       }
     } else if (part.toLowerCase() == part) {
