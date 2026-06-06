@@ -187,18 +187,23 @@
         },
         {
             "a": "MI",
-            "t": "Enc",
+            "t": "enc",
             "m": "*{mi}"
         },
         {
             "a": "MITAAVA",
-            "t": "Enc",
+            "t": "enc",
             "m": "*{mitauva}"
         },
         {
             "a": "GUUQ",
-            "t": "Enc",
+            "t": "enc",
             "m": "*{guuq}"
+        },
+        {
+            "a": "KAR",
+            "t": "ev",
+            "m": "*{-kaq}V"
         },
         {
             "a": "GIIP",

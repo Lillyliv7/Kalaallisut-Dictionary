@@ -5,6 +5,9 @@ import 'dictionary.dart';
 import 'variables.dart';
 
 String getBlockText(Morpheme morph) {
+  if (morph.form == "" && morph.endForm != "") {
+    return morph.endForm;
+  }
   return analyzerToMofo(morph.form, morph.join);
 }
 

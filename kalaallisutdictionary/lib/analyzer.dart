@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:kalaallisutdictionary/blockWidget.dart';
+import 'blockWidget.dart';
 import 'variables.dart';
 import 'tagging.dart';
 
@@ -318,7 +318,7 @@ ParsedWord parseWord(String str) {
         morphemes[0].join = analyzerTypeConverter(part).split('')[0];
       }
       // add ending part (after ending marker)
-      if (morphemes.length > 1) {
+      if (morphemes.length > 1 && inEnding) {
         for (var m = morphemes.length - 1; m >= 0; m--) {
           if (morphemes[m].type == 'end') {
             morphemes[m].endForm += ' + $part';
