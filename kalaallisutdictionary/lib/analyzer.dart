@@ -177,7 +177,7 @@ String getMofoLink(String affix, String join, String type){//https://mofo.oqa.dk
       convertedType = 'enclitic';
     }
   }
-  return 'https://mofo.oqa.dk/Morphemes/kl/$convertedType/$join/${affix.replaceAll(RegExp(r'[A-Z{}]'), '')}';
+  return 'https://mofo.oqa.dk/Morphemes/kl/$convertedType/$join/${affix.replaceAll(RegExp(r'[A-Z{}\*]'), '')}';
 }
 
 Future<String?> getMofoDefinition(String affix, String join) async {
