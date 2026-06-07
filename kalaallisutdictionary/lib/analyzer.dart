@@ -387,6 +387,21 @@ String analyzerToMofo(String input, String type) {
   return input;
 }
 
+String getMofoDefinition(String input, String type) {
+  // search affixes/clitics
+  for (int i = 0; i < analyzerMofoObj['entries'].length; i++) {
+    if (analyzerMofoObj['entries'][i]['t'] == type) {
+      if (analyzerMofoObj['entries'][i]['a'] == input) {
+        if (analyzerMofoObj['entries'][i]['d'] != null) {
+          return analyzerMofoObj['entries'][i]['d'];
+        }
+      }
+    }
+  }
+
+  return "";
+}
+
 class analyzerPage extends StatefulWidget {
   const analyzerPage({super.key});
 

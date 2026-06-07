@@ -3,72 +3,86 @@
         {
             "a": "QATE",
             "t": "vn",
-            "m": "V{-qatə}N"
+            "m": "V{-qatə}N",
+            "d": "fellow Vb'er"
         },
         {
             "a": "QAR",
             "t": "nv",
-            "m": "N{-qaq}V"
+            "m": "N{-qaq}V",
+            "d": "there is N, Actor has N"
         },
         {
             "a": "SSA",
             "t": "vv",
-            "m": "V{ssa}V"
+            "m": "V{ssa}V",
+            "d": "future"
         },
         {
             "a": "VIK",
             "t": "vn",
-            "m": "V{(v)vik}N"
+            "m": "V{(v)vik}N",
+            "d": "place where one Vb, time when one Vb's, person who is Vb'ed"
         },
         {
             "a": "SINNAA",
             "t": "vv",
-            "m": "V{sinnau}V"
+            "m": "V{sinnau}V",
+            "d": "Subject can Vb"
         },
         {
             "a": "NNGIT",
             "t": "vv",
-            "m": "V{ŋŋit}V"
+            "m": "V{ŋŋit}V",
+            "d": "not Vb, definitely Vb"
         },
         {
             "a": "ARAQ",
             "t": "nn",
-            "m": "N{-araq}N"
+            "m": "N{-araq}N",
+            "d": "small N"
         },
         {
             "a": "IT",
             "t": "nv",
-            "m": "N{-it}V"
+            "m": "N{-it}V",
+            "d": ""
         },
         {
             "a": "SI",
             "t": "nv",
-            "m": "N{si}V"
+            "m": "N{si}V",
+            "d": "Agent buys N, Agent encounters N, Agent finds Patient's N, Agent buys/gets/finds an N for Patient"
         },
         {
             "a": "TAR",
             "t": "vv",
-            "m": "V{ðaq}V"
+            "m": "V{ðaq}V",
+            "d": "Subject recurring/habitually Vb, remember to Vb!"
         },
         {
             "a": "U",
             "t": "nv",
-            "m": "N{-u}V"
+            "m": "N{-u}V",
+            "d": "Actor is an N (copula)"
         },
         {
             "a": "LLUAR",
             "t": "vv",
-            "m": "V{(l)luaq}V"
+            "m": "V{(l)luaq}V",
+            "d": "Vb well"
         },
         {
             "a": "QQU",
             "t": "vv",
-            "m": "V{tqu}V"
+            "m": "V{tqu}V",
+            "d": "Agent bids/asks Patient to Vb, Agent requests to be Vb'ed, in order to Vb, in order to not Vb"
         },
         {
             "a": "TIP",
             "t": "vv",
-            "m": "V{tət}V"
+            "m": "V{tət}V",
+            "d": "Agent lets/causes Patient to Vb, Patient is (being) Vb'ed, while Patient Vb'ed, before Patient Vb'ed, Agent thinks that Patient Vb"
         },
         {
             "a": "TUQ",
@@ -204,6 +218,11 @@
             "a": "KAR",
             "t": "ev",
             "m": "*{-kaq}V"
+        },
+        {
+            "a": "IP",
+            "t": "ev",
+            "m": "{ət}V"
         },
         {
             "a": "GIIP",

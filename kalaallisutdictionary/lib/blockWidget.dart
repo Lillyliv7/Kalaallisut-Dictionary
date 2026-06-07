@@ -20,6 +20,9 @@ String getTooltipText(Morpheme morph) {
   if (morph.type == 'end') {
     return morph.endForm;
   }
+  if (morph.type == 'aff') {
+    return getMofoDefinition(morph.form, morph.join);
+  }
   return '?';
 }
 
