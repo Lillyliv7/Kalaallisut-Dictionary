@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -113,7 +114,7 @@ ParsedWord parseWord(String str) {
 
   // find root type
   if (morphemes.length > 1) {
-    if (morphemes[1].type == 'aff'){
+    if (morphemes[1].type == 'aff') {
       morphemes[0].join = morphemes[1].join.split('')[0];
     } else if (morphemes[1].type == 'end') {
       morphemes[0].join = morphemes[1].endForm.split('')[0].toLowerCase();
@@ -129,8 +130,16 @@ ParsedWord parseWord(String str) {
   return ParsedWord(morphemes: morphemes);
 }
 
-Future<String?> analyzerRequest(String URL, String searchTerm) async {
-  final url = Uri.https(URL, '/analyze', {'word': searchTerm});
+Future<String?> analyzerRequest(String searchTerm) async {
+  Uri url;
+
+  if (kIsWeb) {
+    url = Uri.parse(
+      '${Uri.base.origin}/analyze',
+    ).replace(queryParameters: {'word': searchTerm});
+  } else {
+    url = Uri.https('imlillith888.xyz', '/analyze', {'word': searchTerm});
+  }
   print(url);
 
   try {
@@ -158,7 +167,6 @@ class _analyzerPageState extends State<analyzerPage> {
   final TextEditingController _wordController = TextEditingController();
 
   String _textValue = '';
-  String _analyzerServer = 'imlillith888.xyz';
 
   List<ParsedWord> _cleanedAnalyses = [];
 
@@ -166,7 +174,7 @@ class _analyzerPageState extends State<analyzerPage> {
     setState(() {
       _cleanedAnalyses = [];
     });
-    analyzerRequest(_analyzerServer, _textValue).then((analyzed) {
+    analyzerRequest(_textValue).then((analyzed) {
       if (analyzed == null) {
         setState(() {
           _cleanedAnalyses = [];

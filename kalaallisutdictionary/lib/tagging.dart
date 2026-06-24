@@ -45,7 +45,6 @@ class _taggingPageState extends State<taggingPage> {
   final TextEditingController _wordController = TextEditingController();
 
   String _textValue = '';
-  String _analyzerServer = 'imlillith888.xyz:8000';
 
   String file = '';
 
@@ -56,7 +55,7 @@ class _taggingPageState extends State<taggingPage> {
     setState(() {
       _cleanedAnalyses = [];
     });
-    analyzerRequest(_analyzerServer, _textValue).then((analyzed) {
+    analyzerRequest(_textValue).then((analyzed) {
       if (analyzed == null) {
         setState(() {
           _cleanedAnalyses = [];
@@ -81,9 +80,7 @@ class _taggingPageState extends State<taggingPage> {
         }
       }
 
-      final cleaned = analysesNoRepeats
-          .map((a) => parseWord(a))
-          .toList();
+      final cleaned = analysesNoRepeats.map((a) => parseWord(a)).toList();
       setState(() {
         _cleanedAnalyses = cleaned;
       });
