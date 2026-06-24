@@ -15,7 +15,7 @@ String getBlockText(Morpheme morph) {
 }
 
 Future<String?> getTooltipText(Morpheme morph) async {
-  if(morph.type == 'root') {
+  if (morph.type == 'root') {
     return dictionarySearchType(morph.join, morph.form).join('\n');
   }
   if (morph.type == 'end') {
@@ -26,7 +26,10 @@ Future<String?> getTooltipText(Morpheme morph) async {
     if (res == null) return '?';
     try {
       final data = jsonDecode(res);
-      final meanings = (data['meanings'] as List?)?.map((e) => e.toString()).join('\n').replaceAll('`', '');
+      final meanings = (data['meanings'] as List?)
+          ?.map((e) => e.toString())
+          .join('\n')
+          .replaceAll('`', '');
       return meanings ?? '?';
     } catch (e) {
       return e.toString();
@@ -77,7 +80,6 @@ class ParsedWordWidget extends StatefulWidget {
 }
 
 class _ParsedWordWidgetState extends State<ParsedWordWidget> {
-
   @override
   void initState() {
     super.initState();
@@ -86,22 +88,21 @@ class _ParsedWordWidgetState extends State<ParsedWordWidget> {
 
   @override
   Widget build(BuildContext context) {
-        return Wrap(
-          spacing: 6.0,
-          runSpacing: 8.0,
-          children: [
-            ...widget.word.morphemes.map((e) => FutureBuilder<String?>(
-                  future: getTooltipText(e),
-                  builder: (context, snapshot) {
-                    final tooltip = snapshot.data ?? '';
-                    return _MorphBlock(
-                      tooltipText: tooltip,
-                      morpheme: e,
-                    );
-                  },
-                ))
-          ]
-        );
+    return Wrap(
+      spacing: 6.0,
+      runSpacing: 8.0,
+      children: [
+        ...widget.word.morphemes.map(
+          (e) => FutureBuilder<String?>(
+            future: getTooltipText(e),
+            builder: (context, snapshot) {
+              final tooltip = snapshot.data ?? '';
+              return _MorphBlock(tooltipText: tooltip, morpheme: e);
+            },
+          ),
+        ),
+      ],
+    );
   }
 }
 
@@ -109,24 +110,30 @@ class _MorphBlock extends StatelessWidget {
   final String tooltipText;
   final Morpheme morpheme;
 
-  const _MorphBlock({
-    required this.tooltipText,
-    required this.morpheme,
-  });
+  const _MorphBlock({required this.tooltipText, required this.morpheme});
 
   @override
   Widget build(BuildContext context) {
     return Tooltip(
       message: tooltipText,
       padding: const EdgeInsets.all(12.0),
-      textStyle: const TextStyle(color: Colors.white, fontSize: 14, height: 1.4),
+      textStyle: const TextStyle(
+        color: Colors.white,
+        fontSize: 14,
+        height: 1.4,
+      ),
       decoration: BoxDecoration(
         color: Colors.black87,
         borderRadius: BorderRadius.circular(8),
       ),
       child: GestureDetector(
         onTap: () async {
-          launchUrl(Uri.parse(getMofoLink(morpheme)), mode: LaunchMode.externalApplication);
+          if (analyzerToMofo(morpheme.form, morpheme.join) != morpheme.form) {
+            launchUrl(
+              Uri.parse(getMofoLink(morpheme)),
+              mode: LaunchMode.externalApplication,
+            );
+          }
         },
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
