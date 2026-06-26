@@ -12,7 +12,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: kalaallisutdictionary
+        working-directory: Qanoq
 
     permissions:
       contents: write
