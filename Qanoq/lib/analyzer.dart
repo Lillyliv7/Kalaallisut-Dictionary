@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'blockWidget.dart';
 import 'variables.dart';
 import 'tagging.dart';
+import 'mofo.dart';
 
 // illoqarfimmiippoq
 // illu+QAR+Der/nv+Gram/IV+VIK+Der/vn+N+Lok+Sg+Gram/Hyb+IP+Gram/IV+V+Ind+3Sg
@@ -35,11 +36,30 @@ class Morpheme {
     this.form = "",
     this.endForm = "",
   });
+
+  @override
+  String toString() {
+    switch (type) {
+      case 'root':
+        return form;
+      case 'aff':
+        return analyzerToMofo(form, join);
+      case 'enc':
+        return analyzerToMofo(form, join);
+      case 'end':
+        return analyzerToMofo(endForm, '');
+    }
+    return '';
+  }
 }
 
 class ParsedWord {
   List<Morpheme> morphemes;
   ParsedWord({required this.morphemes});
+  @override
+  String toString() {
+    return morphemes.map((m) => m.toString()).join(' ');
+  }
 }
 
 String analyzerTypeConverter(String type) {
@@ -180,9 +200,7 @@ class _analyzerPageState extends State<analyzerPage>
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text(uiStrings['ui.server-error']),
-          content: Text(
-            uiStrings['ui.server-error-text'],
-          ),
+          content: Text(uiStrings['ui.server-error-text']),
           actions: <Widget>[
             TextButton(
               child: Text(uiStrings['ui.close']),

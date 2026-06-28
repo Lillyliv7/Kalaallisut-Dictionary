@@ -40,10 +40,12 @@ class taggingPage extends StatefulWidget {
   State<taggingPage> createState() => _taggingPageState();
 }
 
-class _taggingPageState extends State<taggingPage> with AutomaticKeepAliveClientMixin<taggingPage> {
+class _taggingPageState extends State<taggingPage>
+    with AutomaticKeepAliveClientMixin<taggingPage> {
   final TextEditingController _inputArea = TextEditingController();
   final TextEditingController _outputArea = TextEditingController();
   final TextEditingController _customAnalysesArea = TextEditingController();
+  final TextEditingController _wordController = TextEditingController();
 
   String _textValue = '';
 
@@ -93,65 +95,183 @@ class _taggingPageState extends State<taggingPage> with AutomaticKeepAliveClient
     _inputArea.dispose();
     _outputArea.dispose();
     _customAnalysesArea.dispose();
+    _wordController.dispose();
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 400),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(uiStrings['tagging.title'], style: TextStyle(fontSize: 30)),
-              Tooltip(
-                message: uiStrings['tagging.tooltip'],
-                child: const Icon(Icons.info, size: 25),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 15),
-        ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 1000, minWidth: 800),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ConstrainedBox(
-                constraints: const BoxConstraints(maxWidth: 400),
-                child: Column(
-                  children: [
-                    TextField(
-                      controller: _inputArea,
-                      keyboardType: TextInputType.multiline,
-                      minLines: 5,
-                      maxLines: 1000,
-                      decoration: InputDecoration(
-                        labelText: uiStrings['tagging.input-label'],
-                      ),
-                    ),
-                    const SizedBox(height: 15),
-                    TextField(
-                      controller: _outputArea,
-                      keyboardType: TextInputType.multiline,
-                      minLines: 5,
-                      maxLines: 1000,
-                      decoration: InputDecoration(
-                        labelText: uiStrings['tagging.output-label'],
-                      ),
-                    ),
-                  ],
+    // Call super.build when using AutomaticKeepAliveClientMixin
+    super.build(context);
+
+    return SingleChildScrollView(
+      // Added to handle overall overflow if content is taller than screen
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 400),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  uiStrings['tagging.title'],
+                  style: const TextStyle(fontSize: 30),
                 ),
-              ),
-            ],
+                Tooltip(
+                  message: uiStrings['tagging.tooltip'],
+                  child: const Icon(Icons.info, size: 25),
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+          const SizedBox(height: 15),
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              minWidth: MediaQuery.of(context).size.width * 0.8,
+            ),
+            child: IntrinsicHeight(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment:
+                    CrossAxisAlignment.stretch, // Makes columns match height
+                children: [
+                  Expanded(
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxWidth: 500),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Text("Input"),
+                          TextField(
+                            controller: _inputArea,
+                            keyboardType: TextInputType.multiline,
+                            minLines: 5,
+                            maxLines: 10000,
+                            decoration: InputDecoration(
+                              labelText: uiStrings['tagging.input-label'],
+                            ),
+                          ),
+                          const SizedBox(height: 15),
+                          const Text("Output"),
+                          TextField(
+                            controller: _outputArea,
+                            keyboardType: TextInputType.multiline,
+                            minLines: 5,
+                            maxLines: 10000,
+                            decoration: InputDecoration(
+                              labelText: uiStrings['tagging.output-label'],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 40),
+                  Expanded(
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxWidth: 500),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Expanded(
+                                child: TextField(
+                                  controller: _wordController,
+                                  decoration: InputDecoration(
+                                    hintText: uiStrings['analyzer.enter-word'],
+                                    border: const OutlineInputBorder(),
+                                  ),
+                                  onChanged: (text) {
+                                    _textValue = text;
+                                  },
+                                ),
+                              ),
+                              const SizedBox(width: 15),
+                              ElevatedButton(
+                                onPressed: _searchDictionary,
+                                style: ElevatedButton.styleFrom(
+                                  fixedSize: const Size(50, 50),
+                                  padding: EdgeInsets.zero,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                ),
+                                child: const Icon(
+                                  Icons.pageview_outlined,
+                                  size: 32,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: _cleanedAnalyses.isEmpty
+                                  ? [
+                                      Text(
+                                        uiStrings['analyzer.no-analyses'],
+                                        style: const TextStyle(
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ]
+                                  : _cleanedAnalyses
+                                        .map(
+                                          (parsedWord) => Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                              vertical: 8.0,
+                                            ),
+                                            child: Row(
+                                              children: [
+                                                IconButton(
+                                                  tooltip: 'Add to output',
+                                                  padding: EdgeInsets.zero,
+                                                  constraints:
+                                                      const BoxConstraints(
+                                                        minWidth: 40,
+                                                        minHeight: 40,
+                                                      ),
+                                                  icon: const Icon(Icons.add),
+                                                  onPressed: () {
+                                                    setState(() {
+                                                      final current =
+                                                          _outputArea.text;
+                                                      _outputArea.text =
+                                                          '$current$parsedWord ';
+                                                    });
+                                                  },
+                                                ),
+                                                const SizedBox(width: 8),
+                                                Flexible(
+                                                  fit: FlexFit.loose,
+                                                  child: ParsedWordWidget(
+                                                    word: parsedWord,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        )
+                                        .toList(),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
-  
+
   @override
   bool get wantKeepAlive => true;
 }
