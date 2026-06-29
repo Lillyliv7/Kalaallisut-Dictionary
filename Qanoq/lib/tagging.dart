@@ -60,6 +60,7 @@ class _taggingPageState extends State<taggingPage>
         _wordController.text = inputList[currentPosition];
       });
       currentPosition++;
+      _searchDictionary();
     }
   }
 

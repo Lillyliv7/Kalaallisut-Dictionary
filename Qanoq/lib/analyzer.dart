@@ -1,3 +1,4 @@
+import 'package:Qanoq/cache.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -151,6 +152,12 @@ ParsedWord parseWord(String str) {
 }
 
 Future<String?> analyzerRequest(String searchTerm) async {
+  // search cache
+  String? cacheRes = getCache(searchTerm, 'analyzer', null);
+  if (cacheRes != null) {
+    return cacheRes;
+  }
+
   Uri url;
 
   if (kIsWeb) {
@@ -165,6 +172,7 @@ Future<String?> analyzerRequest(String searchTerm) async {
   try {
     final response = await http.get(url);
     if (response.statusCode == 200) {
+      saveCache(searchTerm, response.body, 'analyzer', null);
       return response.body;
     } else {
       print('Request failed with status: ${response.statusCode}.');
@@ -258,6 +266,7 @@ class _analyzerPageState extends State<analyzerPage>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Stack(
       alignment: Alignment.center,
       children: [

@@ -6,25 +6,30 @@ import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'language.dart';
+import 'cache.dart';
 
 var analyzerMofoObj;
 var kalEngObj;
 var uiStrings;
 var preferences;
 var endings;
+List<CacheEntry> cache = [];
 var uiColor = Colors.green;
 StreamController<bool> darkModeStream = StreamController();
 bool darkModeBoolValue = false;
 
-
 Future<bool> loadDatabases() async {
-  final String analyzerMofoStr = await rootBundle.loadString('assets/analyzer-mofo.json');
+  final String analyzerMofoStr = await rootBundle.loadString(
+    'assets/analyzer-mofo.json',
+  );
   analyzerMofoObj = jsonDecode(analyzerMofoStr);
 
   final String kalEngStr = await rootBundle.loadString('assets/kal-eng.json');
   kalEngObj = jsonDecode(kalEngStr);
 
-  final String uiStringsStr = await rootBundle.loadString('assets/ui-english.json');
+  final String uiStringsStr = await rootBundle.loadString(
+    'assets/ui-english.json',
+  );
   uiStrings = jsonDecode(uiStringsStr);
 
   final String endingsStr = await rootBundle.loadString('assets/endings.json');

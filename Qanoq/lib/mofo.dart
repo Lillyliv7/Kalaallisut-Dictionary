@@ -1,3 +1,4 @@
+import 'package:Qanoq/cache.dart';
 import 'package:http/http.dart' as http;
 
 import 'analyzer.dart';
@@ -65,6 +66,10 @@ String getMofoLink(Morpheme morph) {
 }
 
 Future<String?> getMofoDefinition(Morpheme morph) async {
+  String? cacheRes = getCache(morph.form, 'mofo', morph.join);
+  if (cacheRes != null) {
+    return cacheRes;
+  }
   var url;
   String convertedType = "";
   if (morph.type == 'aff') {
@@ -92,6 +97,7 @@ Future<String?> getMofoDefinition(Morpheme morph) async {
     if (response.statusCode == 200) {
       print('Request successful!');
       print('Response body: ${response.body}');
+      saveCache(morph.form, response.body, 'mofo', morph.join);
       return response.body;
     } else {
       print('Request failed with status: ${response.statusCode}.');
